@@ -1,8 +1,8 @@
 # Programmierung 1 - UniBern 2024
 
-This is the repository of Roman Schwob for "Programmierung 1" of the Bachelor in "Informatik" at the University of Bern.
+This is the repository of *Roman Schwob* for "Programmierung 1" of the Bachelor in "Informatik" at the University of Bern.
 
-Below I create a Syntax Guide for Java. The folders contain my solutions to the exercise series.
+In the second part of the readme below is a *Syntax Guide for Java* that I create. The *folders* in the repository contain my solutions to the exercise series.
 
 If you have any questions or suggestions, please contact me through GitHub.
 
