@@ -50,7 +50,7 @@ ArbitraryClass arbitraryObject = new ArbitraryClass(arbitraryParameters);
 Circle circle1 = new Circle(40, 40, 10); // Ex.
 ```
 
-**Call a method**:
+**Call** a method:
 ```
 arbitraryMethod(arbitraryParameters); // method of this class
 printQuoteOfSteve(); // Ex. method that is defined in this class
@@ -110,27 +110,27 @@ Examples:
 
 ## Data Types
 
-### Stings
+### 0) Strings
 ```
 String arbitraryString = "arbitrary text"
 ```
-Note: strings is **NOT a primitive data type**, but a class!
+Note: string is **NOT a primitive data type**, but a class!
 
 **Concatenate** 2 strings:
 ```
 "abc" + "def"
 ```
 
-**escape** symbol: "\\", especially \\" for an actual double quote
+**escape** symbol: \\, especially \\" for an actual double quote
 
-### Numbers
+### 1) Numbers
 
-(byte: -128 - 127)
-(short: -32'768 - 32767)
-**int: −2'147'483'648, +2'147'483'647**
-(long ≈ ±9 × 10 18)
-(float ≈ ±3.4 × 10 38)
-**double ≈ ±1.7 × 10 308**
+- (byte: -128 - 127)
+- (short: -32'768 - 32767)
+- **int: −2'147'483'648, +2'147'483'647**
+- (long ≈ ±9 × 10 18)
+- (float ≈ ±3.4 × 10 38)
+- **double ≈ ±1.7 × 10 308**
 
 convert "up" (e.g. int to double): no problem
 ```
@@ -138,7 +138,7 @@ int count = 17;
 double num = count; // will be 17.0
 ```
 
-convert "down" (e.g. double to int): --> need **cast operation**
+convert "down" (e.g. double to int): would give err --> need **cast operation**
 ```
 int count = (int) num; // cast num into int, then assignment works
 ```
@@ -150,7 +150,7 @@ int count = (int) num; // cast num into int, then assignment works
 - ++ and -- --> + and - 1; e.g. arbVar++
 - += etc.; e.g. arbVar += 10
 
-### Characters
+### 2) Characters
 
 a **single** character, declared within single quotes
 ```
@@ -158,7 +158,7 @@ char arbitraryChar = 'a';
 ```
 
 
-### Booleans
+### 3) Booleans
 
 only possible values: **true false**
 ```
