@@ -13,15 +13,15 @@ public class Ex02 {
             System.out.println("Division by zero is not allowed.");
             return;
         }
-        int sum1 = a + b;
-        int resultInt = sum1*sum1 / b;
-        double aa = (double) a;
-        double bb = (double) b;
-        double sum2 = aa + bb;
-        double resultDouble = sum2*sum2 / bb;
-        double resultRemainder = resultDouble - resultInt;
+        int sumInt = a + b;
+        int resultInt = sumInt*sumInt / b;
+        double sumDouble = (double)a + b;
+        double resultDouble = sumDouble*sumDouble / b;
+        int resultRemainder = (sumInt*sumInt) % b;
+        System.out.println("=================");
         System.out.println("(a+b)**2 / b = " + resultDouble);
-        System.out.println("As integer: = " + resultInt);
-        System.out.println("Remainder = " + resultRemainder);
+        System.out.println("=================");
+        System.out.println("As integer: " + resultInt);
+        System.out.println("-> Remainder: " + resultRemainder);
     }
 }
