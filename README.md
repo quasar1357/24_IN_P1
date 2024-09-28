@@ -14,11 +14,13 @@ If you have any questions or suggestions, please contact me through GitHub.
 ## Comments:
 ```
 // comment on one line
-
+```
+```
 /*
 comment until ended with
 */
-
+```
+```
 /**
 * automatic generation of documentation
 */
@@ -26,9 +28,9 @@ comment until ended with
 
 ## Objects and Methods
 
-Class definition vs. object instantiation!
+**NOTE**: Class definition vs. object instantiation!
 
-Class & methods definition:
+Class & methods **definition**:
 ```
 public class ArbitraryClass{
     ...
@@ -37,51 +39,55 @@ public class ArbitraryClass{
     }
     ...
     public static void main(String[] args){
-        ... // The main method is mandatory if we want the program to start...
+        ... // The main method is mandatory if we want the program to run...
     }
 }
 ```
 
-Object instantiation:
+Object **instantiation**:
 ```
 ArbitraryClass arbitraryObject = new ArbitraryClass(arbitraryParameters);
-Circle circle1 = new Circle(40, 40, 10);
+Circle circle1 = new Circle(40, 40, 10); // Ex.
 ```
 
-Call a method:
+**Call a method**:
 ```
 arbitraryMethod(arbitraryParameters); // method of this class
-printQuoteOfSteve(); // method that is defined in this class
+printQuoteOfSteve(); // Ex. method that is defined in this class
 
 arbitraryObject.arbitraryMethod(arbitraryParameters); // ... of another object
-circle1.setCenterX(100);
+circle1.setCenterX(100); // Ex.
 ```
 
 ## Variables and Constants
 
-Variables:
+**Variables**:
 ```
 int arbitraryVariable; // declared
 arbitraryVariable = 100; // assigned value
 // OR
 int arbitraryVariable = 100; declare and assign
-
+```
+```
 int variableOne, variabelTwo, ... ; // declare multiple at once
+// OR
 int variableOne = 100, variableTwo; // declare both, assign one
 ```
 
-Constants:
+**Constants**:
 ```
 final int ARBITRARY_CONSTANT = 500;
 ```
 
 ## Input and Output
+
 ### Output
 ```
 System.out.println("arbitrary text") // prints with trailing line break
 System.out.print("arbtrary text") // prints without line break
-// (System.out = Objekt; repräsentiert Ausgabegerät)
+// NOTE: System.out = Objekt; repräsentiert Ausgabegerät
 ```
+
 ### Input
 ```
 import java.util.Scanner;
@@ -96,6 +102,7 @@ import java.util.Scanner;
 
 ## Conventions
 
+Examples:
 - classes: StudentActivity
 - variables: currentSpeed
 - methods: getCurrentSpeed
@@ -109,12 +116,12 @@ String arbitraryString = "arbitrary text"
 ```
 Note: strings is **NOT a primitive data type**, but a class!
 
-Concatenate 2 strings:
+**Concatenate** 2 strings:
 ```
 "abc" + "def"
 ```
 
-escape symbol: "\", especially \" for an actual double quote
+**escape** symbol: "\\", especially \\" for an actual double quote
 
 ### Numbers
 
@@ -131,17 +138,17 @@ int count = 17;
 double num = count; // will be 17.0
 ```
 
-Operations:
+convert "down" (e.g. double to int): --> need **cast operation**
+```
+int count = (int) num; // cast num into int, then assignment works
+```
+
+**Operations**:
 - +, -, *, / as usual (also priority)
 - modulo= %; priority as *and /, also on floats/doubles...
 - division: two ints --> int; else --> float/double...
 - ++ and -- --> + and - 1; e.g. arbVar++
 - += etc.; e.g. arbVar += 10
-
-convert "down" (e.g. double to int): --> need **cast operation**
-```
-int count = (int) num; // cast num into int, then assignment works
-```
 
 ### Characters
 
@@ -153,11 +160,12 @@ char arbitraryChar = 'a';
 
 ### Booleans
 
-only possible values: true false
+only possible values: **true false**
 ```
 boolean arbitraryBool = false;
 ```
 
+**Use booleans**:
 - Relational Operators: ==, !=, <, >, <=, >=
 - AND: && ; OR: ||; NOT: ! (e.g. !a)
 - Priorities: 1. NOT, 2. AND, 3. OR
