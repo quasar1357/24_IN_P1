@@ -6,8 +6,9 @@ public class Ex01 {
         System.out.println("\"Winter is coming\"");
         System.out.println("");
         System.out.println("PART 2:");
-        System.out.println("\"Winter\"");
-        System.out.println("\"is\"");
-        System.out.println("\"coming\"");
+        // System.out.println("\"Winter\"");
+        // System.out.println("\"is\"");
+        // System.out.println("\"coming\"");
+        System.out.println("\"Winter\nis\ncoming\"");
     }
 }
