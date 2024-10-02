@@ -6,7 +6,7 @@ In the second part of the readme below is a *Syntax Guide for Java* that I creat
 
 If you have any questions or suggestions, please contact me through GitHub.
 
-
+I add this line...
 
 
 # Java Syntax Guide
