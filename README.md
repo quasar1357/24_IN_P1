@@ -72,6 +72,12 @@ Examples:
 - methods: getCurrentSpeed
 - constants: MAX_SPEED
 
+
+Bezeichner gehören zu einer der **drei Kategorien**:
+1. für einen bestimmten **Zweck** reserviert (class, int, …)
+2. etwas aus dem **Java API** bezeichnen (System, main, println, …)
+3. etwas aus **diesem Programm** bezeichnen (eigene Methode/Variable)
+
 ## Primitive Data Types
 
 ### 1) Numbers
@@ -104,7 +110,7 @@ int count = (int) num; // cast num into int, then assignment works
 
 ### 2) Characters (& the String Class)
 
-a **single** character, declared within single quotes
+A **single character**, declared within **single quotes**
 ```java
 char arbitraryChar = 'a';
 ```
@@ -167,6 +173,9 @@ if (arbBool){
 **NOTE**: Class definition vs. object instantiation (vs. variable assignment)
 
 ### Class & Methods **Definition**
+
+**Constructor** method: called when new instance created, name always same as class
+
 ```java
 public class ArbitraryClass{
     ...
@@ -187,8 +196,8 @@ public class ArbitraryClass{
 - **Declare** variable of that Class --> no object yet
 - **Instantiate** ("new") --> object created (calls constructor)
 - **Assign** to variable --> points to that object
-- **Reassign --> points to different object (= Aliases)!**
-- **Change object --> all variables pointing to it change!**
+- **Reassign** --> points to **different object (= Aliases)**!
+- **Change** object --> **all** variables pointing to it change!
 
 ---
 
@@ -228,16 +237,18 @@ import java.util.*; // import all Classes from a Package
 
 ### 1) Strings
 
-Note: string is **NOT a primitive data type**, but a class!
+Important: string is **NOT a primitive data type**, but a class!
 
-However, it is an exception in that it can be created without "new" command:
+NOTE: Use **DOUBLE quotes**! (Not as in python single quotes...)
+
+However, it is an exception in that it can be **created without "new"** command:
 ```java
 String arbitraryString = "arbitrary text"
 ```
 
 **Escape** symbol: \\, especially \\" for an actual double quote
 
-Shortcut for **concatenation**: `"abc" + "def"`
+Shortcut for **concatenation**: `"abc" + "def" + 1` (other types are auto-converted)
 
 
 - `String(`String `p)`: constructor; instantiates together with *new* operator a string object
@@ -294,9 +305,9 @@ import java.text.DecimalFormat;
 - void `applyPattern(`String `p)`: re-define pattern
 
 **Pattern**:
-- "0": enforce to show this position
-- "#": show leading/trailing zeroes
+- "0": enforce to show this position with leading/trailing zeroes
+- "#": show only if necessary
 - ".": define where decimal
-- "'": define where '
+- ",": define where '
 - "%": use in % (--> *100 & add "%")
 - Other characters: used as is
