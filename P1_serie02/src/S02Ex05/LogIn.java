@@ -34,7 +34,7 @@ public class LogIn {
         DecimalFormat df = new DecimalFormat("000");
         String dPart = df.format(randNum);
 
-        // Generate the username
+        // Concatenate the parts & print the username
         String username = firstName.toUpperCase().charAt(0) + lPart + dPart;
         System.out.println("Your username is: " + username);
 
@@ -57,7 +57,7 @@ public class LogIn {
             pwEnd += (char) uniCode;
         }
 
-        // Concatenate the parts
+        // Concatenate the parts & print the password
         String password = pwLead + pwMid + "-" + pwEnd;
         System.out.println("Your password is: " + password);
 

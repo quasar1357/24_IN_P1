@@ -12,6 +12,7 @@ public class GeomSeries {
         int r = scanner.nextInt();
         System.out.print("Enter the number of terms: ");
         int n = scanner.nextInt();
+        
         // Calculate the n-th term of the geometric series and print it
         int nTerm = a * (int) Math.pow(r, n - 1);
         System.out.println("The n-th term an is " + nTerm);
