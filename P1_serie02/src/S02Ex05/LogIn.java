@@ -67,6 +67,5 @@ public class LogIn {
         // 3) Concatenate the parts & print the password
         String password = pwLead + pwMid + "-" + pwEnd;
         System.out.println("Your password is: " + password);
-
     }
 }
