@@ -7,23 +7,30 @@ import java.text.DecimalFormat;
 public class LogIn {
 
     public static void main(String[] args) {
+        /*
+         * This program generates a username and a password for a user
+         * given their first and last name (they give as input).
+         */
 
-        // Generate the USERNAME
+        // 1) Generate the USERNAME
 
         // Ask for the name
         Scanner nameScanner = new Scanner(System.in);
-        System.out.println("Enter your first name: ");
+        System.out.println("Enter your first name (ä = ae etc.): ");
         String firstName = nameScanner.nextLine();
-        System.out.println("Enter your last name: ");
+        System.out.println("Enter your last name (ä = ae etc.): ");
         String lastName = nameScanner.nextLine();
         
+        // Remove spaces and "-" from the last name
+        String lastNameEdited = lastName.replace(" ", "");
+        lastNameEdited = lastNameEdited.replace("-", "");
         // Extract the first 5 characters of the last name
         String lPart;
-        if(lastName.length() > 5){
-            lPart = lastName.substring(0, 5);
+        if(lastNameEdited.length() > 5){
+            lPart = lastNameEdited.substring(0, 5);
         // OR the whole last name if it has less than 5 characters
         } else {
-            lPart = lastName;
+            lPart = lastNameEdited;
         }
         lPart = lPart.toUpperCase(); // Convert to uppercase
 
@@ -38,7 +45,7 @@ public class LogIn {
         String username = firstName.toUpperCase().charAt(0) + lPart + dPart;
         System.out.println("Your username is: " + username);
 
-        // Generate the PASSWORD
+        // 2) Generate the PASSWORD
         
         // First part
         int pwLeadInt = rand.nextInt(7, 10);
@@ -49,7 +56,7 @@ public class LogIn {
         DecimalFormat df2 = new DecimalFormat("00000");
         String pwMid = df2.format(pwMidInt);
         
-        // Third part
+        // Third part: 3 random uppercase letters
         String pwEnd = "";
         for (int i = 0; i < 3; i++) {
             // Generate and concatenate a random uppercase letter
@@ -57,7 +64,7 @@ public class LogIn {
             pwEnd += (char) uniCode;
         }
 
-        // Concatenate the parts & print the password
+        // 3) Concatenate the parts & print the password
         String password = pwLead + pwMid + "-" + pwEnd;
         System.out.println("Your password is: " + password);
 

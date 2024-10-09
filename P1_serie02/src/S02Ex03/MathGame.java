@@ -4,6 +4,11 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class MathGame {
+    /**
+     * This program generates two random values with a sum between 0 and 20
+     * It asks the user to guess their sum.
+     * Finally, it checks if the user's guess is correct and prints the result.
+     */
     public static final int MAX_VAL = 20;
     public static final int MIN_VAL = 0;
     public static final int RANGE_VAL = MAX_VAL - MIN_VAL;
