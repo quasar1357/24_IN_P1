@@ -69,5 +69,4 @@ public class LogIn {
         System.out.println("Your password is: " + password);
 
     }
-
 }
