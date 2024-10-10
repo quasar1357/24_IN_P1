@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GeomSeries {
     /**
-     * This program asks the user for the first term, the common ratio
+     * Asks the user for the first term, the common ratio
      * and the number of terms (all as integers)
      * and calculates the n-th term of a geometric series.
      */
