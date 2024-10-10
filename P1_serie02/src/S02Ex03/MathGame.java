@@ -5,9 +5,9 @@ import java.util.Random;
 
 public class MathGame {
     /**
-     * This program generates two random values with a sum between 0 and 20
-     * It asks the user to guess their sum.
-     * Finally, it checks if the user's guess is correct and prints the result.
+     * Generates two random values with a sum between 0 and 20.
+     * Asks the user to guess their sum.
+     * Finally, checks if the user's guess is correct and prints the result.
      */
     public static final int MAX_VAL = 20;
     public static final int MIN_VAL = 0;
@@ -36,7 +36,7 @@ public class MathGame {
     }
     public static int getInputInt(Scanner valScanner, int minIn, int maxIn){
         /**
-        * This method reads an integer from the user and checks if it is within the specified range.
+        * Reads an integer from the user and checks if it is within the specified range.
         */
         // First attempt without further information
         int inputInt = valScanner.nextInt();
