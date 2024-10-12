@@ -17,7 +17,7 @@ public class Sphere {
         // Calculate the volume and area of the sphere
         double volume = (4.0/3.0) * Math.PI * Math.pow(radius, 3);
         double area = 4 * Math.PI * Math.pow(radius, 2);
-        DecimalFormat formatter = new DecimalFormat("#,##0.0000");
+        DecimalFormat formatter = new DecimalFormat("#,##0.####");
         String volumeString = formatter.format(volume);
         String areaString = formatter.format(area);
 
