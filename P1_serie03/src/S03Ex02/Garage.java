@@ -10,16 +10,19 @@ public class Garage {
      */
 
     public static void main(String[] args) {
+        // Erstelle drei Autos und printe sie
         Car car1 = new Car("Porsche", "Carrera", 1956);
         Car car2 = new Car("VW", "Golf", 1979);
         Car car3 = new Car("Subaru", "Justy", 1980);
         printAllCars(car1, car2, car3);
+        // Änderungen an den Autos und wieder printen
         car1.setBrand("Ferrari");
         car2.setModel("Beetle");
         car3.setYear(1978);
         System.out.println("\nAFTER CHANGES: \n");
         printAllCars(car1, car2, car3);
-        System.out.print(Year.now().getValue());
+        // Printe auch das aktuelle Jahr, um zu sehen, womit gearbeitet wird
+        System.out.print("Current year:" + Year.now().getValue());
     }
 
     // Methode um alle Details der drei Autos zu printen
