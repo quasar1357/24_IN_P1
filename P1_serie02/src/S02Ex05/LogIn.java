@@ -8,8 +8,8 @@ public class LogIn {
 
     public static void main(String[] args) {
         /*
-         * This program generates a username and a password for a user
-         * given their first and last name (they give as input).
+         * Generates a username and a password for a user
+         * given their first and last name (taken as user input).
          */
 
         // 1) Generate the USERNAME
