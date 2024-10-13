@@ -10,8 +10,7 @@ public class Book {
 
 	// Instance variables
 	private int id;
-	private String title;
-	private String author;
+	private String title, author;
 	private Date dateOfPublication;
 	// Constant for the conversion from milliseconds to years
 	private final long MILLISECONDS_PER_YEAR = (long) 1000 * 60 * 60 * 24 * 365;
@@ -56,9 +55,11 @@ public class Book {
 
 	/** Reads all book data from user input */
 	public void input() {
+		// ID
 		Scanner idScanner = new Scanner(System.in);
 		System.out.println("Bitte geben Sie die ID des Buches ein:");
 		this.setId(idScanner.nextInt()); // Use setter which checks ID
+		// Title, author, date
 		Scanner bookScanner = new Scanner(System.in);
 		System.out.println("Bitte geben Sie den Titel des Buches ein:");
 		this.title = bookScanner.nextLine();

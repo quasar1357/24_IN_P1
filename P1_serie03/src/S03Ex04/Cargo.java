@@ -12,7 +12,7 @@ public class Cargo {
     // Name
     private String name;
 
-    // Constructor with parameters
+    // Constructor (with all parameters)
     public Cargo(String nameIn, int lengthIn, int widthIn, int heightIn) {
         this.name = nameIn;
         this.length = lengthIn;

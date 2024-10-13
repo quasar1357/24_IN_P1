@@ -9,7 +9,9 @@ public class Box {
 
     // Dimensions
     private int length, width, height;
+    // Status
     private boolean full;
+    // Potential Cargo object in the box
     private Cargo cargo;
 
     // Constructor WITH parameters
@@ -20,7 +22,7 @@ public class Box {
         this.full = false;
     }
     
-    // Constructor WITHOUT parameters (default = 1)
+    // Constructor WITHOUT parameters (default dimensions = 1)
     public Box(){
         this.length = 1;
         this.width = 1;
@@ -35,9 +37,9 @@ public class Box {
         this.height = hIn;
     }
 
-    // Method to get capacity (optional)
+    // Method to get capacity
     public int getCapacity() {
-        return this.length * this.width + this.height;
+        return this.length * this.width * this.height;
     }
 
     // Method to get "full" status (optional)
@@ -55,15 +57,14 @@ public class Box {
             this.cargo = cargoIn;
             return true;
         }
-        // NOTE: No else needed, as the method will return/exit if full
-        if (this.full) {
+        // If adding not successful, check why and print message
+        // NOTE: No else needed, as method returns if adding is successful
+        if (this.full)
             System.out.println("Box schon voll! Nichts zugefügt.");
-            return false;
-        } else {
+        else
             System.out.println("Stückgut passt nicht in die Box. " + 
             "Nichts zugefügt.");
-            return false;
-        }
+        return false;
     }
 
     // toString method
@@ -72,7 +73,7 @@ public class Box {
         "Länge, Breite, Höhe: " +
         this.length + ", " + this.width + ", " + this.height + "\n" +
         "Voll: " + this.full + "\n" +
-        this.cargo;
+        "Inhalt: " + this.cargo;
     }
 
 }

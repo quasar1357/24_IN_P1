@@ -11,36 +11,37 @@ public class Garage {
 
     public static void main(String[] args) {
         // Erstelle drei Autos und printe sie
-        Car car1 = new Car("Porsche", "Carrera", 1956);
+        Car car1 = new Car("Ferrari", "Carrera", 1956);
         Car car2 = new Car("VW", "Golf", 1979);
         Car car3 = new Car("Subaru", "Justy", 1980);
+        System.out.println("\nBEVOR ANPASSUNGEN: \n");
         printAllCars(car1, car2, car3);
         // Änderungen an den Autos und wieder printen
-        car1.setBrand("Ferrari");
+        car1.setBrand("Porsche");
         car2.setModel("Beetle");
         car3.setYear(1978);
-        System.out.println("\nAFTER CHANGES: \n");
+        System.out.println("\nNACH ANPASSUNGEN: \n");
         printAllCars(car1, car2, car3);
         // Printe auch das aktuelle Jahr, um zu sehen, womit gearbeitet wird
-        System.out.print("Current year:" + Year.now().getValue());
+        System.out.print("\nAktuelles Jahr: " + Year.now().getValue());
     }
 
     // Methode um alle Details der drei Autos zu printen
     private static void printAllCars(Car car1, Car car2, Car car3) {
-        System.out.println("CAR1 ==========");
+        System.out.println("===== CAR1 =====");
         System.out.println(car1);
-        System.out.println("CAR2 ==========");
+        System.out.println("===== CAR2 =====");
         System.out.println(car2);
-        System.out.println("CAR3 ==========");
+        System.out.println("===== CAR3 =====");
         System.out.println(car3);
-        System.out.println("ANTIQUENESS ==========");
+        System.out.println("===== ANTIQUENESS =====");
         System.out.println("Is car 1 antique? (" + car1.getYear() + ") " + 
                             car1.isAntique());
         System.out.println("Is car 2 antique? (" + car2.getYear() + ") " + 
                             car2.isAntique());
         System.out.println("Is car 3 antique? (" + car3.getYear() + ") " + 
                             car3.isAntique());
-        System.out.println("GETTERS ==========");
+        System.out.println("===== GETTERS =====");
         System.out.println("Car 1 Getters: " +
                             car1.getBrand() + " " +
                             car1.getModel() + " " +

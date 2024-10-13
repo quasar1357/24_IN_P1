@@ -32,12 +32,12 @@ public class PairOfDice {
         return this.die2.getPoints();
     }
 
-    // Methode zum Werfen der beiden Würfel und gib die summe zurück
+    // Methode zum Werfen der beiden Würfel und gib die Summe zurück
     public int rollDice() {
         return this.die1.roll() + this.die2.roll();
     }
 
-    // Erhalte die aktuelle Summe, ohne sie neu zu werfen
+    // Erhalte die aktuelle Summe, ohne Würfel neu zu werfen
     public int getSum() {
         return this.die1.getPoints() + this.die2.getPoints();
     }

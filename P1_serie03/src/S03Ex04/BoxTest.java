@@ -17,8 +17,10 @@ public class BoxTest {
         System.out.println("\n=== toString Methode für Stückgut ===");
         System.out.println(bottle);
         System.out.println("\n=== Getters für Stückgut ===");
-        System.out.println(bottle.getName() + ": " + bottle.getLength() + "x" +
-                           bottle.getWidth() + "x" + bottle.getHeight());
+        System.out.println("Name = " + bottle.getName() + " | " +
+                           "Dims = " + bottle.getLength() + " * " +
+                                       bottle.getWidth() + " * " +
+                                       bottle.getHeight());
 
         // Teste setter Methoden
         System.out.println("\n=== Ändere Eigenschaften der Flasche ===");
@@ -26,10 +28,11 @@ public class BoxTest {
         bottle.setLength(5);
         bottle.setWidth(5);
         // Teste falschen Eingabewert
+        System.out.println("Versuche Höhe mit negativem Wert zu setzen...");
         bottle.setHeight(-16);
         System.out.println(bottle); // Höhe sollte 15 bleiben...
 
-        // Definiere eine Box mit Parameter
+        // Definiere eine Box mit Parametern
         System.out.println("\n=== Definiere Boxen ===");
         Box smallBox = new Box(15, 15, 7);
         System.out.println(smallBox);
@@ -47,11 +50,13 @@ public class BoxTest {
         smallBox.addCargo(bottle); // Sollte nicht gehen
         System.out.println("Kleine Box voll: " + smallBox.getFull()); // false
         smallBox.addCargo(book); // Sollte gehen
-        System.out.println("Kleine Box voll: " + smallBox.getFull()); // true
+        System.out.println("Buch in kleine Box gelegt: " + smallBox.getFull()); // true
         largeBox.addCargo(ball); // Sollte gehen
-        System.out.println("Grosse Box voll: " + largeBox.getFull()); // true
+        System.out.println("Ball in grosse Box gelegt: " + largeBox.getFull()); // true
         largeBox.addCargo(bottle); // Sollte nicht gehen, da schon voll!
-        System.out.println("Grosse Box voll: " + largeBox.getFull()); // true
+        System.out.println("Grosse Box immer noch voll" + 
+                           "(auch nach erfolglosem neuerlichem Zufügen): " +
+                           largeBox.getFull()); // true
 
         // Teste getCapacity Methode
         System.out.println("\n=== Erhalte Kapazitäten ===");
@@ -60,9 +65,7 @@ public class BoxTest {
 
         // Gib Boxen mit Stückgütern aus
         System.out.println("\n=== Volle Boxen ===");
-        System.out.println("\nKleine Box:");
         System.out.println(smallBox);
-        System.out.println("\nGrosse Box:");
         System.out.println(largeBox);
     }
 

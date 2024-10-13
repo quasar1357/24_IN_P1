@@ -4,7 +4,7 @@ package S03Ex03;
 
 public class DiceGame {
     /**
-     * Testklasse für die Klasse PaitOfDice
+     * Testklasse für die Klasse PairOfDice
      */
 
     public static void main(String[] args){
@@ -13,7 +13,7 @@ public class DiceGame {
         System.out.println(testPair);
 
         // Teste die setters
-        System.out.println("\nNach Setzen der Werte:");
+        System.out.println("\nNach Setzen der Werte auf 3 und 4:");
         testPair.setPoints1(3);
         testPair.setPoints2(4);
         System.out.println(testPair);
@@ -22,12 +22,13 @@ public class DiceGame {
         System.out.println("\nUngültige Eingaben:");
         testPair.setPoints1(0); // Wert zu tief
         testPair.setPoints1(7); // Wert zu hoch
+        System.out.println("Unverändertes Würfelpaar:");
         System.out.println(testPair);
         
         // Teste die getters
         System.out.println("\nGetters:");
-        System.out.println("" + testPair.getPoints1());
-        System.out.println("" + testPair.getPoints2());
+        System.out.println("" + testPair.getPoints1() + " | " +
+                                testPair.getPoints2());
         
         // Teste die rollDice Methode
         System.out.println("\nRoll dice:");

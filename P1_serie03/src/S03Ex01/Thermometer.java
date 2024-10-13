@@ -46,12 +46,16 @@ public class Thermometer {
 
     // Methode zum Umrechnen von Celsius zu Fahrenheit
     private double celsiusToFahrenheit(double celsius) {
-        return celsius * 9 / 5 + 32;
+        double fVal = celsius * 9 / 5 + 32;
+        // Runden auf 2 Nachkommastellen (nicht gefragt in Aufgabe)
+        return Math.round(fVal*100) / 100.0;
     }
 
     // Methode zum Umrechnen von Fahrenheit zu Celsius
     private double fahrenheitToCelsius(double fahrenheit) {
-        return (fahrenheit - 32) * 5 / 9;
+        double cVal = (fahrenheit - 32) * 5 / 9;
+        // Runden auf 2 Nachkommastellen (nicht gefragt in Aufgabe)
+        return Math.round(cVal*100) / 100.0;
     }
 
     // Methode zum Zurücksetzen der Temperatur (auf 37.0°C oder 98.6°F)
