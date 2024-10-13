@@ -4,15 +4,15 @@ package S03Ex04;
 
 public class Box {
     /**
-     * Klasse für eine Box
+     * Class that models a Box object
      */
 
-    // Dimensionen
+    // Dimensions
     private int length, width, height;
     private boolean full;
     private Cargo cargo;
 
-    // Konstruktor MIT Parameter
+    // Constructor WITH parameters
     public Box(int lengthIn, int widthIn, int heightIn){
         this.length = lengthIn;
         this.width = widthIn;
@@ -20,7 +20,7 @@ public class Box {
         this.full = false;
     }
     
-    // Konstruktor OHNE Parameter (Werte = 1)
+    // Constructor WITHOUT parameters (default = 1)
     public Box(){
         this.length = 1;
         this.width = 1;
@@ -28,24 +28,24 @@ public class Box {
         this.full = false;
     }
 
-    // Methode, um die Dimensionen anzupassen
+    // Method to set dimensions
     public void setDims(int lIn, int wIn, int hIn) {
         this.length = lIn;
         this.width = wIn;
         this.height = hIn;
     }
 
-    // Methode, um die Kapazität zu erhalten (optional)
+    // Method to get capacity (optional)
     public int getCapacity() {
         return this.length * this.width + this.height;
     }
 
-    // Methode, um Zustand voll/leer zu erhalten (optional)
+    // Method to get "full" status (optional)
     public boolean getFull() {
-        return(this.full);
+        return this.full;
     }
 
-    // Methode, um ein Stückgut zuzufügen
+    // Method to add a cargo object to box
     public boolean addCargo(Cargo cargoIn) {
         if(!this.full &&
         cargoIn.getLength() <= this.length &&
@@ -53,26 +53,26 @@ public class Box {
         cargoIn.getHeight() <= this.height) {
             this.full = true;
             this.cargo = cargoIn;
-            return(true);
+            return true;
         }
-        // NOTE: Kein else nötig wegen return statement
+        // NOTE: No else needed, as the method will return/exit if full
         if (this.full) {
             System.out.println("Box schon voll! Nichts zugefügt.");
-            return(false);
+            return false;
         } else {
             System.out.println("Stückgut passt nicht in die Box. " + 
             "Nichts zugefügt.");
-            return(false);
+            return false;
         }
     }
 
-    // toString Methode
+    // toString method
     public String toString() {
-        return("Box\n" +
+        return "Box\n" +
         "Länge, Breite, Höhe: " +
         this.length + ", " + this.width + ", " + this.height + "\n" +
         "Voll: " + this.full + "\n" +
-        this.cargo);
+        this.cargo;
     }
 
 }

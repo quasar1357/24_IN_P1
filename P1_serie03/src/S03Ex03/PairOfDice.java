@@ -26,10 +26,10 @@ public class PairOfDice {
 
     // Getter für Würfelwerte
     public int getPoints1() {
-        return(this.die1.getPoints());
+        return this.die1.getPoints();
     }
     public int getPoints2() {
-        return(this.die2.getPoints());
+        return this.die2.getPoints();
     }
 
     // Methode zum Werfen der beiden Würfel und gib die summe zurück
@@ -43,9 +43,9 @@ public class PairOfDice {
     }
 
     public String toString() {
-        return("Pair of Dice with values " +
+        return "Pair of Dice with values " +
         this.die1.getPoints() + " and " +
-        this.die2.getPoints());
+        this.die2.getPoints();
     }
 
 }

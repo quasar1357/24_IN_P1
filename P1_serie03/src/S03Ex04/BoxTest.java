@@ -4,7 +4,7 @@ package S03Ex04;
 
 public class BoxTest {
     /**
-     * Testklasse für Klassen Box und Cargo
+     * Test class for Box and Cargo classes
      */
 
     public static void main(String[] args) {
