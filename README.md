@@ -248,7 +248,7 @@ String arbitraryString = "arbitrary text"
 
 **Escape** symbol: \\, especially \\" for an actual double quote
 
-Shortcut for **concatenation**: `"abc" + "def" + 1` (other types are auto-converted)
+Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-converted if **any one** is a String
 
 
 - `String(`String `p)`: constructor; instantiates together with *new* operator a string object
