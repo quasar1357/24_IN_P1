@@ -64,7 +64,7 @@ public class LogIn {
             pwEnd += (char) uniCode;
         }
 
-        // 3) Concatenate the parts & print the password
+        // Concatenate the parts & print the password
         String password = pwLead + pwMid + "-" + pwEnd;
         System.out.println("Your password is: " + password);
     }
