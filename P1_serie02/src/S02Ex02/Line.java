@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Line {
     /**
-     * This program reads the coordinates of 2 points from the user
+     * Reads the coordinates of 2 points from the user
      * and calculates the slope between them.
      */
     public static void main(String[] args) {
