@@ -27,15 +27,19 @@ comment until ended with
 
 **Variables**:
 ```java
-int arbitraryVariable; // declared
-arbitraryVariable = 100; // assigned value
+int variableOne; // declared
+variableOne = 100; // assigned value
 // OR
-int arbitraryVariable = 100; declare and assign
+int variableTwo = 100; declare and assign
 ```
 ```java
 int variableOne, variabelTwo, ... ; // declare multiple at once
 // OR
 int variableOne = 100, variableTwo; // declare both, assign one
+```
+Variable that shall only be assigned once during the program:
+```java
+final int variableThree;
 ```
 
 **Constants**:
@@ -96,7 +100,7 @@ int count = 17;
 double num = count; // will be 17.0
 ```
 
-**Convert "down"** (e.g. double to int): would give err --> need **cast operation**
+**Convert "down"** (e.g. double to int): assignment would give err --> need **cast operation**
 ```java
 int count = (int) num; // cast num into int, then assignment works
 ```
@@ -115,9 +119,9 @@ A **single character**, declared within **single quotes**
 char arbitraryChar = 'a';
 ```
 
-Note: **string is NOT a primitive data type**, but a class!
+Note: **string is NOT a primitive data type**, but a class! (Details see later, Wrapper Classes...)
 
-However, it is an exception in that it can be created without "new" command:
+However, it is an exception in that it can be created **without "new" command and constructor call**:
 ```java
 String arbitraryString = "arbitrary text"
 ```
@@ -239,9 +243,9 @@ import java.util.*; // import all Classes from a Package
 
 Important: string is **NOT a primitive data type**, but a class!
 
-NOTE: Use **DOUBLE quotes**! (Not as in python single quotes...)
+NOTE: Use **DOUBLE quotes**! (single quotes not supported as in python...)
 
-However, it is an exception in that it can be **created without "new"** command:
+However, it is an exception in that it can be **created without "new"** command and constructor:
 ```java
 String arbitraryString = "arbitrary text"
 ```
