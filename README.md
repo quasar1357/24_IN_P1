@@ -71,10 +71,10 @@ import java.util.Scanner;
 ## Conventions
 
 Examples:
-- classes: StudentActivity
 - variables: currentSpeed
-- methods: getCurrentSpeed
 - constants: MAX_SPEED
+- classes: StudentActivity
+- methods: getCurrentSpeed
 
 
 Bezeichner gehören zu einer der **drei Kategorien**:
