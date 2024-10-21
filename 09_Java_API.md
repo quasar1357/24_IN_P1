@@ -102,3 +102,72 @@ import java.text.DecimalFormat;
 - ",": define where '
 - "%": use in % (--> *100 & add "%")
 - Other characters: used as is
+
+## Math
+Does not need to be imported.
+
+All methods are static, i.e. can be called directly on the class, without instantiating an object.
+
+- static double `abs(`double `num)`: Absolute value
+- static double `cos(`double `angle)`: Cosine (also existing: `sin()` und `tan()`)
+- static long `round(`double `num)`: Round to closest integer
+- static double `ceil(`double `num)`
+- static double `floor(`double `num)`
+- static double `pow(`double `x, `double `y)`: x^y
+static double sqrt(`double `x): x^0.5
+- static double `min(`double `x, `double `y)`: (also existing: `max()`)
+- static double `random()`: between 0.0 (incl.) and 1.0 (excl.)
+
+## Wrapper Classes
+
+To each primitive data type, there exists a class that wraps them and **can hold and work with values of that type**. They are particularly useful in cases that it is necessary to use objects and not primitive data types.
+
+**Wrapper Class Name: Same as primitivy data type but with capital first letter. Exceptions: Integer instead of Int and Character instead of Char.**
+
+Autoboxing and Unboxing is easy:
+
+```java
+Integer obj = 69; // auto-instantiation of Integer object
+int num = obj; // auto-extraction of int value
+```
+
+**Parsing**: numerical Wrapper functions contain *static* parse methods to read in a number in form of a string.
+```java
+String strNum = "987";
+int num = Integer.parseInt(strNum);
+```
+
+The opposite can be done with the *static* **toString methods**.
+```java
+int num = 987;
+String strNum = Integer.toString(num);
+```
+
+## ArrayList
+
+Saves a **list of objects of the same type**. Allows access and modifications through **integer indices**.
+
+ArrayList is a **generic** class, meaning the user can instantiate a parametrised type that can hold objects of one defined type.
+Importantly, ArrayLists **can only store objects**, NOT primary data types. This suggests using wrapper classes mentioned above.
+At the declaration, the user **specifies the type of the objects that can be contained** in the ArrayList.
+Naturally, the assigned object must be instantiated with the same type.
+Defining an ArrayList without type specification (holding any types) is possible, but not recommended.
+
+```java
+ArrayList<aType> aVarName = new ArrayList<aType>(); // Declaration and instantiation with the same type
+ArrayList<String> names = new ArrayList<String>(); // Example
+```
+- ```ArrayList<E>()```: Constructor, instantiates an empty list that can take objects of type E
+- boolean `add(`E `obj)`: Adds object `obj` of type "E" at the end, returns `true` if successful
+- void `add(`int `i, `E `obj)`: Adds object `obj` of type "E" at position i, shifts object currently at this position and all following objects back by one, returns `true` if successful
+- E `set(`int `i, `E `obj)`: Replaces the object at position i with obj, returns the replaced object
+- E `get(`int `i)`: Returns the element at position i
+- void `clear()`: Removes all elements from the list
+- E `remove(`int `i)`: Removes the element at position i from the list and returns it
+- int `indexOf(`E `obj)`: Returns the (smallest) index of the object obj in list; returns -1, if obj does not exist in this list
+- boolean `contains(`E `obj)`: `true` if object present at least once
+- boolean `isEmpty()`
+- int `size()`: number of objects saved in list
+- String `toString()`: "[X, Y ... ]" where X, Y etc. are the objects in string form
+
+NOTE: methods using an index return a runtime error if the index is not valid

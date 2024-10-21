@@ -27,7 +27,7 @@ Variables, constants and methods can be defined with a specific **visibility**:
 
 Variables that are declared inside a method, are called **local variables**, and can only be used within this method. Their visibility cannot be changed.
 
-Variables declared inside a class but outside methods are called **instance variables** as they are tied to instances (objects) of the class. They are available to all methods of the class. To address an instance variable of the current instance, the **"this." keyword** is used, e.g.: `this.points = 3`.
+Variables declared inside a class but outside methods are called **instance variables** as they are tied to instances (objects) of the class. They are available to all methods of the class. To address an instance variable of the current instance, the **"this.*" keyword** is used, e.g.: `this.points = 3`.
 
 Instance variables are typically defined as "private", such that they are only available within the class. Using **public variables is not recommended**, as this violates the principle of encapsulation.
 
@@ -141,7 +141,7 @@ public class AnyClass{
 
 ### Creating and Assigning Objects
 
-- We can interpret class of an object like its data type...
+- We can interpret the class of an object like its data type...
 - BUT variables for objects are only **references** to the object (not the value itself)
 - **Declare** variable of that Class --> no object yet
 - **Instantiate** ("new") --> object created (calls constructor)
@@ -170,12 +170,12 @@ circle1.setCenterX(100); // Ex.
 
 Use **static method**: use **dot operator on the Class**
 ```java
-AnyClass.anyMethod(anyParams);
+AnyClass.anyMethod(anyParams); // ... static of another class
 Quotes.printQuoteOfSteve(); // Ex. method that is pre-defined in the class "Quotes" but independent of an object
 ```
 Inside the class itself, static methods can be called without the dot operator
 ```java
-anyMethod(anyParams);
+anyMethod(anyParams); // ... static of this class
 printQuoteOfSteve(); // Ex. method that is defined in this class
 ```
 Use **constant**: use **dot operator on the Class**
