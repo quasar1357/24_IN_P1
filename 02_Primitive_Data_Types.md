@@ -10,24 +10,26 @@
 - **double ≈ ±1.7 × 10^308**
 
 
-**Convert "up"** (e.g. int to double): no problem
+**Convert "up"** (e.g. assign int to double): no problem
 ```java
 int count = 17;
 double num = count; // will be 17.0
 ```
 
-**Convert "down"** (e.g. double to int): assignment would give err --> need **cast operation**
+**Convert "down"** (e.g. assign double to int): assignment would give err --> need **cast operation**
 ```java
 int count = (int) num; // cast num into int, then assignment works
 ```
+**Casting**:
 ```java
-a = (double) (a * b) // (a * b) will be calculated with int logic then type-casted to double
+int c = (int) (a * b) // (a * b) calculated with double logic then type-casted to int
+double c = (int) a * b // a casted to int and then converted to double through multiplication
 ```
 
 **Operations**:
+- types: two ints --> int; else --> float/double...
 - ```+, -, *, /``` as usual (also priority)
 - modulo = ```%``` ; priority as ```*``` and ```/```, also on floats/doubles...
-- types: two ints --> int; else --> float/double...
 - ```++``` and ```--``` --> + and - 1; e.g. ```arbVar++```
 - ```+=``` etc.; e.g. ```arbVar += 10```
 
@@ -35,22 +37,22 @@ a = (double) (a * b) // (a * b) will be calculated with int logic then type-cast
 
 A **single character**, declared within **single quotes**
 ```java
-char arbitraryChar = 'a';
+char aCharVar = 'a';
 ```
 
 Note: **string is NOT a primitive data type**, but a class!
 
 However, it is an exception in that it can be created **without "new" command and constructor call**:
 ```java
-String arbitraryString = "arbitrary text"
+String aStringVar = "arbitrary text"
 ```
-*Details about strings, see below (API classes)*
+*Details about strings, see  chapter Java API*
 
 ## 3) Booleans
 
 Only possible values: **true** or **false**
 ```java
-boolean arbitraryBool = false;
+boolean aBoolVar = false;
 ```
 
 **Create and combine booleans**:
@@ -58,7 +60,7 @@ boolean arbitraryBool = false;
 - **Logical** Operators: AND = ```&&``` ; OR = ```||``` ; XOR = ```^``` ; NOT = ```!``` (e.g. ```!a```)
 - **Priorities**:
 
-    0. () (& artihm. Op.)
+    0. () (and artihmetic Operations)
     1. NOT
     2. XOR
     3. AND

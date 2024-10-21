@@ -1,6 +1,6 @@
 # Using Java API classes
 
-## 1) Strings
+## Strings
 
 Important: string is **NOT a primitive data type**, but a class!
 
@@ -29,7 +29,31 @@ Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-conver
 
 Strings are **immutable** --> all methods return a new String object
 
-## 2) Scanner
+## System (Output/Input)
+
+Does not need to be imported.
+
+### Output
+```java
+System.out.println("arbitrary text") // prints with trailing line break
+System.out.print("arbitrary text") // prints without line break
+// NOTE: System.out = Objekt; repräsentiert Ausgabegerät
+```
+
+### Input
+`System.in`, usually used together with the Scanner class, see below.
+Example:
+```java
+import java.util.Scanner;
+...
+    Scanner scan = new Scanner(System.in);
+    String arbitraryStringVar = scan.next();
+    int arbitraryIntVar = scan.nextInt();
+    double arbitraryDoubleVar = scan.nextDouble();
+    ...
+```
+
+## Scanner
 ```java
 import java.util.Scanner
 ```
@@ -42,12 +66,14 @@ import java.util.Scanner
 - boolean `hasNext()`: any more items?
 
 ```java
-Scanner lineScanner = new Scanner(names);
-lineScanner.useDelimiter(", ");
-String name1 = lineScanner.next();
+Scanner nameScanner = new Scanner(namesFile);
+nameScanner.useDelimiter(", ");
+String name1 = nameScanner.next();
+String name2 = nameScanner.next();
+...
 ```
 
-## 3) Random
+## Random
 ```java
 import java.util.Random;
 ```
@@ -59,7 +85,7 @@ import java.util.Random;
 
 **Adjust and combine** to the needs (e.g. add and multiply to move boarders and extend range)
 
-## 4) DecimalFormat
+## DecimalFormat
 
 ```java
 import java.text.DecimalFormat;
