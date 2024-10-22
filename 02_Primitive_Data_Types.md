@@ -50,7 +50,7 @@ String aStringVar = "arbitrary text"
 
 ## 3) Booleans
 
-Only possible values: **true** or **false**
+Only two possible values: **true** or **false**
 ```java
 boolean aBoolVar = false;
 ```

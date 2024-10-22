@@ -1,6 +1,7 @@
 # OOP: Classes, Objects & Methods
-**GENERAL: Class definition vs. object instantiation (vs. variable assignment)**:
-Class definition outlines the blueprint, while instantiation creates an actual instance (object) based on that blueprint.
+**GENERAL DISTINCTION: Class definition vs. object instantiation (vs. variable assignment)**
+
+Class definition outlines the blueprint, while instantiation creates an actual instance (object) based on that blueprint. Multiple, different instances/objects of a single class may be built.
 
 ## 1) Defining Classes
 **Class structure**:
@@ -24,7 +25,6 @@ Variables, constants and methods can be defined with a specific **visibility**:
 ![visibility](visibility.png)
 
 ### Variables and Constants
-
 Variables that are declared inside a method, are called **local variables**, and can only be used within this method. Their visibility cannot be changed.
 
 Variables declared inside a class but outside methods are called **instance variables** as they are tied to instances (objects) of the class. They are available to all methods of the class. To address an instance variable of the current instance, the **"this.*" keyword** is used, e.g.: `this.points = 3`.
@@ -33,8 +33,20 @@ Instance variables are typically defined as "private", such that they are only a
 
 **Constants** can be private or public, in which case they can be seen as a "service" to external sources.
 
-### Defining Methods
+### Static Methods
+Methods that belong to the class itself, not to any instance are declared/defined as "static". They can be called **without instantiating an object**.
 
+```java
+public class AnyClass{
+    ...
+    public static anyType anyMethod(aType anArg){
+        ... // Do something independently of any instances...
+    }
+    ...
+}
+```
+
+### Defining Methods
 - Private methods = **"support methods"**
 - Public methods = **"service methods"**
 
@@ -74,6 +86,7 @@ public class AnyClass{
     ...
 }
 ```
+
 ### Constructor Method
 Is called when **a new instance is created**. Its name is always the same as the class. It contains no return type (also not void, as it returns the address of the instance).
 
@@ -89,19 +102,6 @@ public class AnyClass{
     ... // Define the initial state of the object given NO argument (e.g. using default values)
 }
 ```
-
-### Static Methods
-Methods that can be called **without instantiating an object** of the class, are defined as "static". They belong to the class itself, not to any instance of the class.
-```java
-public class AnyClass{
-    ...
-    public static anyType anyMethod(aType anArg){
-        ... // Do something independently of any instances...
-    }
-    ...
-}
-```
-
 
 ### Getters/Setters
 Since instance variables should typically be private, they cannot be accessed from the outside. However, **controlled access** can be granted through methods. Setters grant control as they typically check the input before assigning it to an instance variable, and may include validation or transformations before setting the value.
@@ -168,20 +168,31 @@ anyObject.anyMethod(anyParameters); // ... of another object
 circle1.setCenterX(100); // Ex.
 ```
 
-Use **static method**: use **dot operator on the Class**
+To use a **static method** or access a **static constant**, we apply **dot operator on the Class**:
 ```java
 AnyClass.anyMethod(anyParams); // ... static of another class
 Quotes.printQuoteOfSteve(); // Ex. method that is pre-defined in the class "Quotes" but independent of an object
 ```
-Inside the class itself, static methods can be called without the dot operator
+```java
+AnyClass.ANY_CONSTANT; // using static constants (outside the class)
+double circleCirc = circleDiam * Math.PI; // Using the pi constant from Math module
+```
+
+Inside the class itself, static methods and static constants can be called/accessed without the dot operator:
 ```java
 anyMethod(anyParams); // ... static of this class
 printQuoteOfSteve(); // Ex. method that is defined in this class
 ```
-Use **constant**: use **dot operator on the Class**
+Note: There can also be non-static constants (declared outside methods, and can be public or private). They belong to an instance and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
 ```java
-AnyClass.ANY_CONSTANT
-Math.PI // the constant for pi from the Math class of the API
+// Example:
+class Car {
+    private final int maxSpeed;
+    
+    public Car(int maxSpeedIn) {
+        this.maxSpeed = maxSpeedIn; // Setting the constant to the input at the instantiation
+    }
+}
 ```
 
 ### Importing Classes

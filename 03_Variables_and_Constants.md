@@ -1,6 +1,7 @@
 # Variables and Constants
 
 ## Declaration and Assignment
+Declaration always with type, assignment of a value with `=`.
 ```java
 int variableOne; // declared
 variableOne = 100; // assigned value
@@ -12,13 +13,9 @@ int variableOne, variabelTwo, ... ; // declare multiple at once
 // OR
 int variableOne = 100, variableTwo; // declare both, assign one
 ```
-Variable that shall only be **assigned once** during the program:
-```java
-final int variableThree;
-```
 
 ### Constants
-Constants are per definition "final", and assigned at the definition.
+Constants are declared as `final`, meaning they can be assigned exactly once:
 ```java
 final int ARBITRARY_CONSTANT = 500;
 ```
@@ -42,7 +39,8 @@ final int ARBITRARY_CONSTANT = 500;
 
 **Conventions**:
 - **Variables**: camelCase, e.g. ```currentSpeed```
-- **Constants**: CAPITAL_SNAKE_CASE, e.g. ```MAX_SPEED```
+- **Constants (static)**: CAPITAL_SNAKE_CASE, e.g. ```MAX_SPEED```
+- (Non-static constants: camelCase; see OOP)
 - **Classes**: PascalCase, e.g. ```SpeedSensor```
 - **Methods**: camelCase, e.g. ```getCurrentSpeed```
 
