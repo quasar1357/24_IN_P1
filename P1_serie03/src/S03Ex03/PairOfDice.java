@@ -18,10 +18,10 @@ public class PairOfDice {
 
     // Setter für Würfelwerte
     public void setPoints1(int dieVal) {
-        this.die1.setPoints(dieVal);
+        this.die1.setPoints(dieVal); // Input values are checked in Dice Class
     }
     public void setPoints2(int dieVal) {
-        this.die2.setPoints(dieVal);
+        this.die2.setPoints(dieVal); // Input values are checked in Dice Class
     }
 
     // Getter für Würfelwerte
@@ -34,6 +34,7 @@ public class PairOfDice {
 
     // Methode zum Werfen der beiden Würfel und gib die Summe zurück
     public int rollDice() {
+        // roll() returns the value of the die; but also sets the value of the die
         return this.die1.roll() + this.die2.roll();
     }
 

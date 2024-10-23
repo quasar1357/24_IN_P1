@@ -39,7 +39,10 @@ public class BoxTest {
 
         // Definiere eine grosse Box aber (noch) ohne Parameter
         Box largeBox = new Box();
+        // Printe die grosse Box ohne Dimensionen
+        System.out.println(largeBox);
         // Setze die Dimensionen der grossen Boxe
+        System.out.println("Setze Dimensionen der grossen Boxe...");
         largeBox.setDims(20, 20, 40);
         // Gib die grosse Box aus
         System.out.println(largeBox);

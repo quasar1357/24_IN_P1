@@ -13,7 +13,7 @@ public class Car {
     private String brand, model;
     private int releaseYear;
     // Grenzwert für Alter für antike Autos
-    private final int antiqueThresh = 45;
+    private static final int ANTIQUE_THRESH = 45;
 
     // Konstruktor mit allen drei Parametern
     public Car(String brandIn, String modelIn, int yearIn) {
@@ -52,13 +52,13 @@ public class Car {
     public boolean isAntique() {
         int currentYear = Year.now().getValue();
         int age = currentYear - this.releaseYear;
-        return (age > antiqueThresh);
+        return (age > ANTIQUE_THRESH);
     }
 
     // toString Methode fürs Printen
     public String toString() {
         return "MODEL: " + this.model +
-        "\nBRAND: " + this.brand +
-        "\nYEAR:  " + this.releaseYear;
+             "\nBRAND: " + this.brand +
+             "\nYEAR:  " + this.releaseYear;
     }
 }

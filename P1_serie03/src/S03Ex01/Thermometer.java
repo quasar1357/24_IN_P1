@@ -10,7 +10,7 @@ public class Thermometer {
 
     // Temperatur in Celcius
     private double temp;
-    // Einheit der Temperatur (Boolean mit True = Celsius, False = Fahrenheit)
+    // Einheit der Temperatur (Boolean mit true = Celsius, false = Fahrenheit)
     private boolean inC = true;
 
     // Konstruktor ohne Argumente; setzt die Temperatur auf 37.0 Grad Celsius
@@ -63,7 +63,7 @@ public class Thermometer {
         if (inC) {
             this.temp = 37.0;
         } else {
-            this.temp = fahrenheitToCelsius(98.6);
+            this.temp = 98.6;
         }
     }
 

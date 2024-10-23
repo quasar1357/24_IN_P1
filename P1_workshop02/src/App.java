@@ -1,5 +1,14 @@
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        switch('B') {
+            case 'A' :            System.out.print("A ");
+
+            case 'B' :            System.out.print("B ");
+
+            case 'C' :            System.out.print("C ");
+
+            case 'D' :            System.out.print("D ");
+        }
+
     }
 }
