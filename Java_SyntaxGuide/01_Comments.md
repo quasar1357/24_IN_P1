@@ -1,5 +1,5 @@
 # Comments:
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 ```java
 // comment on one line
 ```
@@ -16,4 +16,4 @@ comment until ended with
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

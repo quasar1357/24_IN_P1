@@ -1,5 +1,5 @@
 # Primitive Data Types
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## 1) Numbers
 
@@ -69,4 +69,4 @@ boolean aBoolVar = false;
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

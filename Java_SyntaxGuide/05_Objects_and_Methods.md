@@ -1,5 +1,5 @@
 # Objects and Methods
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## Creating and Assigning Objects
 
@@ -70,4 +70,4 @@ import java.util.*; // import all Classes from a Package
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

@@ -1,5 +1,5 @@
 # Combinations of final vs. non-final, public vs. private, and static vs. non-static
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## 1. Private Instance Variable: private + non-final + non-static
 
@@ -78,4 +78,4 @@ public | final | static | Public class constant (global "service" constants)
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

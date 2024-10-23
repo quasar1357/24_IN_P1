@@ -1,5 +1,5 @@
 # Using Java API classes
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## Strings
 
@@ -175,4 +175,4 @@ NOTE: methods using an index return a runtime error if the index is not valid
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

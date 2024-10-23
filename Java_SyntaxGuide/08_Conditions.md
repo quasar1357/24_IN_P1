@@ -1,5 +1,5 @@
 # Conditions
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## Simple **if**
 ```java
@@ -57,4 +57,4 @@ if (arbBool){
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

@@ -1,5 +1,5 @@
 # Classes
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 **GENERAL DISTINCTION: Class definition vs. object instantiation (vs. variable assignment)**
 
@@ -142,4 +142,4 @@ public class AnyClass{
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

@@ -1,5 +1,5 @@
 # Variables and Constants
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## Declaration and Assignment
 Declaration always with type, assignment of a value with `=`.
@@ -53,4 +53,4 @@ Identifiers belong to one of **three categories**:
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

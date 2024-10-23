@@ -1,5 +1,5 @@
 # Loops
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 ## While Loops
 ```java
@@ -20,4 +20,4 @@ do {
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)

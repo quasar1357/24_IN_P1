@@ -1,5 +1,5 @@
 # Generics
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
 
 A class can be defined in a way that it **can use objects of multiple types**. For this, it uses a "formal type variable/parameter" (e.g. T). When an object is instatiated, it has to be declared for a certain type through an "type argument" (e.g. <int>). In that object, **any occurence of the formal type variable is then replaced by that type argument**. Generics provide type safety by ensuring that the type used is consistent at compile time.
 
@@ -45,4 +45,4 @@ Rocket<Human> humanRocket = new Rocket<Human>();
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide)
+[Back to overview](./00_Java_SyntaxGuide.md)
