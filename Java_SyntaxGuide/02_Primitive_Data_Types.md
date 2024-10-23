@@ -1,4 +1,5 @@
 # Primitive Data Types
+[Back to overview](./00_Java_SyntaxGuide)
 
 ## 1) Numbers
 
@@ -46,7 +47,7 @@ However, it is an exception in that it can be created **without "new" command an
 ```java
 String aStringVar = "arbitrary text"
 ```
-*Details about strings, see  chapter Java API*
+*Details about strings, see  chapter [Java API](10_Java_API.md).*
 
 ## 3) Booleans
 
@@ -65,3 +66,7 @@ boolean aBoolVar = false;
     2. XOR
     3. AND
     4. OR
+
+---
+
+[Back to overview](./00_Java_SyntaxGuide)

@@ -1,4 +1,5 @@
 # Variables and Constants
+[Back to overview](./00_Java_SyntaxGuide)
 
 ## Declaration and Assignment
 Declaration always with type, assignment of a value with `=`.
@@ -30,9 +31,9 @@ final int ARBITRARY_CONSTANT = 500;
 - **Boolean** (true and false): `boolean flag = true;`
 - **Null** Literal (variable does not point to anything or to the "empty" object): `String str = null;`
 
-**Strings**: Assigning a String literal to a variable, automatically creates a **String object** (see chapter Java API). This is an exception, as usually objects first need to be explicitly instantiated (see chapter OOP).
+**Strings**: Assigning a String literal to a variable, automatically creates a **String object** (*see chapter [Java API](07_Generics.md)*. This is an exception, as usually objects first need to be explicitly instantiated (*see chapter about [Objects](05_Objects_and_Methods.md)*).
 
-**Primitive Data Types**: When assigning a literal of a primitive Data Type, the variable points **to the value itself**, which cannot be changed. This is different for object references (see chapter OOP).
+**Primitive Data Types**: When assigning a literal of a primitive Data Type, the variable points **to the value itself**, which cannot be changed. This is different for object references (*see chapter about [Objects](05_Objects_and_Methods.md)*).
 
 
 ## Naming
@@ -40,7 +41,7 @@ final int ARBITRARY_CONSTANT = 500;
 **Conventions**:
 - **Variables**: camelCase, e.g. ```currentSpeed```
 - **Constants (static)**: CAPITAL_SNAKE_CASE, e.g. ```MAX_SPEED```
-- (Non-static constants: camelCase; see OOP)
+- (Non-static constants: camelCase; *see chapter about [Objects](05_Objects_and_Methods.md)*)
 - **Classes**: PascalCase, e.g. ```SpeedSensor```
 - **Methods**: camelCase, e.g. ```getCurrentSpeed```
 
@@ -49,3 +50,7 @@ Identifiers belong to one of **three categories**:
 1. **Reserved** for a specific purpose in Java (class, int, ...)
 2. Designate something from the **Java API** (system, main, println, ...)
 3. Designate something from **this program** (own class/method/variable)
+
+---
+
+[Back to overview](./00_Java_SyntaxGuide)

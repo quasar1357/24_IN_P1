@@ -1,4 +1,5 @@
 # Comments:
+[Back to overview](./00_Java_SyntaxGuide)
 ```java
 // comment on one line
 ```
@@ -12,3 +13,7 @@ comment until ended with
 * automatic generation of documentation
 */
 ```
+
+---
+
+[Back to overview](./00_Java_SyntaxGuide)

@@ -1,12 +1,15 @@
-# OOP: Classes, Objects & Methods
+# Classes
+[Back to overview](./00_Java_SyntaxGuide)
+
 **GENERAL DISTINCTION: Class definition vs. object instantiation (vs. variable assignment)**
 
 Class definition outlines the blueprint, while instantiation creates an actual instance (object) based on that blueprint. Multiple, different instances/objects of a single class may be built.
 
-## 1) Defining Classes
 **Class structure**:
 
 ![class_structure](class_structure.png)
+
+## Defining a Class
 
 ### Class head
 `aVisibility class AnyClassName { ... }`
@@ -16,8 +19,8 @@ public class MyClass {
 }
 ```
 
-### Visibility
-Variables, constants and methods can be defined with a specific **visibility**:
+### Visibility Modifiers
+Variables, constants and methods can be defined with a specific **visibility** and its according modifier:
 - **Private**: only visible within the class
 - **Public**: also visible and accessible from other classes
 - **Protected**: The variable is accessible within the same package and by subclasses (even if they're in a different package)
@@ -70,10 +73,12 @@ public class AnyClass{
 ```java
 return this.anyVar; // an instance variable
 
-return finalResult; // a local variable
+return endResult; // a local variable
 
 ... // or any other expression (but only one value/object)
 ```
+
+## Special Methods
 
 ### Main Method
 The main method contains commands that we want to be **executed** when running the program. It is mandatory for classes that are designed to be the entry point of a Java program.
@@ -135,113 +140,6 @@ public class AnyClass{
 }
 ```
 
-
-
-## 2) Creating Objects & Using Methods
-
-### Creating and Assigning Objects
-
-- We can interpret the class of an object like its data type...
-- BUT variables for objects are only **references** to the object (not the value itself)
-- **Declare** variable of that Class --> no object yet
-- **Instantiate** ("new") --> object created (calls constructor)
-- **Assign** to variable --> points to that object
-- **Reassign** --> points to **different object (= Aliases)**!
-- **Change** object --> **all** variables pointing to it change!
-
 ---
 
-**Create object = declare (left), instantiate (right) and assign (=)**:
-![alt text](creating_objects.png)
-
-```java
-AnyClass anyObject = new AnyClass(anyParameters);
-Circle circle1 = new Circle(40, 40, 10); // Ex.
-```
----
-### Using Methods and Constants
-
-Call methods of an object: use **dot operator on the Object**
-
-```java
-anyObject.anyMethod(anyParameters); // ... of another object
-circle1.setCenterX(100); // Ex.
-```
-
-To use a **static method** or access a **static constant**, we apply **dot operator on the Class**:
-```java
-AnyClass.anyMethod(anyParams); // ... static of another class
-Quotes.printQuoteOfSteve(); // Ex. method that is pre-defined in the class "Quotes" but independent of an object
-```
-```java
-AnyClass.ANY_CONSTANT; // using static constants (outside the class)
-double circleCirc = circleDiam * Math.PI; // Using the pi constant from Math module
-```
-
-Inside the class itself, static methods and static constants can be called/accessed without the dot operator:
-```java
-anyMethod(anyParams); // ... static of this class
-printQuoteOfSteve(); // Ex. method that is defined in this class
-```
-Note: There can also be non-static constants (declared outside methods, and can be public or private). They belong to an instance and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
-```java
-// Example:
-class Car {
-    private final int maxSpeed;
-    
-    public Car(int maxSpeedIn) {
-        this.maxSpeed = maxSpeedIn; // Setting the constant to the input at the instantiation
-    }
-}
-```
-
-### Importing Classes
-Imports are done **before class definitions**.
-```java
-// Examples:
-import java.util.Scanner; // import specific Class
-import java.util.*; // import all Classes from a Package
-```
-
-## 3) Generics
-A class can be defined in a way that it **can use objects of multiple types**. For this, it uses a "formal type variable/parameter" (e.g. T). When an object is instatiated, it has to be declared for a certain type through an "type argument" (e.g. <int>). In that object, **any occurence of the formal type variable is then replaced by that type argument**. Generics provide type safety by ensuring that the type used is consistent at compile time.
-
-```java
-public class MyGenericClass<T> {
-    private T aVar; // Define a variable that can be of various types
-    public MyGenericClass(T anyArg) { // constructor
-    this.aVar = anyArg; // Set this variable (given an input of the chose type)
-    }
-    public void setVar(T anyArg) {
-        this.aVar = anyArg; // Setter
-    }
-    ...
-}
-
-// Outside, instantiation:
-MyGenericClass<aType> objectName = new MyGenericClass<aType>(anyArg);
-```
-
-Example:
-```java
-public class Rocket<T> { // A rocket that can transport different things
-    private T cargo; // Instance variabel
-    public Rocket(T cargo) { // Constructor
-        this.cargo = cargo;
-    }
-
-    public void set(T cargo) { // Setter
-        this.cargo = cargo;
-    }
-
-    public T getCargo() { // Getter
-        return this.cargo;
-    }
-}
-
-// Outside:
-Rocket<Dog> dogRocket = new Rocket<Dog>();
-Rocket<Human> humanRocket = new Rocket<Human>();
-```
-
-![generics](generics.png)
+[Back to overview](./00_Java_SyntaxGuide)

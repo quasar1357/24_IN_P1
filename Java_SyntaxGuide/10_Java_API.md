@@ -1,4 +1,5 @@
 # Using Java API classes
+[Back to overview](./00_Java_SyntaxGuide)
 
 ## Strings
 
@@ -171,3 +172,7 @@ ArrayList<String> names = new ArrayList<String>(); // Example
 - String `toString()`: "[X, Y ... ]" where X, Y etc. are the objects in string form
 
 NOTE: methods using an index return a runtime error if the index is not valid
+
+---
+
+[Back to overview](./00_Java_SyntaxGuide)
