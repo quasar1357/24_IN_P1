@@ -20,8 +20,9 @@ Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-conver
 - `String(`String `p)`: constructor; instantiates together with *new* operator a string object
 - char `charAt(`int `index)`: character at position *index*
 - String `concat(`String `p)`: object + p
-- boolean `equals(`String `p)`: exactly same chaaracters and order?
+- boolean `equals(`String `p)`: if exactly same characters and order
 - boolean `equalsIgnoreCase(`String `p)`
+- int `compareTo(`String `p)`: positive if larger than p, negative if smaller, 0 if equal (Unicode stepwise from left to right, see below)
 - int `length()`
 - String `replace(`char `oldChar, `char `newChar)`
 - String `substring(`int `offset, `int `endIndex)`: from (incl.) offset to endIndex (excl.)
@@ -29,6 +30,8 @@ Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-conver
 - String `toUpperCase()`
 
 Strings are **immutable** --> all methods return a new String object
+
+![unicode](unicode.png)
 
 ## System (Output/Input)
 

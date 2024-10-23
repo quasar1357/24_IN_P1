@@ -41,7 +41,7 @@ A **single character**, declared within **single quotes**
 char aCharVar = 'a';
 ```
 
-Note: **string is NOT a primitive data type**, but a class!
+NOTE: **string is NOT a primitive data type**, but a class!
 
 However, it is an exception in that it can be created **without "new" command and constructor call**:
 ```java
@@ -66,6 +66,8 @@ boolean aBoolVar = false;
     2. XOR
     3. AND
     4. OR
+
+NOTE: Equals `==` should **not be used on floating point numbers** (e.g. doubles); use a constant TOLERANCE to check the difference instead.
 
 ---
 
