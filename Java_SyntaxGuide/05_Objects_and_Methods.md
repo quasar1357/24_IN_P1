@@ -1,5 +1,7 @@
-# Objects and Methods
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Objects and Methods
 
 ## Creating and Assigning Objects
 
@@ -45,7 +47,7 @@ anyMethod(anyParams); // ... static of this class
 printQuoteOfSteve(); // Ex. method that is defined in this class
 ```
 
-NOTE: There can also be **non-static constants** (declared outside methods, and can be public or private). They belong to an instance - and are therefore addressed by the dot operator on the object (from outside) or using `this. ` (inside the class) - and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
+NOTE: There can also be **non-static constants** (declared outside methods, and can be public or private). They belong to an instance - and are therefore addressed by the dot operator on the object (from outside) or using `this.*` (inside the class) - and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
 ```java
 // Example:
 class Car {

@@ -1,5 +1,7 @@
-# Loops
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Loops
 
 ## While Loops
 ```java

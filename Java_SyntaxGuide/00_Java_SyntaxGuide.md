@@ -1,6 +1,6 @@
 ## Contents
 
-01. [Comments](./01_Comments.md)
+01. [Comments](./01_Commands_and_Comments.md)
 02. [Primitive Data Types](./02_Primitive_Data_Types.md)
 03. [Variables and Constants](./03_Variables_and_Constants.md)
 04. [Classes](./04_Classes.md)

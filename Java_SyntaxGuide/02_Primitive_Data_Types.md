@@ -1,5 +1,7 @@
-# Primitive Data Types
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Primitive Data Types
 
 ## 1) Numbers
 

@@ -1,11 +1,13 @@
-# Variables and Constants
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Variables and Constants
 
 ## Declaration and Assignment
 Declaration always with type, assignment of a value with `=`.
 ```java
-int variableOne; // declared
-variableOne = 100; // assigned value
+int variableOne; // declare
+variableOne = 100; // assign value
 // OR
 int variableTwo = 100; declare and assign
 ```
@@ -31,7 +33,7 @@ final int ARBITRARY_CONSTANT = 500;
 - **Boolean** (true and false): `boolean flag = true;`
 - **Null** Literal (variable does not point to anything or to the "empty" object): `String str = null;`
 
-**Strings**: Assigning a String literal to a variable, automatically creates a **String object** (*see chapter [Java API](07_Generics.md)*. This is an exception, as usually objects first need to be explicitly instantiated (*see chapter about [Objects](05_Objects_and_Methods.md)*).
+**Strings**: Assigning a String literal to a variable, automatically creates a **String object** (*see chapter [Java API](07_Generics.md)*). This is an exception, as usually objects first need to be explicitly instantiated (*see chapter about [Objects](05_Objects_and_Methods.md)*).
 
 **Primitive Data Types**: When assigning a literal of a primitive Data Type, the variable points **to the value itself**, which cannot be changed. This is different for object references (*see chapter about [Objects](05_Objects_and_Methods.md)*).
 

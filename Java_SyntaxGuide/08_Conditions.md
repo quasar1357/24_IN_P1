@@ -1,5 +1,7 @@
-# Conditions
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Conditions
 
 ## if and else Statements
 ### Simple **if**
@@ -57,7 +59,7 @@ if (arbBool){
 ```
 
 ## Switch Statement
-The `switch` command let's the user go through a block and enter at positions, depending on the values of the given variable.
+The `switch` command let's the user go through a block and **enter at positions, depending on the value** of the given variable.
 
 If we do not `break` in a given case, it will go through all following cases.
 
@@ -79,7 +81,7 @@ switch(anyVar) {
 ```
 
 ## Conditional Operator
-Given a boolean (or a statement that creates one), the operator return one of two values, the first one if the boolean is true, the second one if it is false.
+Given a boolean (or a statement that creates one), the operator **returns one of two values**, the first one if the boolean is true, the second one if it is false.
 
 ```java
 anyBool ? valOne : valTwo;

@@ -1,20 +1,22 @@
-# Using Java API classes
 [Back to overview](./00_Java_SyntaxGuide.md)
+
+---
+# Using Java API classes
 
 ## Strings
 
 Important: string is **NOT a primitive data type**, but a class!
+However, it is an exception in that it can be **created without "new" command and without explicitly calling the constructor**:
 
 NOTE: Use **DOUBLE quotes**! (single quotes not supported as in python...)
 
-However, it is an exception in that it can be **created without "new"** command and constructor:
 ```java
 String arbitraryString = "arbitrary text"
 ```
 
 **Escape** symbol: \\, especially \\" for an actual double quote
 
-Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-converted if **any one** is a String
+Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-converted if **any one** is a String.
 
 
 - `String(`String `p)`: constructor; instantiates together with *new* operator a string object
