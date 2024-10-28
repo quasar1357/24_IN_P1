@@ -10,20 +10,20 @@ public class Coin {
         this.flip();
     }
 
-public void flip(){
-    isHeads = rand.nextBoolean();
-}
+    public void flip(){
+        isHeads = rand.nextBoolean();
+    }
 
-public boolean getIsHeads() {
-    return isHeads;
-}
+    public boolean getIsHeads() {
+        return isHeads;
+    }
 
-public boolean equals(Coin otherCoin){
-    return otherCoin.getIsHeads() == this.isHeads;
-}
+    public boolean equals(Coin otherCoin){
+        return otherCoin.getIsHeads() == this.isHeads;
+    }
 
-public String toString() {
-    return (isHeads ? "Kopf" : "Zahl");
-}
+    public String toString() {
+        return (isHeads ? "Kopf" : "Zahl");
+    }
 
 }
