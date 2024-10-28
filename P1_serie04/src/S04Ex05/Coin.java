@@ -25,5 +25,4 @@ public class Coin {
     public String toString() {
         return (isHeads ? "Kopf" : "Zahl");
     }
-
 }

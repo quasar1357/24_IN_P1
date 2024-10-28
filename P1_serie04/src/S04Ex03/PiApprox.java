@@ -35,5 +35,4 @@ public class PiApprox {
         } while(num==0.0);
         return num;
     }
-
 }

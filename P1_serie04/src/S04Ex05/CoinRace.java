@@ -20,5 +20,4 @@ public class CoinRace {
         if(headsRow1==ROW_TO_WIN && headsRow2==ROW_TO_WIN) System.out.println("Unentschieden!");
         else System.out.println((headsRow1==ROW_TO_WIN ? "Münze 1" : "Münze 2") + " gewinnt");
     }
-
 }
