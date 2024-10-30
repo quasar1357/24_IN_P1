@@ -9,10 +9,13 @@ public class Gregor {
         String again;
         boolean isLeap;
         do {
+            // Get year from user
             System.out.println("Gib ein Jahr ein (nach 1582): ");
             int yearIn = scan.nextInt();
+            // Check if leap year and print result
             isLeap = IsLeapYear(yearIn);
             System.out.println("Dies ist " + (isLeap ? "" : "k") + "ein Schaltjahr");
+            // Ask user if they want to go again
             System.out.println("Nochmals? (y/n) ");
             again = scan.next();
         } while(again.equalsIgnoreCase("y"));

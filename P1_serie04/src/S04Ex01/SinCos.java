@@ -13,7 +13,7 @@ public class SinCos {
             int intTwo = rand.nextInt(MAX_VAL) + 1;
             // System.out.println(""+intOne + " "+intTwo + " | " + count);
             int sumVal = intOne + intTwo;
-            System.out.println("value one: " + intOne + ", " + 
+            System.out.println("value one: " + intOne + ", " +
                                "value two: " + intTwo + ", " +
                                "sum: " + sumVal + ", " +
                                "sinus: " + Math.sin(Math.toRadians(sumVal)) + ", " +

@@ -9,6 +9,7 @@ public class PairOfDice {
     private Dice dice2;
     private ArrayList<Integer> rolls;
 
+    // Constuctor with points
     public PairOfDice(int sidesIn, int pointsIn1, int pointsIn2) {
         this.sides = sidesIn;
         this.dice1 = new Dice(sidesIn, pointsIn1);
@@ -17,7 +18,7 @@ public class PairOfDice {
         rolls.add(pointsIn1);
         rolls.add(pointsIn2);
     }
-
+    // Constructor without points
     public PairOfDice(int sidesIn) {
         this.sides = sidesIn;
         this.dice1 = new Dice(sidesIn);
@@ -27,6 +28,7 @@ public class PairOfDice {
         this.rolls.add(dice2.getPoints());
     }
 
+    // roll method
     public int roll() {
         int points1 = this.dice1.roll();
         int points2 = this.dice2.roll();
@@ -35,30 +37,27 @@ public class PairOfDice {
         return points1 + points2;
     }
 
+    // getters and setters
     public int getPoints1() {
         return this.dice1.getPoints();
     }
-
     public int getPoints2() {
         return this.dice2.getPoints();
     }
-
     public ArrayList<Integer> getRolls() {
         return this.rolls;
     }
-
     public int getSides() {
         return this.sides;
     }
-
     public void setPoints1(int pointsIn) {
         this.dice1.setPoints(pointsIn);
     }
-
     public void setPoints2(int pointsIn) {
         this.dice2.setPoints(pointsIn);
     }
 
+    // toString method
     public String toString() {
         return "Pair of dice with " + this.sides + " sides and points " + this.points1 + " and " + this.points2;
     }
