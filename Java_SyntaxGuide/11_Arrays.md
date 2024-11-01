@@ -7,8 +7,8 @@
 
 - Arrays are **part of Java** (not "written in Java")
 - Arrays in Java **are Objects**
-- At instatntiation we **have to define the length**
-- **Length can not be changed** afterwards
+- At instantiation we **have to define the length**
+- An array's **length can not be changed** afterwards
 
 ```java
 aType[] aVarName; // Declaration
@@ -29,7 +29,7 @@ int[] scores = {5, 3, 22, 31, 5, 18, 12, 55, 17, 17};
 
 - Elements can be **objects or primitive data types**
 - When the array is instantiated, it reserves space for the objects, but **does NOT instantiate the objects** themselves
-- **For primitive data types, default values** are given, e.g. `0` for numericals and `false` for booleans
+- **For primitive data types, default values** are assigned, e.g. `0` for numericals and `false` for booleans
 
 ```java
 // Example:
@@ -42,7 +42,7 @@ names[2] = "Hannes";
 
 ## Accessing Elements
 
-- Use square brackets and an index to access elements
+- Use **square brackets and an index** to access elements
 
 ```java
 int myEl = numbersArr[3]; // get fourth element (remember indices start @ 0)
@@ -50,17 +50,18 @@ int myEl = numbersArr[3]; // get fourth element (remember indices start @ 0)
 
 ## Getting the length
 
-- the variable ".length" is public and can be accessed directly on array objects
+- the **variable ".length" is public** and can be accessed directly on array objects
 
 ```java
+// Example:
 int maxIndex = numbersArr.length - 1; // Example...
 ```
 
 ## multi-dimensional arrays
 
-- Multi-dimensional arrays are achieved by creating arrays of arrays (of arrays of ...)
-- To access elements, we just use multiple square brackets (one for each dimension)
-- To access properties of dimensions, we just use them on elements of early "layers" (which are arrays themselves)
+- Multi-dimensional arrays are achieved by creating **arrays of arrays** (of arrays of ...)
+- To instantiate the arrays and to access elements, we just use **multiple square brackets** (one for each dimension)
+- To access properties of dimensions, we just use them on elements of the "layer before" (which are arrays themselves)
 
 ```java
 // Example:
