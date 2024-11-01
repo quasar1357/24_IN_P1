@@ -28,19 +28,35 @@ public class MyClass {
 1. **Visibility** modifier (and optionally other modifiers such as `static`); see below
 2. **Data type** that is returned; OR `void` when nothing is returned
 3. **Name** of the method
+4. **Parameters** in form `type name`; multiples separated by `,`
 
 ```java
-aVisibility aType aMethodName(aType anArg){
+aVisibility aType aMethodName(typeOne argOne, typeTwo argTwo){
         ...
     }
 ```
 ```java
+// Example:
 public class AnyClass{
     ...
     public int calcDouble(int num){
         ...
     }
 }
+```
+
+**Parameter lists of variable length**
+- We can give a **parameter list of variable length** to a method
+- Using **`...` in front of a parameter name**, indicates that this variable can consist of an arbitrary number of elements
+- It is then saved in form of **an array of the given type**, with **length inferred** by the number of elements passed (*see [Arrays](11_Arrays.md) for details*)
+- We can only use **ONE such parameter**, and it has to be **passed after any other parameters**
+
+```java
+// Example:
+    public Band(String bandName, String ... members) {
+        this.bandName = bandName; // simple String
+        this.members = members; // string-array of variable length
+    }
 ```
 
 **Return**:

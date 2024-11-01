@@ -154,7 +154,7 @@ String strNum = Integer.toString(num);
 Saves a **list of objects of the same type**. Allows access and modifications through **integer indices**.
 
 ArrayList is a **generic** class, meaning the user can instantiate a parametrised type that can hold objects of one defined type.
-Importantly, ArrayLists **can only store objects**, NOT primary data types. This suggests using wrapper classes mentioned above.
+Importantly, ArrayLists **can only store objects**, NOT primitive data types. This suggests using wrapper classes mentioned above.
 At the declaration, the user **specifies the type of the objects that can be contained** in the ArrayList.
 Naturally, the assigned object must be instantiated with the same type.
 Defining an ArrayList without type specification (holding any types) is possible, but not recommended.
