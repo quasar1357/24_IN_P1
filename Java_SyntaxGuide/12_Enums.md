@@ -48,10 +48,13 @@ public enum AnEnumName {
 
 Enums can have methods and variables, just like classes. Of course these methods may also allow to change the values of the variables.
 
-Enum objects automatically have the methods and variables defined in the enum type:
+Enum **objects** automatically have the methods and variables defined in the enum type:
 
 - String `name()`: Returns the **identifier** of the enum object as a string (for example ‘Goalkeeper’)
 - int `ordinal()`: Returns the **position** of the enum object within the enumeration
+
+The **enum class** itself has the following (`static`) methods:
+
 - static E `valueOf(`String `s)`: Returns **object** of enum type E from the enumeration **whose identifier matches s**
 - static E[] `values()`: Returns **all objects** of this enumeration **in an array**
 
