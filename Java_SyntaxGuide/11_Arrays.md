@@ -71,15 +71,23 @@ table.length; // = height (# rows)
 table[0].length; // = width (# columns)
 ```
 
-- We can also use initialization lists for instantiation, again they are just used in a nested way
-
+- We can also use **initialization lists** for instantiation, again they are just used in a nested way
+- Importantly, this can cause a **ragged array**, i.e. arrays with different lengths in the same dimension
 
 ```java
-// Example:
+// Example "normal" array:
 int[][] results = { {1, 2, 0},
                     {2, 0, 1},
                     {1, 1, 1},
                     {1, 0, 2} };
+```
+
+```java
+// Example "ragged" array:
+int[][] ragged = { {1, 2, 0},       // row length 3
+                   {2, 0},          // row length 2
+                   {1, 1, 1, 2} };  // row length 4
+
 ```
 
 ## Comparison to ArrayLists

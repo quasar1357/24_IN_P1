@@ -16,6 +16,27 @@ public class ArrayTests {
         for(int arrEl : arr2) {
             System.out.println(arrEl);
         }
+
+        // Test 2D array
+        int[][] testArr = new int[2][3];
+        for(int[] row : testArr) {
+            for(int col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
+        // Test 2D array with different row lengths
+        String[][] testString = {{"a", "b", "c"}, {"c", "d"}};
+        System.out.println("num rows: " + testString.length);
+        for(String[] row : testString) {
+            System.out.print("num cols: " + row.length + " | ");
+            for(String col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
         // Test variable number of arguments
         createAndPrintIntArr(1, 2, 3, 45, 21, 14);
         int[] arr3 = createAndPrintIntArr(5, 4, 3);
