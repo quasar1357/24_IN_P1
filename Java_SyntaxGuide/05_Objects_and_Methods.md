@@ -26,12 +26,14 @@ Circle circle1 = new Circle(40, 40, 10); // Ex.
 ## Using Methods and Constants
 
 Call methods of an object: use **dot operator on the Object**
+
 ```java
 anyObject.anyMethod(anyParameters); // ... of another object
 circle1.setCenterX(100); // Ex.
 ```
 
-To use a **static method** or access a **static constant**, we apply the **dot operator on the Class**:
+Use a **static method** or access a **static constant**: apply the **dot operator on the Class**:
+
 ```java
 AnyClass.anyMethod(anyParams); // ... static of another class
 Quotes.printQuoteOfSteve(); // Ex. method that is pre-defined in the class "Quotes" but independent of an object
@@ -42,12 +44,14 @@ double circleCirc = circleDiam * Math.PI; // Using the pi constant from Math mod
 ```
 
 **Inside the class** itself, static methods and static constants (or variables) can be called/accessed without the dot operator:
+
 ```java
 anyMethod(anyParams); // ... static of this class
 printQuoteOfSteve(); // Ex. method that is defined in this class
 ```
 
 NOTE: There can also be **non-static constants** (declared outside methods, and can be public or private). They belong to an instance - and are therefore addressed by the dot operator on the object (from outside) or using `this.*` (inside the class) - and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
+
 ```java
 // Example:
 class Car {

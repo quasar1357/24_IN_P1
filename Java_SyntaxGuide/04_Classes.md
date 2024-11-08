@@ -99,9 +99,11 @@ public class AnyClass{
 ```
 
 ### The Static Modifier
-Variables, constants and methods can be declared to belong to the class itself, not to any instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects_and_Methods.md) and [Variable Types](06_Variable_Types.md) for details*). 
+Variables, constants and methods can be declared to belong to the class itself, not to any instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects_and_Methods.md) and [Variable Types](06_Variable_Types.md) for details*).
 
-Sidenote: static methods are somewhat similar to functions in other programming languages such as Python.
+For static variables (and constants), there is only **one instance** of the variable **for the whole class**, and it is shared among all instances of the class. This can be useful for variables that are the same for all instances, such as a counter.
+
+*Sidenote: static methods are somewhat similar to functions in other programming languages such as Python.*
 
 ```java
 public class AnyClass{
