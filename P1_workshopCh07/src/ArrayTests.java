@@ -41,6 +41,20 @@ public class ArrayTests {
         createAndPrintIntArr(1, 2, 3, 45, 21, 14);
         int[] arr3 = createAndPrintIntArr(5, 4, 3);
         System.out.println("length: " + arr3.length);
+
+        // Test swapping method
+        int[] swapArray = {1,2,3,4,5,6};
+        for(int el : swapArray) System.out.print(el);
+        System.out.println();
+        swap(swapArray, 2,4);
+        for(int el : swapArray) System.out.print(el);
+        System.out.println();
+
+        // Test letter counter
+        String sentence1 = "Ich bin mir sehr sicher, dass das geht!"; //" abcdefghijklmnopqrstuvwxyz";
+        int[] countSentence1 = letterCount(sentence1);
+        for(int i=0; i<26; i++) System.out.println((char)('a' + i) + ": " + countSentence1[i]);
+        System.out.println("others: " + countSentence1[26]);
     }
 
     private static int[] createAndPrintIntArr(int ... arrIn) {
@@ -50,5 +64,35 @@ public class ArrayTests {
             System.out.println(arrEl);
         }
         return arr;
+    }
+
+    private static void swap(int[] values, int i, int j) {
+        if (!(i>0 && i<values.length && j>0 && j<values.length))
+            return;
+        int initI = values[i];
+        values[i] = values[j];
+        values[j] = initI;
+    }
+
+    private static int[] letterCount(String sentence){
+        final int NUM_CHARS = 26;
+        int[] charCount = new int[NUM_CHARS+1];
+        int specialCount = 0;
+        char current; // current character in loop below
+
+        String sLower = sentence.toLowerCase(); // we do not differentiate upper/lower case
+
+        for(int pos = 0; pos< sLower.length(); pos++){ // go through sentence
+            // Options:
+            // - switch statement
+            // - go through characters: for(int cIdx = 0; cIdx < NUM_CHARS; cIdx++) if ...
+            // - use and compare character values... !!!
+            current = sLower.charAt(pos);
+            if(current >= 'a' && current <= 'z')
+                charCount[current - 'a']++; // e.g. 'g' - 'a' = 103 - 97 = 6
+            else specialCount++; // special character                
+        }
+        charCount[NUM_CHARS] = specialCount;
+        return charCount;
     }
 }
