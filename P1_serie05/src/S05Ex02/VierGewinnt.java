@@ -79,7 +79,7 @@ public class VierGewinnt {
 	 * TODO 1:
 	 */
 	private void makeMove(char player, int col) {
-		for(int r = ROWS - 1; r>=0; r--){
+		for(int r = ROWS - 1; r>=0; r--){ // put in first empty row from below
 			char[] currRow = board[r];
 			if(currRow[col] == EMPTY){
 				currRow[col] = player;
