@@ -30,6 +30,8 @@ Shortcut for **concatenation**: `"abc" + "def" + 1`, other types are auto-conver
 - String `substring(`int `offset, `int `endIndex)`: from (incl.) offset to endIndex (excl.)
 - String `toLowerCase()`
 - String `toUpperCase()`
+- String `trim()`: remove leading and trailing whitespaces
+- String `split(`String `regex)`: split string at regex and return array of strings
 
 Strings are **immutable** --> all methods return a new String object
 
@@ -160,6 +162,8 @@ Naturally, the assigned object must be instantiated with the same type.
 Defining an ArrayList without type specification (holding any types) is possible, but not recommended.
 
 ```java
+import java.util.ArrayList;
+
 ArrayList<aType> aVarName = new ArrayList<aType>(); // Declaration and instantiation with the same type
 ArrayList<String> names = new ArrayList<String>(); // Example
 ```

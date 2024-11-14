@@ -69,28 +69,100 @@ public class VierGewinnt {
 	 * TODO 0:
 	 */
 	private boolean valid(int col) {
-		return true;
+		boolean inRange = 0 <= col && col < COLUMNS;
+		if(!inRange) return false;
+		boolean notFull = board[0][col] == EMPTY;
+		return notFull;
 	}
 
 	/*
 	 * TODO 1:
 	 */
 	private void makeMove(char player, int col) {
-
+		for(int r = ROWS - 1; r>=0; r--){
+			char[] currRow = board[r];
+			if(currRow[col] == EMPTY){
+				currRow[col] = player;
+				break;
+			}
+		}
 	}
 
 	/*
 	 * TODO 2:
 	 */
 	private boolean checkWin(char player) {
+		// check horizontal
+		for(int r = 0; r < ROWS; r++){
+			for(int c = 0; c <= COLUMNS - 4; c++){
+				boolean win = true;
+				for(int i = 0; i < 4; i++){
+					if(board[r][c+i] != player){
+						win = false;
+						break;
+					}
+				}
+				if(win) return true;
+			}
+		}
+
+		// check vertical
+		for(int c = 0; c < COLUMNS; c++){
+			for(int r = 0; r <= ROWS - 4; r++){
+				boolean win = true;
+				for(int i = 0; i < 4; i++){
+					if(board[r+i][c] != player){
+						win = false;
+						break;
+					}
+				}
+				if(win) return true;
+			}
+		}
+
+		// check diagonal
+		for(int r = 0; r <= ROWS - 4; r++){
+			for(int c = 0; c <= COLUMNS - 4; c++){
+				boolean win = true;
+				for(int i = 0; i < 4; i++){
+					if(board[r+i][c+i] != player){
+						win = false;
+						break;
+					}
+				}
+				if(win) return true;
+			}
+		}
+
+		for(int r = 0; r <= ROWS - 4; r++){
+			for(int c = COLUMNS - 1; c >= 3; c--){
+				boolean win = true;
+				for(int i = 0; i < 4; i++){
+					if(board[r+i][c-i] != player){
+						win = false;
+						break;
+					}
+				}
+				if(win) return true;
+			}
+		}
+
 		return false;
+		
 	}
+
+
 
 	/*
 	 * TODO 3:
 	 */
 	private void printBoard() {
-
+		for(char[] r : board){
+			for(char field : r){
+				System.out.print(field + " ");
+			}
+			System.out.println();
+		}
 	}
 
 }
