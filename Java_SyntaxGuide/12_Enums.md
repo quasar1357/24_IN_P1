@@ -3,7 +3,7 @@
 ---
 # Enum Types
 
-Enum types are similar to classes. However, they allow **only a selection of identifiers ("versions") of objects**.
+Enum types are similar to classes. However, they allow **only a selection of identifiers ("versions") of objects**, thereby providing type safety.
 
 ## Defining enums
 
@@ -38,13 +38,14 @@ Identifiers that do not need further specification can be defined in a more simp
 ```java
 public enum AnEnumName {
 
-    VersionOne, VersionTwo, VersionThree;
+    VersionOne, VersionTwo, VersionThree // Note, the semicolon is not needed here (but can be added...)
+                                        // BUT: if you add any more code, the semicolon is needed!
 
 }
 ```
 
 
-## Methods of enums
+## Methods of enums and the enum class
 
 Enums can have methods and variables, just like classes. Of course these methods may also allow to change the values of the variables.
 
@@ -67,7 +68,7 @@ To instantiate an enum object, we just use the version name on the enum type (li
 AnEnumName myEnum = AnEnumName.VersionOne;
 ```
 
-Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated.
+Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated and do not take any arguments.
 
 
 

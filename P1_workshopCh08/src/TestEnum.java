@@ -5,5 +5,11 @@ public class TestEnum {
         }
         FamilyMember cathy = FamilyMember.Cathy;
         System.out.println(cathy);
+        
+        // First save the members in an array
+        FamilyMember[] members = FamilyMember.values();
+        for (FamilyMember p : members) {
+            System.out.println(p + " was born in " + p.getYear() + " and is " + p.getGender());
+        }
     }
 }

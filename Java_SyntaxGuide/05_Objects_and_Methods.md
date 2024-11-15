@@ -43,11 +43,13 @@ AnyClass.ANY_CONSTANT; // using static constants (outside the class)
 double circleCirc = circleDiam * Math.PI; // Using the pi constant from Math module
 ```
 
-**Inside the class** itself, static methods and static constants (or variables) can be called/accessed without the dot operator:
+**Inside the class** itself, static methods and static constants (or variables) can be called/accessed without the dot operator, but it is still recommended to use the dot operator (of course on the class) for clarity:
 
 ```java
-anyMethod(anyParams); // ... static of this class
-printQuoteOfSteve(); // Ex. method that is defined in this class
+NameOfThisClass.anyMethod(anyParams); // ... static method of this class
+anyMethod(anyParams); // ... static method of this class without using the dot operator
+printQuoteOfSteve(); // Ex. method that is defined in this class (without the dot operator)
+Person.globalCount++; // Using a static variable (inside the class Person but explicitly using the class name)
 ```
 
 NOTE: There can also be **non-static constants** (declared outside methods, and can be public or private). They belong to an instance - and are therefore addressed by the dot operator on the object (from outside) or using `this.*` (inside the class) - and are set once, e.g. in the constructor. Like this, the constant can be set for the instance and then used for its lifetime.
