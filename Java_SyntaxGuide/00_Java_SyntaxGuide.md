@@ -10,3 +10,7 @@
 08. [Conditions](./08_Conditions.md)
 09. [Loops](./09_Loops.md)
 10. [The Java API](./10_Java_API.md)
+11. [Arrays](./11_Arrays.md)
+12. [Enums](./12_Enums.md)
+13. [Inheritance](./13_Inheritance.md)
+14. [Interfaces](./14_Interfaces.md)
