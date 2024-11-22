@@ -4,10 +4,10 @@
 
 # Interfaces
 
-- **Interfaces** are similar to abstract classes, but they can't have any implementation, only method headers.
+- **Interfaces** are similar to abstract superclasses, but they can't have any implementation, only method headers.
 - They are used to define a **set of methods** that a class must implement, thereby **ensuring a certain behavior**.
-- A class can **implement multiple interfaces**, but only **extend one superclass**.
-
+- To do so, they typically contain `abstract methods`, which are implemented by the class that implements the interface (*see chapter [13_Inheritance](./13_Inheritance.md) for details on abstract methods*).
+- Methods in interfaces are by default `public` and `abstract`, and these **keywords can be omitted** when defining them in the interface.
 
 ## Defining interfaces
 
@@ -16,18 +16,23 @@
 ```java
     // Interface
     public interface TheInterface {
-        public void aMethod();
+        void aMethod();
     }
 
     // Example:
     public interface Shape {
-        public double getArea();
+        double getArea();
+        void printArea();
+        void doubleLength();
+        ...
     }
 ```
 
 
 ## Implementing interfaces
-
+> ___
+> **IMPORTANT**: A class can **implement multiple interfaces**, but only **extend one superclass**.
+> ___
 - **Implementing an interface** is done using the `implements` keyword, and all methods of the interface must be implemented in the class.
 
 ```java
@@ -59,7 +64,7 @@ public class Book implements Buyable {
 public class Pasta implements Buyable, Cookable
 ```
 
-- On the other hand, an interface can be implemented by multiple classes, allowing for **polymorphism** (as seen for class [Inheritance](./13_Inheritance.md)).
+- On the other hand, an interface can be implemented by multiple classes, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*).
 - This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
 
 - Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.

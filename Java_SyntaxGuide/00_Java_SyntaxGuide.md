@@ -14,3 +14,4 @@
 12. [Enums](./12_Enums.md)
 13. [Inheritance](./13_Inheritance.md)
 14. [Interfaces](./14_Interfaces.md)
+15. [Polymorphism and Inheritance vs. Interfaces](./15_Polymorphism_and_InhVsInt.md)
