@@ -32,5 +32,4 @@ public class MatrixTest {
         MatrixOperations.printMatrix(MatrixOperations.product(matrix3, matrix4));
         System.out.println(MatrixOperations.product(matrix1, matrix2)); // should return null
     }
-
 }

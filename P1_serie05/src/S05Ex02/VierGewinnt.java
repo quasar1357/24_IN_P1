@@ -163,6 +163,13 @@ public class VierGewinnt {
 			}
 			System.out.println();
 		}
+		for(int r=0; r<COLUMNS; r++){
+			System.out.print("--");
+		}
+		System.out.println();
+		for(int r=0; r<COLUMNS; r++){
+			System.out.print((r+1) + " ");
+		}
+		System.out.println();
 	}
-
 }

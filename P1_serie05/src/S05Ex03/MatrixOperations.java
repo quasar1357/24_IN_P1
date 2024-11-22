@@ -6,11 +6,11 @@ import java.io.File;
 
 public class MatrixOperations {
 
-    public static int[][] readMatrixFromString(String file){
+    public static int[][] readMatrixFromString(String fileContent){
 
         // Read file and store lines in ArrayList
         ArrayList<String> lines = new ArrayList<String>();
-        Scanner lineScanner = new Scanner(file);
+        Scanner lineScanner = new Scanner(fileContent);
         while(lineScanner.hasNext()){
             String line = lineScanner.nextLine();
             lines.add(line);
@@ -59,7 +59,7 @@ public class MatrixOperations {
     public static int[][] transpose(int[][] matrixIn){
         int numRows = matrixIn.length;
         int numCols = matrixIn[0].length;
-        if (!(numRows==numCols)){
+        if (numRows != numCols){
             System.out.println("Matrix needs to be square size.");
             return null;
         }
@@ -92,6 +92,10 @@ public class MatrixOperations {
     }
 
     public static void printMatrix(int[][] matrix){
+        if(matrix == null){
+            System.out.println("Matrix is null.");
+            return;
+        }
         for(int[] row : matrix){
             for(int el : row){
                 System.out.print(el + " ");
@@ -100,5 +104,4 @@ public class MatrixOperations {
         }
         System.out.println();
     }
-
 }
