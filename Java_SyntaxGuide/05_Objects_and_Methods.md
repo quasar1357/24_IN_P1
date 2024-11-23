@@ -23,6 +23,8 @@ AnyClass anyObject = new AnyClass(anyParameters);
 Circle circle1 = new Circle(40, 40, 10); // Ex.
 ```
 ---
+
+
 ## Using Methods and Constants
 
 Call methods of an object: use **dot operator on the Object**
@@ -66,6 +68,47 @@ class Car {
 ```
 
 *For an overview over possible variable and constant types, see Chapter [Variable Types](06_Variable_Types.md).*
+
+
+## Method overloading
+
+- Method overloading is the case where multiple methods have the **same method name** but **different parameters** (number, type and/or order)
+- In this case, the method is **selected based on the parameters** used in the method call
+- The lowest possible (most specific) level of type is considered (e.g. `Mammal` is more specific than `Animal`)
+- But if the variable is declared as a more general type (e.g. `Animal`), the method of the general type is called (if no casting is done)
+*(- Sidenote: overloading depends on the declared type at compile time, while overriding depends on the actual type at runtime)*
+
+```java
+// TAKEN FROM WORKSHOP CHAPTER 9 (SEE THERE FOR MORE DETAILS)
+    public static void main(String[] args) {
+        for(Animal a : animals){
+            if(a instanceof Mammal){ // since we want to use the overloaded method specific for mammals, we filter for mammal objects
+                System.out.println("Without overloaded method (treating as an animal): ");
+                displayInfo(a); // Since above, the object is defined as an animal, it will be treated as an animal by default
+                System.out.println("With overloaded method (treating as a mammal): ");
+                displayInfo((Mammal) a); // NOTE: we are casting the object to Mammal, so that the overloaded method is called
+            }
+        }
+    }
+
+    private static void displayInfo(Animal a){
+        System.out.println(a);
+        a.eat();
+        a.move();
+        if(a instanceof Mammal){
+            ((Mammal) a).giveBirth();
+        }
+
+    }
+    private static void displayInfo(Mammal m){ // Define the same method, but for mammals; this is called method overloading
+        System.out.println(m);
+        System.out.println("This is a mammal, and thus has fur!");
+        m.eat();
+        m.move();
+        m.giveBirth();
+    }
+```
+
 
 ## Importing Classes
 

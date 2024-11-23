@@ -1,0 +1,5 @@
+Animal
+	Reptile (abstract)
+	Mammal (abstract)
+		Horse
+		Bat

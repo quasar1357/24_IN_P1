@@ -45,17 +45,18 @@
 # Inheritance vs. Interfaces
 | **Feature**                     | **Superclasses**                                                                           | **Interfaces**                                                                                 |
 |----------------------------------|-------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------|
-| **Number allowed**              | A class can extend only one superclass (single inheritance).                              | A class can implement multiple interfaces.                                                    |
+| **Number allowed**              | A class can extend **only one** superclass (single inheritance).                              | A class can implement **multiple** interfaces.                                                    |
 | **Keyword for inheritance**     | `extends`                                                                                 | `implements`                                                                                  |
-| **Use of `.super` vs. `??`**    | `.super` is used to call methods or constructors from the superclass.                     | Interfaces do not have constructors or direct parent calls like `.super`.                     |
-| **Default methods**             | Superclasses naturally provide method implementations.                                    | Can have `default` methods with an implementation (introduced in Java 8).                    |
-| **Abstract methods**            | Abstract methods require the `abstract` keyword.                                          | Methods are implicitly abstract (no `abstract` keyword needed unless explicitly specified).    |
-| **Necessity of implementation** | A class must implement all abstract methods from its superclass unless it’s abstract.     | A class must implement all abstract methods from all interfaces unless it’s abstract itself. |
+| **Use of `.super` vs. `??`**    | `.super` is used to call methods or constructors from the superclass.                     | Interfaces do **not** have constructors or direct parent calls like `.super`.                     |
+| **Default methods**             | Superclasses **naturally provide** method implementations.                                    | Can have `default` methods with an implementation (introduced in Java 8).                    |
+| **Abstract methods**            | Abstract methods **require** the `abstract` keyword.                                          | Methods are **implicitly abstract** (no `abstract` keyword needed unless explicitly specified).    |
+| **Necessity of implementation** | *A class must implement all abstract methods from its superclass unless it’s abstract itself.*     | *A class must implement all abstract methods from all interfaces unless it’s abstract.* |
 | **What is inherited**           | Fields, methods (including concrete and abstract), and some behavior are inherited.       | No concrete methods or fields (except static and default methods) are inherited.              |
-| **Constructors**                | Superclasses can have constructors, which are called with `super()` from the subclass.    | Interfaces cannot have constructors.                                                          |
-| **Polymorphism**                | A subclass can be referenced as its superclass type.                                      | A class can be referenced by any of its implemented interfaces.                               |
+| **Constructors**                | Superclasses **can have** constructors, which are called with `super()` from the subclass.    | Interfaces **cannot have** constructors.                                                          |
+| **Polymorphism**                | *A subclass can be referenced as its superclass type.*                                      | *A class can be referenced by any of its implemented interfaces.*                               |
 | **Syntax for defining**         | `class SuperclassName { ... }`                                                            | `interface InterfaceName { ... }`                                                             |
 | **Syntax for extending/implementing** | `class SubClass extends Superclass { ... }`                                               | `class SubClass implements Interface1, Interface2 { ... }`                                       |
+| **Naming convention**           | Superclasses are typically named as **nouns**. Ex.: `LivingBeing`                                                | Interfaces are typically named as **adjectives or verbs**. Ex.: `Living` or `Lives`                                        |
 ---
 
 ## **Role of Abstract Superclasses**

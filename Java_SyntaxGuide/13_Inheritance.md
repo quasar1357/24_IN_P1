@@ -74,7 +74,7 @@ public class Dictionary extends Book
 
 - **Abstract classes** are classes that can't be instantiated, but are used as a **blueprint for other classes** (kind of defining its role but not its implementation).
 - Abstract classes can have **abstract methods**, which are methods without a body, only a method head. (But it can also have concrete methods.)
-- Since abstract classes can't be instantiated, their **constructors can't be called** and are optional (they are just used when a concrete subclass is instantiated).
+- Since abstract classes can't be instantiated, their **constructors can't be (directly) called** and are optional (they are just called when a concrete subclass is instantiated). In some cases, they can be useful, especially to initialize variables.
 - Subclasses of an abstract class **must implement all abstract methods** of the superclass, unless they are abstract themselves.
 - Abstract methods are defined using the `abstract` keyword, and a `;` instead of a method body.
 
