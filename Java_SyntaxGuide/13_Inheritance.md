@@ -36,7 +36,7 @@ public class Dictionary extends Book
 ```
 
 
-## Overwriting vs. `final` methods/classes
+## Overriding and `final` methods/classes
 
 - **Methods that share the method head** of a method in the superclass will overwrite the inherited method.
 - The reference **`super.` can be used to access the superclass' definition** of methods and variables, allowing to simply extend on it.
@@ -44,6 +44,9 @@ public class Dictionary extends Book
 - **Classes** that are defined as `final` **can not be used as superclasses** at all.
 - In java, all classes **finally originate from the `Object` class** (even if not explicitly stated), and inherit its methods, such as toString().
 - The **`@Override` annotation** is used to indicate that a method is intended to override a method in the superclass (it is optional, but helps if the method in the superclass is changed).
+- Important: Differentiate between **overloading** (same method name, different parameters) and **overriding** (same method name and parameters, but different level in the hierarchy)!
+*(- Sidenote: overloading depends on the declared type at compile time, while overriding depends on the actual type at runtime)*
+
 
 ```java
     // Overwriting a method

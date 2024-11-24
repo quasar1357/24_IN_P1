@@ -76,6 +76,7 @@ class Car {
 - In this case, the method is **selected based on the parameters** used in the method call
 - The lowest possible (most specific) level of type is considered (e.g. `Mammal` is more specific than `Animal`)
 - But if the variable is declared as a more general type (e.g. `Animal`), the method of the general type is called (if no casting is done)
+- Important: Differentiate between **overloading** (same method name, different parameters) and **overriding** (same method name and parameters, but different level in the hierarchy)!
 *(- Sidenote: overloading depends on the declared type at compile time, while overriding depends on the actual type at runtime)*
 
 ```java
