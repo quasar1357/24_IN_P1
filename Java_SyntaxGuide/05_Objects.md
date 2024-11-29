@@ -1,7 +1,7 @@
 [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
-# Objects and Methods
+# Objects and Method Calls
 
 ## Creating and Assigning Objects
 
@@ -70,13 +70,12 @@ class Car {
 *For an overview over possible variable and constant types, see Chapter [Variable Types](06_Variable_Types.md).*
 
 
-## Method overloading
+## Using overloaded methods
 
-- Method overloading is the case where multiple methods have the **same method name** but **different parameters** (number, type and/or order)
-- In this case, the method is **selected based on the parameters** used in the method call
-- The lowest possible (most specific) level of type is considered (e.g. `Mammal` is more specific than `Animal`)
-- But if the variable is declared as a more general type (e.g. `Animal`), the method of the general type is called (if no casting is done)
-- Important: Differentiate between **overloading** (same method name, different parameters) and **overriding** (same method name and parameters, but different level in the hierarchy)!
+- When calling an overloaded method, the **most specific matching type** is chosen based on the compile-time type of the argument (e.g., `Mammal` is more specific than `Animal`).
+- If the variable is declared as a more general type (e.g., `Animal`), the method corresponding to that general type is called unless explicitly cast.
+
+- Important: Differentiate between **overloading** (same method name, different parameters) and **overriding** (same method name and parameters, but different level in the hierarchy, used in [inheritance](13_Inheritance.md) and [interfaces](14_Interfaces.md)).
 *(- Sidenote: overloading depends on the declared type at compile time, while overriding depends on the actual type at runtime)*
 
 ```java
@@ -110,15 +109,6 @@ class Car {
     }
 ```
 
-
-## Importing Classes
-
-Imports are done **before class definitions**.
-```java
-// Examples:
-import java.util.Scanner; // import specific Class
-import java.util.*; // import all Classes from a Package
-```
 
 ---
 

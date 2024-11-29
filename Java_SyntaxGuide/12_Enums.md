@@ -5,10 +5,11 @@
 
 Enum types are similar to classes. However, they allow **only a selection of identifiers ("versions") of objects**, thereby providing type safety.
 
-## Defining enums
 
-- identifiers/versions are listed as first thing in the definition, delimited by `,`
-- thereby they automatically:
+## Defining enums
+s
+- **Identifiers/versions are listed as first thing** in the definition, delimited by `,`
+- Thereby they automatically:
     - call the constructor
     - instantiate objects of this enum type and
     - assign them to static variables named as this version
@@ -33,7 +34,7 @@ public enum AnEnumName {
 
 ```
 
-Identifiers that do not need further specification can be defined in a more simple way:
+Identifiers that do not need further specification can be defined in a more **simple way**:
 
 ```java
 public enum AnEnumName {
@@ -45,7 +46,20 @@ public enum AnEnumName {
 ```
 
 
-## Methods of enums and the enum class
+## Using enums
+
+### Instantiating enums
+
+To instantiate an enum object, we just use the `.` operator and **version name** on the enum type (like a static variable):
+
+```java
+AnEnumName myEnum = AnEnumName.VersionOne;
+```
+
+Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated and **do not take any arguments**.
+
+
+### Methods of enums and the enum class
 
 Enums can have methods and variables, just like classes. Of course these methods may also allow to change the values of the variables.
 
@@ -59,22 +73,10 @@ The **enum class** itself has the following (`static`) methods:
 - static E `valueOf(`String `s)`: Returns **object** of enum type E from the enumeration **whose identifier matches s**
 - static E[] `values()`: Returns **all objects** of this enumeration **in an array**
 
-## Using enums
-
-
-To instantiate an enum object, we just use the version name on the enum type (like a static variable):
-
-```java
-AnEnumName myEnum = AnEnumName.VersionOne;
-```
-
-Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated and do not take any arguments.
-
-
 
 ## Sidenote: mixing enums and classes
 
-To create objects that have both fixed but also dynamic properties, we can mix enums and classes. For example, we can define an `enum` where each type has a fixed value for `variableA`, but when creating an instance of the associated class, we can allow for `variableB` to be set dynamically:
+To create objects that have both **fixed but also dynamic properties**, we can mix enums and classes. For example, we can define an `enum` where each type has a fixed value for `variableA`, but when creating an instance of the associated `class`, we can allow for `variableB` to be set dynamically:
 
 - Define an `enum` that holds the fixed value for `variableA`.
 - Create a `class` that takes an enum constant and a dynamic value for `variableB`.
@@ -129,7 +131,7 @@ Config config = new Config(ConfigType.SMALL, 50);
 config.setVariableB(60);
 ```
 
-Explanation
+**Explanation**
 
 - `ConfigType` enum defines pre-set values for `variableA`.
 - `Config` class allows you to instantiate with a `ConfigType`, which sets `variableA` automatically, and allows `variableB` to be set independently.

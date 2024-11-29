@@ -42,7 +42,7 @@ names[2] = "Hannes";
 
 ## Accessing Elements
 
-- Use **square brackets and an index** to access elements
+Use **square brackets and an index** to access elements
 
 ```java
 int myEl = numbersArr[3]; // get fourth element (remember indices start @ 0)
@@ -50,7 +50,7 @@ int myEl = numbersArr[3]; // get fourth element (remember indices start @ 0)
 
 ## Getting the length
 
-- the **variable ".length" is public** and can be accessed directly on array objects
+The **variable ".length" is public** and can be accessed directly on array objects
 
 ```java
 // Example:
@@ -90,7 +90,7 @@ int[][] ragged = { {1, 2, 0},       // row length 3
 
 ```
 
-## Comparison to ArrayLists
+## Comparison Arrays vs. ArrayLists
 
 Property | Arrays | ArrayLists
 -|-|-

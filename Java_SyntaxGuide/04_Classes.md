@@ -1,7 +1,7 @@
 [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
-# Classes_and_Methods
+# Classes and Method Definitions
 
 **GENERAL DISTINCTION: Class definition vs. object instantiation** (vs. variable declaration/assignment)
 
@@ -10,6 +10,8 @@ The class definition outlines the blueprint, while instantiation creates an actu
 **Class structure**:
 
 ![class_structure](class_structure.png)
+
+
 
 ## Defining a Class
 
@@ -30,7 +32,7 @@ public class MyClass {
 }
 
 // Example with extensions and implementations:
-public abstract final class AnyClass extends ParentClass implements InterfaceOne, InterfaceTwo {
+public final class AnyClass extends ParentClass implements InterfaceOne, InterfaceTwo {
     ...
 }
 ```
@@ -40,9 +42,9 @@ public abstract final class AnyClass extends ParentClass implements InterfaceOne
 **Head**:
 
 1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`): see below, [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
-2. **Return type**; OR `void` when nothing is returned
+2. **Return type** OR `void` (when nothing is returned)
 3. **Name** of the method
-4. **Parameters** in form `type name`; multiples separated by `,`
+4. **Parameters**: inside `()` in form `type name`, multiples separated by `,`
 
 ```java
 aVisibility aType aMethodName(typeOne argOne, typeTwo argTwo){
@@ -86,22 +88,22 @@ return endResult; // a local variable
 Variables, constants and methods can be defined with a specific **visibility** and its according modifier:
 - **Private**: only visible within the class; private methods = **"support methods"**
 - **Public**: also visible and accessible from other classes; public methods = **"service methods"**
-- **Protected**: The variable is accessible within the same package and by subclasses (even if they're in a different package)
+- **Protected**: The variable is accessible within the same package and by subclasses (even if they're in a different package); especially useful for [inheritance](13_Inheritance.md)
 - If no visibility modifier is specified, the **default is "package-private"**, meaning the variable is accessible within the same package.
 
 ![visibility](visibility.png)
 
 ### Variables and Constants
-Variables and constants that are declared inside a method, are called **local variables/constants**, and can only be used within this method. Their visibility cannot be changed.
+Variables and constants that are declared inside a *method*, are called **local variables/constants**, and can only be used within this method. Their visibility cannot be changed.
 
-Variables and constants that are declared inside a class but outside methods (and are not declared as "static", see below) are called **instance variables/constants** as they are tied to an instance (object) of that class. Within the class, they are available to all methods of the class. To address an instance variable/constant of the current instance, the **`this.*` keyword** is used, e.g.: `this.points = 3`.
+Variables and constants that are declared inside a class but outside methods (and are not declared as "static", see below) are called **instance variables/constants** as they are tied to an instance (object) of that class. Within the class, they are available to all methods of the class. To address an instance variable/constant of the current instance, the **`this.*` keyword** is used, e.g.: `this.points = 3` (although `this` is technically optional if there is no ambiguity).
 
-**Variables** are typically defined as `private`, such that they are only available within the class. Using **public variables is not recommended**, as this violates the principle of encapsulation. **Constants** can be `private` or `public`, in which case they can be seen as a "service" to external sources.
+**Variables** are typically defined as `private`, such that they are only available within the class (= "encapsulation"). Using **public variables is not recommended**, as this violates the principle of encapsulation. **Constants** (especially `static` ones, see below) can be `private` or `public`, in which case they can be seen as a "service" to external sources.
 
 ```java
 public class AnyClass{
     ...
-    private int anInstanceVariable; // An instance variable
+    private int anInstanceVariable; // An instance variable, available to all methods of the class
     ...
     public anyType anyMethod(aType anArg){
         string aLocalVariable; // A local variable, only available to the method
@@ -113,9 +115,9 @@ public class AnyClass{
 ```
 
 ### The Static Modifier
-Variables, constants and methods can be declared to belong to the class itself, not to any instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects.md) and [Variable Types](06_Variable_Types.md) for details*).
+Variables, constants and methods can be declared to belong to the class itself, not to an instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects.md) and [Variable Types](06_Variable_Types.md) for details*).
 
-For static variables (and constants), there is only **one instance** of the variable **for the whole class**, and it is shared among all instances of the class. This can be useful for variables that are the same for all instances, such as a counter.
+For static variables (and constants), there is only **one instance of the variable for the whole class**, and it is shared among all objects/instances of this class. This can be useful for variables that are the same for all instances, such as a counter.
 
 *Sidenote: static methods are somewhat similar to functions in other programming languages such as Python.*
 
@@ -130,6 +132,12 @@ public class AnyClass{
     ...
 }
 ```
+
+### Method overloading
+- In java, it is allowed to define **multiple methods with the same name, but different signatures** (number, type and/or order of parameters), which is called **method overloading**
+- In this case, java can **select the method based on the parameters** used in the method call
+
+
 
 ## Special Methods
 
@@ -146,9 +154,9 @@ public class AnyClass{
 ```
 
 ### Constructor Method
-Is called when **a new instance is created**. Its name is always the same as the class. It contains no return type (also not void, as it returns the address of the instance).
+Is called when **a new instance is created**. Its name is always the same as the class. It contains no return type (also not void, as it implicitly returns the *address* of the instance).
 
-IMPORTANT: There can be **multiple constructors** that differ in the **number/type of arguments** they take. At the instantiation of an object, the suited constructor is automatically chosen based on the input.
+IMPORTANT: There can be **multiple constructors** that differ in the **number/type of arguments** they take. At the instantiation of an object, the suited constructor is automatically chosen based on the input(= "method overloading", see above).
 
 ```java
 public class AnyClass{
@@ -194,15 +202,26 @@ public class AnyClass{
 ```
 ### equals() and compareTo()
 
-Be careful when comparing objects with `==`, this tests for aliases (pointing to the same object).
+Be careful when comparing objects with `==`, this tests for aliases (variables pointing to the very same object).
 
-However, objects should often be recognised as identical if certain properties are the same. Implement the `equals()` method for this comparison (default is also simply test for aliases!).
+However, objects should often be recognised as identical if certain properties are the same. Implement the `equals()` method for this comparison (default is also simply a test for aliases!).
 
-The `compareTo()` method has a similar function. It should generally produce the output of "executing_object minus argument_object" :
-- Negative integer value if the executing object is smaller than the object in the argument (in a defined way)
-- Positive integer value if the executing object is larger in this way
-- 0 if objects are equal (with regard to relevant properties)
+The `compareTo()` method has a similar function. It should generally produce the output more or less according to "executing_object minus argument_object", i.e. at least:
+- **Negative** integer value if the **executing object is smaller** than the object in the argument (in a defined way)
+- **Positive** integer value if the executing object is **larger** in this way
+- **0** if objects are **equal** (with regard to relevant properties)
 
+
+
+## Importing Classes
+
+Imports are done **before class definitions** (but after package definitions).
+
+```java
+// Examples:
+import java.util.Scanner; // import specific Class
+import java.util.*; // import all Classes from a Package
+```
 
 ---
 

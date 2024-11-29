@@ -6,16 +6,16 @@
 
 - **Interfaces** are similar to abstract superclasses, but they can't have any implementation, only method headers.
 - They are used to define a **set of methods** that a class must implement, thereby **ensuring a certain behavior**.
-- To do so, they typically contain `abstract methods`, which are implemented by the class that implements the interface (*see chapter [13_Inheritance](./13_Inheritance.md) for details on abstract methods*).
+- To do so, they typically contain **abstract methods**, which are implemented by the class that implements the interface (*see chapter [13_Inheritance](./13_Inheritance.md) for details on abstract methods*).
 - Methods in interfaces are by default `public` and `abstract`, and these **keywords can be omitted** when defining them in the interface.
 
 ## Defining interfaces
 
-- Interfaces are defined using the `interface` keyword.
+Interfaces are defined like classes but using the `interface` keyword (instead of class).
 
 ```java
     // Interface
-    public interface TheInterface {
+    public interface TheInterfaceName {
         void aMethod();
     }
 
@@ -33,7 +33,7 @@
 > ___
 > **IMPORTANT**: A class can **implement multiple interfaces**, but only **extend one superclass**.
 > ___
-- **Implementing an interface** is done using the `implements` keyword, and all methods of the interface must be implemented in the class.
+**Implementing an interface** is done using the `implements` keyword, and all methods of the interface must be implemented in the class.
 
 ```java
 // The INTERFACE
@@ -58,16 +58,15 @@ public class Book implements Buyable {
 }
 ```
 
-- If a class implements multiple interfaces, its instances can be **cast to any of the implemented interfaces**, taking on different roles.
+If a class implements multiple interfaces, its instances can be **cast to any of the implemented interfaces**, taking on different roles.
 
 ```java
 public class Pasta implements Buyable, Cookable
 ```
 
-- On the other hand, an interface can be implemented by multiple classes, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*).
-- This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
+On the other hand, an interface can be implemented by multiple classes, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
 
-- Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.
+*Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.*
 
 
 ## Default methods
@@ -115,7 +114,7 @@ public class Pasta implements Comparable<Pasta> // method compareTo noe expects 
 
 ### Iterator and Iterable
 
-- The `Iterator` interface is used to iterate over a collection of objects.
+- The **`Iterator`** interface is used to iterate over a collection of objects.
 - It has three methods: `hasNext()`, `next()`, and `remove()`.
 
 ```java
@@ -130,7 +129,7 @@ while (iter.hasNext()) {
 }
 ```
 
-- The `Iterable` interface is used to define a collection that can be iterated over.
+- The **`Iterable`** interface is used to define a collection that can be iterated over.
 - It has one method, `iterator()`, which returns an `Iterator` object.
 - Iterables can therefore be used in a `for` (each) loop.
 
