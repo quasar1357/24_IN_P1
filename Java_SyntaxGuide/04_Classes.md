@@ -1,7 +1,7 @@
 [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
-# Classes
+# Classes_and_Methods
 
 **GENERAL DISTINCTION: Class definition vs. object instantiation** (vs. variable declaration/assignment)
 
@@ -14,9 +14,23 @@ The class definition outlines the blueprint, while instantiation creates an actu
 ## Defining a Class
 
 ### Class head
+
+1. **Visibility** modifier (and optionally other modifiers such as `abstract` or `final`): see below, [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
+2. `class` (or other types such as [`interface`](14_Interfaces.md) or [`enum`](12_Enums.md)).
+3. **Name** of the class
+4. Optional extensions/implementations:
+    - `extends` for a [superclass](13_Inheritance.md) (only one superclass allowed)
+    - `implements` for [interfaces](14_Interfaces.md) (comma-separated if multiple)
+
 `aVisibility class AnyClassName { ... }`
 ```java
+// Minimal class definition:
 public class MyClass {
+    ...
+}
+
+// Example with extensions and implementations:
+public abstract final class AnyClass extends ParentClass implements InterfaceOne, InterfaceTwo {
     ...
 }
 ```
@@ -25,8 +39,8 @@ public class MyClass {
 
 **Head**:
 
-1. **Visibility** modifier (and optionally other modifiers such as `static`); see below
-2. **Data type** that is returned; OR `void` when nothing is returned
+1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`): see below, [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
+2. **Return type**; OR `void` when nothing is returned
 3. **Name** of the method
 4. **Parameters** in form `type name`; multiples separated by `,`
 
@@ -73,7 +87,7 @@ Variables, constants and methods can be defined with a specific **visibility** a
 - **Private**: only visible within the class; private methods = **"support methods"**
 - **Public**: also visible and accessible from other classes; public methods = **"service methods"**
 - **Protected**: The variable is accessible within the same package and by subclasses (even if they're in a different package)
-- If no visibility modifier is specified, the default is "package-private", meaning the variable is accessible within the same package.
+- If no visibility modifier is specified, the **default is "package-private"**, meaning the variable is accessible within the same package.
 
 ![visibility](visibility.png)
 
@@ -99,7 +113,7 @@ public class AnyClass{
 ```
 
 ### The Static Modifier
-Variables, constants and methods can be declared to belong to the class itself, not to any instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects_and_Methods.md) and [Variable Types](06_Variable_Types.md) for details*).
+Variables, constants and methods can be declared to belong to the class itself, not to any instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects.md) and [Variable Types](06_Variable_Types.md) for details*).
 
 For static variables (and constants), there is only **one instance** of the variable **for the whole class**, and it is shared among all instances of the class. This can be useful for variables that are the same for all instances, such as a counter.
 

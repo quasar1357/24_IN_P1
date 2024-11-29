@@ -33,7 +33,7 @@ double c = (int) a * b // a casted to int and then converted to double through m
 - types: two ints --> int; else --> float/double...
 - ```+, -, *, /``` as usual (also priority)
 - modulo = ```%``` ; priority as ```*``` and ```/```, also on floats/doubles...
-- ```++``` and ```--``` --> + and - 1; e.g. ```arbVar++```
+- ```++``` and ```--``` --> + and - 1, then re-assign; e.g. ```arbVar++```
 - ```+=``` etc.; e.g. ```arbVar += 10```
 
 ## 2) Characters (& the String Class)
@@ -69,7 +69,7 @@ boolean aBoolVar = false;
     3. AND
     4. OR
 
-NOTE: Equals `==` should **not be used on floating point numbers** (e.g. doubles); use a constant TOLERANCE to check the difference instead.
+NOTE: Equals `==` should **not be used on floating point numbers** (e.g. doubles), because of floating point numbers imprecision; use a constant TOLERANCE to check the difference instead.
 
 ---
 
