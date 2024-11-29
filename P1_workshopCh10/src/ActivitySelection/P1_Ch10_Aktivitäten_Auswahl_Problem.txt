@@ -1,0 +1,9 @@
+n Aktivitäten mit Start- und Endzeit
+Endzeiten aufsteigend sortiert
+ZIEL: möglichst viele Aktivitäten wählen (totale Zeit spielt keine Rolle)
+Aktivitäten müssen kompatibel sein = Sart_A > End_B OR Start_B > End_A
+
+Grundidee:
+Immer Aktivität wählen, die am frühesten endet (am meisten Platz für andere Aktivitäten)
+--> Einfach durchgehen, früheste (= nächste) Aktivität wählen, die kompatibel ist
+= greedy Algorithmus; aber in diesem Falle auch optimal !

@@ -51,22 +51,27 @@ Rocket<Human> humanRocket = new Rocket<Human>();
 ![generics](generics.png)
 
 
-## Generic Methods (optional)
+## Generic Methods
 
 - Before the return type in the method signature, declare one or more generic type parameters using angle brackets (<T>, <T, U>, etc.).
     - By convention, T is used for a single generic type, but you can use other letters (e.g., K, V, E) or descriptive names for clarity.
     - You can define multiple type parameters if the method needs them, e.g., <T, U> for two types.
-- Define T through arguments of the method, such that the compiler can then infer the type T should take based on the arguments.
+- Define T through arguments of the method, such that the compiler can then infer the type which T should take based on the arguments.
 - When you declare <T>, it’s only valid within that method. If you declare <T> at the class level, it applies to all methods in the class.
 
 ```java
+// Example 1
+public static <T> void insertionSort(Comparable<T>[] list){
+    ...
+}
+// Example 2
 public static <T> T getFirstElement(T[] array) {
     if (array == null || array.length == 0) return null;
     return array[0];
 }
 ```
 
-- When calling the method, the compiler will automatically infer the type based on the arguments passed.
+When calling the method, the compiler will automatically infer the type based on the arguments passed.
 
 ```java
 Integer[] intArray = {1, 2, 3};

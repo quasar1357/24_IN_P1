@@ -134,7 +134,8 @@ public class AnyClass{
 ```
 
 ### Method overloading
-- In java, it is allowed to define **multiple methods with the same name, but different signatures** (number, type and/or order of parameters), which is called **method overloading**
+- In java, it is allowed to define **multiple methods with the same name, but different parameters** (number, type and/or order), which is called **method overloading**
+- This is possible as just the **signature (= name & parameters) must be unique**
 - In this case, java can **select the method based on the parameters** used in the method call
 
 
