@@ -8,10 +8,11 @@ public class DVD implements IArticle {
         this.year = yearIn;
         this.price = priceIn;
     }
+
     public int getId(){
         return this.id;
     }
-    
+
     public int getPrice(){
         return this.price;
     }

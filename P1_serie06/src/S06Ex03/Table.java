@@ -9,7 +9,7 @@ public class Table extends Furniture {
 
     public double totalPrice(){
         double effortPrice = this.calculateEffort();
-        double totalMaterialCost = this.area * this.material.materialCost;
+        double totalMaterialCost = this.area * this.material.materialCost; // Note: usually we would use the getter method, but since UML defines materialCost as public, let's also use it
         return effortPrice + totalMaterialCost;
     }
 }

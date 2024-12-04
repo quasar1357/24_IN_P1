@@ -6,7 +6,7 @@ public class Book implements IArticle {
 	private int price; // CHF
 
 	/** constructor */
-	public Book( int id, String title, String author, int year, int price) 	{
+	public Book(int id, String title, String author, int year, int price) 	{
 		this.id = id;
 		this.title = title;
 		this.author = author;

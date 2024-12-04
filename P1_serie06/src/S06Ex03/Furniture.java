@@ -12,6 +12,4 @@ public class Furniture {
         double price = this.pricePerHour * this.workedHours;
         return price;
     }
-
-
 }

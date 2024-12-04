@@ -4,11 +4,14 @@ public class Order {
     private static int idCount = 0; // static variable to keep track of all orders made
     private int id; // instance variable to assign specific id to a order object
     private String customerName, customerAddress;
-    private ArrayList<IArticle> articles = new ArrayList<IArticle>();
+    private ArrayList<IArticle> articles;
 
     public Order(){
         idCount++; // Tick up the count of initialized orders
         this.id = idCount; // Assign id to this latest order
+        this.customerName = "";
+        this.customerAddress = "";
+        this.articles = new ArrayList<IArticle>();
     }
 
     public void setCustomerName(String nameIn){

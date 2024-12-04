@@ -10,5 +10,4 @@ public enum Material {
     public double getMaterialCost(){
         return this.materialCost;
     }
-
 }

@@ -6,11 +6,14 @@ public class Order {
     private static int idCount = 0; // static variable to keep track of all orders made
     private int id; // instance variable to assign specific id to a order object
     private String customerName, customerAddress;
-    private ArrayList<Book> books = new ArrayList<Book>();
+    private ArrayList<Book> books;
 
     public Order(){
         idCount++; // Tick up the count of initialized orders
         this.id = idCount; // Assign id to this latest order
+        this.customerName = "";
+        this.customerAddress = "";
+        this.books = new ArrayList<Book>(); // Initialize the books arraylist
     }
 
     public void setCustomerName(String nameIn){
@@ -26,7 +29,7 @@ public class Order {
     }
 
     public String toString(){
-        String output = "Order id: " + id +
+        String output = "Order id: " + this.id +
         ", Customer: " + this.customerName +
         ", " + this.customerAddress;
         for(Book book : this.books){
