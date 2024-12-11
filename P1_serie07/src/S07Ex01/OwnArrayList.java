@@ -54,7 +54,7 @@ public class OwnArrayList {
 	 * Fügt das übergebene Element an der übergebenen Position in dieser Liste ein.
 	 */
 	public boolean set(int i, Object o) {
-		if (this.size == this.capacity)
+		if (i < 0 || this.size <= i)
 			return false;
 		this.listElements[i] = o;
 		return true;

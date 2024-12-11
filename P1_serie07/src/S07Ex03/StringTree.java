@@ -21,7 +21,9 @@ class StringTree {
     private void printInOrderRecursive(TreeNode node) {
         if (node != null) {
             printInOrderRecursive(node.left);
+            // System.out.print("  ");
             System.out.println(node.value);
+            // System.out.print("    ");
             printInOrderRecursive(node.right);
         }
     }
@@ -59,14 +61,12 @@ class StringTree {
     }
 
     public TreeNode minimum() {
+        if(this.root == null)
+            return null;
         TreeNode current = this.root;
         while(current.left != null)
             current = current.left;
         return current;
-    }
-
-    public void printMe() {
-        this.printInOrderRecursive(this.root);
     }
 
     public void readString(String textIn){
@@ -85,7 +85,6 @@ class StringTree {
                 fileContent += fileScanner.nextLine() + "\n";
             }
             return fileContent;
-
         } catch(Exception e){
             System.out.println("Error reading file: " + e);
             return null;

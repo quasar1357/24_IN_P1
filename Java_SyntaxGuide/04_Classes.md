@@ -154,10 +154,10 @@ public class AnyClass{
 }
 ```
 
-### Constructor Method
+### Constructor Method(s)
 Is called when **a new instance is created**. Its name is always the same as the class. It contains no return type (also not void, as it implicitly returns the *address* of the instance).
 
-IMPORTANT: There can be **multiple constructors** that differ in the **number/type of arguments** they take. At the instantiation of an object, the suited constructor is automatically chosen based on the input(= "method overloading", see above).
+IMPORTANT: There can be **multiple constructors** that differ in the **number/type of arguments** they take (= "method overloading", see above). At the instantiation of an object, the suited constructor is automatically chosen based on the input.
 
 ```java
 public class AnyClass{

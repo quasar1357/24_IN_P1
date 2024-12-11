@@ -16,7 +16,6 @@ public class Bag {
             System.out.println("0 is not a valid input, as this is used for empty bags.");
             return;
         }
-
         if(this.value == 0) { // If empty, add the value and a new bag inside this bag
             this.value = value;
             this.bag = new Bag();
