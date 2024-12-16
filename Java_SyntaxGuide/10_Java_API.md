@@ -41,15 +41,16 @@ Strings are **immutable** --> all methods return a new String object
 
 Does not need to be imported.
 
-### Output
+### Standard Output
+`System.out`, output stream used for standard output (used for print/println commands).
 ```java
 System.out.println("arbitrary text") // prints with trailing line break
 System.out.print("arbitrary text") // prints without line break
 // NOTE: System.out = Objekt; repräsentiert Ausgabegerät
 ```
 
-### Input
-`System.in`, usually used together with the Scanner class, see below.
+### Standard Input
+`System.in`, usually used as a parameter to the Scanner class, see below.
 Example:
 ```java
 import java.util.Scanner;
@@ -60,6 +61,9 @@ import java.util.Scanner;
     double arbitraryDoubleVar = scan.nextDouble();
     ...
 ```
+
+### Standard Error
+`System.err`, output stream used for error messages (used for print/println commands).
 
 ## Scanner
 ```java
@@ -79,6 +83,29 @@ nameScanner.useDelimiter(", ");
 String name1 = nameScanner.next();
 String name2 = nameScanner.next();
 ...
+```
+
+## PrintWriter
+```java
+import java.io.PrintWriter;
+```
+
+- `PrintWriter(`String `fileName)`: constructor; creates a file with the given name
+- void `print(`String `p)`: print string p
+- void `println(`String `p)`: print string p with line break
+- void `close()`: close the file; **mandatory** to save changes !
+
+```java
+PrintWriter outFile = new PrintWriter(fileName); // create a file
+Random rand = new Random();
+for (int line = 1; line <= MAX; line++) {
+    for (int num = 1; num <= MAX; num++) {
+        value = rand.nextInt(90) + 10;
+        outFile.print(value + " "); // write to file
+    }
+    outFile.println(); // write line break to file
+}
+outFile.close(); // close file
 ```
 
 ## Random
