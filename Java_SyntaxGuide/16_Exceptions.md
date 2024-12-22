@@ -69,7 +69,7 @@ Each subclass of Èxception` provides at least the **two methods `getMessage()` 
 ![Passing Exceptions](passingExcelptions.png)
 ![Passing Exceptions 2](passingExcelptions2.png)
 
-## Writing custom exceptions
+## Writing custom exceptions - the `Exception` class and `throw` keyword
 
 - Custom exceptions can be created by **extending the class `Exception`** or one of its subclasses (creating a new subclass through inheritance).
 - Custom exceptions are created to **provide more information** about the exception, or to **differentiate between different types of exceptions**.
