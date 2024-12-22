@@ -28,6 +28,9 @@ class StringTree {
         }
     }
 
+    // OWN METHODS
+
+    // NOTE: THIS COULD BE DONE RECURSIVELY... (see printscreen)
     public void add(String value){
         if (this.root == null)
             this.root = new TreeNode(value);
