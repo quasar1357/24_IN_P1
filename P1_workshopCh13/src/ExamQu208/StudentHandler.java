@@ -11,7 +11,7 @@ public class StudentHandler {
     }
 
     public static void main (String[] args) throws NotInitializedException {
-        Student s;
+        Student s = null;
         increaseSemester(s);
     }
 

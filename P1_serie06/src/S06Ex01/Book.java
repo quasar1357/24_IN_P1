@@ -1,7 +1,6 @@
 package S06Ex01;
 
 import java.util.Date;
-import java.util.Scanner;
 import java.text.*;
 
 public class Book {
