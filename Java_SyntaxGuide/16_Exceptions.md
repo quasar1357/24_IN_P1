@@ -6,10 +6,10 @@
 
 ## General
 
-- **Exceptions** are events that occur during the execution of a program that disrupt the normal flow of instructions.
-- In java, exceptions are objects of the class `Exception` that are **thrown** when an exceptional event occurs.
+- **Exceptions** are *unusual* events that occur **during the execution** of a program (as opposed to compilation errors) that disrupt the normal flow of instructions.
+- In java, exceptions are objects of the class `Exception` (or subclasses of it) that are **thrown** when an exceptional event occurs.
 - An ***error*** on the other hand is an object of the class `Error` that is thrown when a serious problem occurs that is beyond the control of the program.
-- Exceptions can be **checked** or **unchecked**:
+- Exceptions can be **checked** or **unchecked** (even though best practice is to *handle all* exceptions):
   - **Checked exceptions** are exceptions that must be **handled** (i.e., caught or declared) by the programmer, or the program will not compile.
   - **Unchecked exceptions** (= subclasses of `RuntimeException`, like `ArithmeticException` or `NullPointerException`) are exceptions that do not have to be handled, but can be handled if desired.
 
@@ -26,7 +26,7 @@
 
 - The `try` block contains the code that **might throw** an exception.
 - The `catch` block contains the code that **handles** the exception.
-- The `finally` block contains the code that **is always executed**.
+- The `finally` block contains the code that **is always executed** (important: even in case of an unhandled exception!).
 - Important: After execution of the `catch` block, the program **continues** with the code **after the entire `try-catch` block**.
 
 ```java
@@ -74,6 +74,7 @@ Each subclass of Èxception` provides at least the **two methods `getMessage()` 
 - Custom exceptions can be created by **extending the class `Exception`** or one of its subclasses (creating a new subclass through inheritance).
 - Custom exceptions are created to **provide more information** about the exception, or to **differentiate between different types of exceptions**.
 - Often, they are just an extending `Exception` class with a **constructor** that calls the constructor of the superclass, providing additional information for creating the message (getMesssage() method).
+- Each subclass of the `Exception` class provides (through inherictance) the two methods `getMessage()` and `printStackTrace()`.
 
 ```java
 public class EmptyInputException extends Exception {

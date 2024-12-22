@@ -63,7 +63,7 @@ import java.util.Scanner;
 ```
 
 ### Standard Error
-`System.err`, output stream used for error messages (used for print/println commands).
+`System.err`, output stream used for error messages (used for print/println commands in red).
 
 ## Scanner
 ```java
@@ -93,7 +93,7 @@ import java.io.PrintWriter;
 - `PrintWriter(`String `fileName)`: constructor; creates a file with the given name
 - void `print(`String `p)`: print string p
 - void `println(`String `p)`: print string p with line break
-- void `close()`: close the file; **mandatory** to save changes !
+- void `close()`: close the file; **mandatory** to ensure all changes are saved !
 
 ```java
 PrintWriter outFile = new PrintWriter(fileName); // create a file
