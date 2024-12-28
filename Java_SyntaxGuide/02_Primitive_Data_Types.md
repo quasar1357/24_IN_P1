@@ -13,32 +13,32 @@
 - **double ≈ ±1.7 × 10^308**
 
 
-**Convert "up"** (e.g. assign int to double): no problem
+**Convert "up"** (e.g. assign int to double) = no problem:
 ```java
 int count = 17;
 double num = count; // will be 17.0
 ```
 
-**Convert "down"** (e.g. assign double to int): assignment would give err --> need **cast operation**
+**Convert "down"** (e.g. assign double to int) = assignment would give err --> need **cast operation**:
 ```java
 int count = (int) num; // cast num into int, then assignment works
 ```
 **Casting**:
 ```java
-int c = (int) (a * b) // (a * b) calculated with double logic then type-casted to int
-double c = (int) a * b // a casted to int and then converted to double through multiplication
+int c = (int) (a * b) // (a * b) calculated with double logic THEN type-casted to int
+double c = (int) a * b // a casted to int, then converted to double through multiplication
 ```
 
 **Operations**:
 - types: two ints --> int; else --> float/double...
-- ```+, -, *, /``` as usual (also priority)
-- modulo = ```%``` ; priority as ```*``` and ```/```, also on floats/doubles...
-- ```++``` and ```--``` --> + and - 1, then re-assign; e.g. ```arbVar++```
-- ```+=``` etc.; e.g. ```arbVar += 10```
+- `+`, `-`, `*`, `/` as usual (also priority)
+- modulo = `%` ; priority as `*` and `/`, also on floats/doubles...
+- `++` and `--`: plus and minus 1 and then re-assign; e.g. `arbVar++` (equal to `arbVar = arbVar + 1`)
+- `+=` etc.; e.g. `arbVar += 10` (equal to `arbVar = arbVar + 10`)
 
 ## 2) Characters (& the String Class)
 
-A **single character**, declared within **single quotes**
+A character is a **single character**, declared within **single quotes**
 ```java
 char aCharVar = 'a';
 ```
@@ -59,17 +59,16 @@ boolean aBoolVar = false;
 ```
 
 **Create and combine booleans**:
-- **Relational** Operators: ```==, !=, <, >, <=, >=```
-- **Logical** Operators: AND = ```&&``` ; OR = ```||``` ; XOR = ```^``` ; NOT = ```!``` (e.g. ```!a```)
+- **Relational** Operators: `==`, `!=`, `<`, `>`, `<=`, `>=`
+- **Logical** Operators: AND = `&&` ; OR = `||` ; XOR = `^` ; NOT = `!` (e.g. `!a`)
 - **Priorities**:
-
     0. () (and artihmetic Operations)
     1. NOT
     2. XOR
     3. AND
     4. OR
 
-NOTE: Equals `==` should **not be used on floating point numbers** (e.g. doubles), because of floating point numbers imprecision; use a constant TOLERANCE to check the difference instead.
+**NOTE**: Equals `==` should **not be used on floating point numbers** (e.g. doubles), because of floating point numbers imprecision; use a constant TOLERANCE to check the difference instead. Simiarly, **Strings and other objects** should usually not be compared using `==` (this checks for Aliases, not equal properties) but with the `equals()` method.
 
 ---
 

@@ -5,34 +5,37 @@
 
 **GENERAL DISTINCTION: Class definition vs. object instantiation** (vs. variable declaration/assignment)
 
-The class definition outlines the blueprint, while instantiation creates an actual instance (object) based on that blueprint. Multiple, distinct instances/objects of a single class may be built.
+The class **definition** outlines the **blueprint**, while **instantiation** creates an **actual instance** (object) based on that blueprint. Multiple, distinct instances/objects of a single class may be built.
 
 **Class structure**:
 
-![class_structure](class_structure.png)
+<img src="class_structure.png" alt="class_structure" width="400">
 
 
+<div style="page-break-before: always;"></div>
 
 ## Defining a Class
 
 ### Class head
 
-1. **Visibility** modifier (and optionally other modifiers such as `abstract` or `final`): see below, [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
-2. `class` (or other types such as [`interface`](14_Interfaces.md) or [`enum`](12_Enums.md)).
+1. **Visibility** modifier (and optionally other modifiers such as `abstract` or `final`): see below and chapters [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
+2. **`class`** (or other types such as [`interface`](14_Interfaces.md) or [`enum`](12_Enums.md)).
 3. **Name** of the class
-4. Optional extensions/implementations:
+4. Optional info about its nature as extension/implementation:
     - `extends` for a [superclass](13_Inheritance.md) (only one superclass allowed)
     - `implements` for [interfaces](14_Interfaces.md) (comma-separated if multiple)
 
-`aVisibility class AnyClassName { ... }`
 ```java
+// General structure:
+aVisibility class AnyClassName { ... }
+
 // Minimal class definition:
 public class MyClass {
     ...
 }
 
 // Example with extensions and implementations:
-public final class AnyClass extends ParentClass implements InterfaceOne, InterfaceTwo {
+public final class AnyClass extends ParentClass implements InterfOne, InterfTwo {
     ...
 }
 ```
@@ -41,31 +44,28 @@ public final class AnyClass extends ParentClass implements InterfaceOne, Interfa
 
 **Head**:
 
-1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`): see below, [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
+1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`): see below and chapters [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
 2. **Return type** OR `void` (when nothing is returned)
 3. **Name** of the method
 4. **Parameters**: inside `()` in form `type name`, multiples separated by `,`
 
 ```java
-aVisibility aType aMethodName(typeOne argOne, typeTwo argTwo){
-        ...
-    }
+    aVisibility aType aMethodName(typeOne argOne, typeTwo argTwo){
+            ...
+        }
 ```
 ```java
 // Example:
-public class AnyClass{
-    ...
     public int calcDouble(int num){
         ...
     }
-}
 ```
 
 **Parameter lists of variable length**
 - We can give a **parameter list of variable length** to a method
 - Using **`...` in front of a parameter name**, indicates that this variable can consist of an arbitrary number of elements
 - It is then saved in form of **an array of the given type**, with **length inferred** by the number of elements passed (*see [Arrays](11_Arrays.md) for details*)
-- We can only use **ONE such parameter**, and it has to be **passed after any other parameters**
+- We can only use **ONE such parameter**, and it has to be **passed as the last parameter**
 
 ```java
 // Example:
@@ -91,19 +91,34 @@ Variables, constants and methods can be defined with a specific **visibility** a
 - **Protected**: The variable is accessible within the same package and by subclasses (even if they're in a different package); especially useful for [inheritance](13_Inheritance.md)
 - If no visibility modifier is specified, the **default is "package-private"**, meaning the variable is accessible within the same package.
 
-![visibility](visibility.png)
+<img src="visibility.png" alt="visibility" width="400">
 
 ### Variables and Constants
-Variables and constants that are declared inside a *method*, are called **local variables/constants**, and can only be used within this method. Their visibility cannot be changed.
 
-Variables and constants that are declared inside a class but outside methods (and are not declared as "static", see below) are called **instance variables/constants** as they are tied to an instance (object) of that class. Within the class, they are available to all methods of the class. To address an instance variable/constant of the current instance, the **`this.*` keyword** is used, e.g.: `this.points = 3` (although `this` is technically optional if there is no ambiguity).
+**Local variables:**
 
-**Variables** are typically defined as `private`, such that they are only available within the class (= "encapsulation"). Using **public variables is not recommended**, as this violates the principle of encapsulation. **Constants** (especially `static` ones, see below) can be `private` or `public`, in which case they can be seen as a "service" to external sources.
+- Variables (and constants) that are declared **inside a *method***
+- Can **only** be used **within this method**
+- Visibility cannot be changed
+
+**Instance variables/constants**
+
+- Declared **inside a class but outside methods** (and not declared as "static", see below)
+- They are **tied to an instance** (object) of that class
+- Within the class, they are **available to all methods**
+- To address an instance variable/constant of the current instance, the **`this.*` keyword** is used, e.g. `this.points = 3` (although `this` is technically optional if there is no ambiguity)
+
+**Visibilities**
+
+- **Variables** are typically defined as `private`, such that they are only available within the class (= "encapsulation")
+- Using **public variables is not recommended**, as this violates the principle of encapsulation
+- **Constants** (especially `static` ones, see below) can be `private` or `public`, in which case they can be seen as a "service" to external sources
 
 ```java
 public class AnyClass{
     ...
-    private int anInstanceVariable; // An instance variable, available to all methods of the class
+    // An instance variable, available to all methods of the class
+    private int anInstanceVariable;
     ...
     public anyType anyMethod(aType anArg){
         string aLocalVariable; // A local variable, only available to the method
@@ -115,7 +130,10 @@ public class AnyClass{
 ```
 
 ### The Static Modifier
-Variables, constants and methods can be declared to belong to the class itself, not to an instance. In that case, they are declared/defined as `static` and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects.md) and [Variable Types](06_Variable_Types.md) for details*).
+
+- **Variables, constants and methods** can be declared **to belong to the class** itself, not to an instance
+- In that case, they are declared/defined as `static` ...
+- ... and can be used **without instantiating an object** (*see [Objects and Methods](05_Objects.md) and [Variable Types](06_Variable_Types.md) for details*).
 
 For static variables (and constants), there is only **one instance of the variable for the whole class**, and it is shared among all objects/instances of this class. This can be useful for variables that are the same for all instances, such as a counter.
 
@@ -125,6 +143,7 @@ For static variables (and constants), there is only **one instance of the variab
 public class AnyClass{
     ...
     public static final int ANY_CONSTANT = 100; // A static, public constant
+    private static int aCounter = 0; // A static variable; e.g. an instance counter
     ...
     public static anyType anyMethod(aType anArg){
         ... // Do something independently of any instances...
@@ -139,11 +158,13 @@ public class AnyClass{
 - In this case, java can **select the method based on the parameters** used in the method call
 
 
+<div style="page-break-before: always;"></div>
 
 ## Special Methods
 
 ### Main Method
 The main method contains commands that we want to be **executed** when running the program. It is mandatory for classes that are designed to be the entry point of a Java program.
+
 ```java
 public class AnyClass{
     ...
@@ -155,7 +176,9 @@ public class AnyClass{
 ```
 
 ### Constructor Method(s)
-Is called when **a new instance is created**. Its name is always the same as the class. It contains no return type (also not void, as it implicitly returns the *address* of the instance).
+- Is called when **a new instance is created**
+- Its **name** is always the **same as the class**
+- It contains **no return type** (also not void, as it implicitly returns the *address* of the instance).
 
 IMPORTANT: There can be **multiple constructors** that differ in the **number/type of arguments** they take (= "method overloading", see above). At the instantiation of an object, the suited constructor is automatically chosen based on the input.
 
@@ -166,17 +189,23 @@ public class AnyClass{
         ... // Define the initial state of the object given an argument
     }
     public AnyClass(){
-    ... // Define the initial state of the object given NO argument (e.g. using default values)
+    ... // Define the initial state of the object given NO argument
+    ... // (e.g. using default values)
 }
 ```
 
 ### Getters/Setters
-Since instance variables should typically be private, they cannot be accessed from the outside. However, **controlled access** can be granted through methods. Setters grant control as they typically check the input before assigning it to an instance variable, and may include validation or transformations before setting the value.
+- Since instance variables should typically be private, they cannot be accessed from the outside
+- However, **controlled access** can be granted **through methods**
+- **Setters** grant control as they typically check the input before assigning it to an instance variable, and may include validation or transformations before setting the value
+- **Getters** are used to access the value of an instance variable, possibly transformed or checked before returning it
+
 ```java
 public class AnyClass{
     ...
-    public varType getAnyVar(){
-        return anyVar // Could also be that the variable is transformed before...
+    public varType getVarOne(){
+        ... // Could also be that the variable is transformed before...
+        return varOne
     }
     ...
 }
@@ -184,9 +213,9 @@ public class AnyClass{
 ```java
 public class AnyClass{
     ...
-    public void setAnyVar(aType anArg){
+    public void setVarOne(aType anArg){
         ... // Usually check input first, and possibly modify it
-        this.anyVar = anArg;
+        this.varOne = anArg;
     }
     ...
 }
@@ -198,30 +227,39 @@ The `toString()` method overrides the default implementation from the Object cla
 public class AnyClass{
     ...
     public String toString() {
-        return this.varOne + ": " + this.varTwo; // or any sort of string describing the object
+        // any sort of string suited to describe the object
+        return this.varOne + ": " + this.varTwo; 
 }
 ```
+
 ### equals() and compareTo()
 
-Be careful when comparing objects with `==`, this tests for aliases (variables pointing to the very same object).
+Be aware that comparing objects with **`==` tests for aliases** (variables pointing to the very same object).
 
-However, objects should often be recognised as identical if certain properties are the same. Implement the `equals()` method for this comparison (default is also simply a test for aliases!).
+However, objects should often be recognised as identical if certain properties are the same. **Implement the `equals()` method** for this comparison (default is also simply a test for aliases!).
 
-The `compareTo()` method has a similar function. It should generally produce the output more or less according to "executing_object minus argument_object", i.e. at least:
-- **Negative** integer value if the **executing object is smaller** than the object in the argument (in a defined way)
-- **Positive** integer value if the executing object is **larger** in this way
+The **`compareTo()`** method has a similar function. It should generally produce the output in a sense according to **"executing_object - argument_object"**, i.e. at least ensure to return:
+
+- a **negative** integer value if the **executing object is smaller** than the object in the argument (in a defined way)
+- a **positive** integer value if the executing object is **larger** in this way
 - **0** if objects are **equal** (with regard to relevant properties)
 
 
+<div style="page-break-before: always;"></div>
 
 ## Importing Classes
 
 Imports are done **before class definitions** (but after package definitions).
 
 ```java
-// Examples:
+package myPackage; // Package definition
+
+// Examples for imports:
 import java.util.Scanner; // import specific Class
 import java.util.*; // import all Classes from a Package
+
+public class AnyClass{
+    ...
 ```
 
 ---

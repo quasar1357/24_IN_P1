@@ -7,13 +7,13 @@
 ### Simple **if**
 ```java
 if (arbBool)
-    ... // single line!
+    ... // single line
 
 // OR
 
 if (arbBool) {
-    ... // multiple lines!
-    ... // multiple lines!
+    ... // multiple lines
+    ... // multiple lines
 }
 ```
 
@@ -59,11 +59,9 @@ if (arbBool){
 ```
 
 ## Switch Statement
-The `switch` command let's the user go through a block and **enter at positions, depending on the value** of the given variable.
-
-If we do not `break` in a given case, it will go through all following cases.
-
-The `default` case can be used to define what to do if no other case is true.
+- The `switch` command let's the user go through a block and **enter at positions, depending on the value** of the given variable
+- **If we do not `break`** in a given case, it will **go through all following cases**
+- The **`default`** case can be used to define what to do **if no other case is true**
 
 ```java
 switch(anyVar) {
@@ -81,12 +79,16 @@ switch(anyVar) {
 ```
 
 ## Conditional Operator
-Given a boolean (or a statement that creates one), the operator **returns one of two values**, the first one if the boolean is true, the second one if it is false.
+Given a boolean (or a statement that creates one), the operator **returns one of two values**: the first one if the boolean is true, the second one if it is false.
 
 ```java
 anyBool ? valOne : valTwo;
-points = (points > MAX) ? points + 1 : points * 2; // Example
-System.out.println(tries + (tries == 1 ? " Versuch" : " Versuche")); // Use-case
+
+// Example
+points = (points > MAX) ? points + 1 : points * 2;
+
+// Use-case for printing
+System.out.println(tries + (tries == 1 ? " Versuch" : " Versuche"));
 ```
 
 ---

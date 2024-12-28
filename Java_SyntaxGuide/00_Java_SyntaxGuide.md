@@ -1,6 +1,6 @@
-## Contents
+# Java Syntax Guide - Contents
 
-01. [Comments](./01_Commands_and_Comments.md)
+01. [Commands and Comments](./01_Commands_and_Comments.md)
 02. [Primitive Data Types](./02_Primitive_Data_Types.md)
 03. [Variables and Constants](./03_Variables_and_Constants.md)
 04. [Classes and Method Definitions](./04_Classes.md)
@@ -15,3 +15,4 @@
 13. [Inheritance](./13_Inheritance.md)
 14. [Interfaces](./14_Interfaces.md)
 15. [Polymorphism and Inheritance vs. Interfaces](./15_Polymorphism_and_InhVsInt.md)
+16. [Exceptions](./16_Exceptions.md)

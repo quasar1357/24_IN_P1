@@ -3,16 +3,18 @@
 ---
 # Enum Types
 
-Enum types are similar to classes. However, they allow **only a selection of identifiers ("versions") of objects**, thereby providing type safety.
+Enum types are **similar to classes**. However, they allow **only a selection of identifiers ("versions") of objects**, thereby providing **type safety**.
 
 
 ## Defining enums
-s
+
 - **Identifiers/versions are listed as first thing** in the definition, delimited by `,`
 - Thereby they automatically:
     - call the constructor
     - instantiate objects of this enum type and
     - assign them to static variables named as this version
+
+NOTE: The **constructor** of an enum type must be **private**, as it is called above and not from outside. It also does **not take any arguments** besides the ones defined in the enum type definition, as the versions are pre-defined.
 
 ```java
 public enum AnEnumName {
@@ -34,13 +36,13 @@ public enum AnEnumName {
 
 ```
 
-Identifiers that do not need further specification can be defined in a more **simple way**:
+Identifiers/versions that do not need further specification can be defined in a more **simple way**:
 
 ```java
 public enum AnEnumName {
-
-    VersionOne, VersionTwo, VersionThree // Note, the semicolon is not needed here (but can be added...)
-                                        // BUT: if you add any more code, the semicolon is needed!
+    // Note, the semicolon is not needed here (but can be added...)
+    VersionOne, VersionTwo, VersionThree 
+    // BUT: if you add any more code, the semicolon is needed!
 
 }
 ```
@@ -50,7 +52,7 @@ public enum AnEnumName {
 
 ### Instantiating enums
 
-To instantiate an enum object, we just use the `.` operator and **version name** on the enum type (like a static variable):
+To instantiate an enum object, we just use the `.` operator and **version name on the enum type** (like a static variable):
 
 ```java
 AnEnumName myEnum = AnEnumName.VersionOne;
@@ -59,20 +61,22 @@ AnEnumName myEnum = AnEnumName.VersionOne;
 Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated and **do not take any arguments**.
 
 
-### Methods of enums and the enum class
+### Methods of enums and the Enum class
 
-Enums can have methods and variables, just like classes. Of course these methods may also allow to change the values of the variables.
+Enums can have methods and variables, just like classes, and of course these methods may also access and change the values of the variables.
 
-Enum **objects** automatically have the methods and variables defined in the enum type:
+**Enum objects** automatically have the methods and variables defined in the Enum type:
 
 - String `name()`: Returns the **identifier** of the enum object as a string (for example ‘Goalkeeper’)
 - int `ordinal()`: Returns the **position** of the enum object within the enumeration
 
-The **enum class** itself has the following (`static`) methods:
+The **Enum class** itself has the following (`static`) methods:
 
 - static E `valueOf(`String `s)`: Returns **object** of enum type E from the enumeration **whose identifier matches s**
 - static E[] `values()`: Returns **all objects** of this enumeration **in an array**
 
+
+<div style="page-break-before: always;"></div>
 
 ## Sidenote: mixing enums and classes
 

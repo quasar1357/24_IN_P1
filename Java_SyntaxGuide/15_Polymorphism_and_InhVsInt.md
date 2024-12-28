@@ -4,11 +4,12 @@
 
 # Polymorphism
 
-- Polymorphism is the ability of an object to take on many forms, meaning that a **reference variable of a superclass or interface can refer to an object of any subclass or class implementing the interface**.
-- This allows for **flexibility** in the code, as the same method can be used for different objects, achieved through method overriding or implementing abstract methods.
-- It also enables to hide implementation details, as the **specific type is not known** at compile time.
-- Notably, it allows to **define arrays that contain objects of different subclasstypeses** but share the relevant behavior/perspective, and to call methods on them.
-- Important: Only subclasses that extend the superclass or implement the interface can be used in this way, therefore allowing for type safety.
+- Polymorphism is the ability of an object to take on many forms, meaning that a **reference variable of a superclass/interface can refer to an object of any subclass/interface-implementing-class**
+- This allows for **flexibility** in the code, as the same method can be used for different objects, achieved through method overriding or implementing abstract methods
+- It also enables to hide implementation details, as the **specific type is not known** at compile time
+- Notably, it allows to **define arrays that contain objects of different subclass types** but share the relevant behavior/perspective, and to call methods on them
+
+IMPORTANT: Only subclasses that extend the superclass or implement the interface can be used in this way, therefore allowing for type safety.
 
 ```java
     // Polymorphism
@@ -32,15 +33,19 @@
         beverage = beverages[i]; // polymorphic assignment !!!
         // Only at runtime, the actual object type is determined
         System.out.println(beverage.drink()); // polymorphic method call !!!
-        // Method "drink" is defined by superclass (or interface), but must be present --> shared behavior/perspective
+        // Method "drink" is defined by superclass (or interface)
+        // but must be present --> shared behavior/perspective
     }
 ```
 
 **EXAMPLE WITH INTERFACES**:
-![interface_polymorphism](interface_polymorphism.png)
-**Advantage**: We can write code, and later **exchange the BackPack by SuitCase**, and the overall behavioiur stays, since they both implement the interface Bag. So, we can work with "Bags", and only later define detailed behaviours by implementing the interface in different classes. This is a **very powerful concept** in Java, and is used in many libraries and frameworks.
+
+<img src="interface_polymorphism.png" alt="interface_polymorphism" width="600">
+
+**Explanation/Advantage**: We can write code, and later **exchange the BackPack by SuitCase**, and the overall behavioiur stays, since they both implement the interface Bag. So, we can work with "Bags", and only later define detailed behaviours by implementing the interface in different classes. This is a **very powerful concept** in Java, and is used in many libraries and frameworks.
 
 
+<div style="page-break-before: always;"></div>
 
 # Inheritance vs. Interfaces
 | **Feature**                     | **Superclasses**                                                                           | **Interfaces**                                                                                 |

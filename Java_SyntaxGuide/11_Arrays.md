@@ -5,37 +5,43 @@
 
 ## Creating arrays
 
-- Arrays are **part of Java** (not "written in Java")
+- Arrays are **part of Java** (not "written in Java" or "part of the Java API")
 - Arrays in Java **are Objects**
+- The elements can be **objects or primitive data types**
 - At instantiation we **have to define the length**
 - An array's **length can not be changed** afterwards
 
 ```java
 aType[] aVarName; // Declaration
 aVarName = new int[aNum]; // Instantiation with length aNum
+
 // Example:
 int[] numbersArr = new int[8]; // int array of length 8
 ```
 
 - Arrays can also be instantiated using **initialization lists**, i.e. lists of elements of the same type, separated by `,` and enclosed in `{}`
 - The **`new` operator is not necessary** in this case
-- **Type and length are inferred** automatically by Java, but types must be same as for declaration
+- **Type and length are inferred** automatically by Java, but types must compatible with declaration
 
 ```java
 aType[] aVarName = {elOne, elTwo, elThree}; // will be of length 3
+
 // Example
 int[] scores = {5, 3, 22, 31, 5, 18, 12, 55, 17, 17};
 ```
 
-- Elements can be **objects or primitive data types**
-- When the array is instantiated, it reserves space for the objects, but **does NOT instantiate the objects** themselves
+- When an array is instantiated, it reserves space for it elements, but **does NOT instantiate any objects** themselves
 - **For primitive data types, default values** are assigned, e.g. `0` for numericals and `false` for booleans
 
 ```java
 // Example:
-String[] names = new String[4]; // Array instantiated, NO Strings instantiated yet
+
+// Instantiating array, NO Strings instantiated yet
+String[] names = new String[4];
 String name1 = new String("Sebastian");
+// Assigning an already instantiated object
 names[0] = name1;
+// Assigning new objects
 names[1] = new String("Louis");
 names[2] = "Hannes";
 ```
@@ -45,7 +51,8 @@ names[2] = "Hannes";
 Use **square brackets and an index** to access elements
 
 ```java
-int myEl = numbersArr[3]; // get fourth element (remember indices start @ 0)
+// get fourth element (remember indices start @ 0)
+int myEl = numbersArr[3];
 ```
 
 ## Getting the length
@@ -54,12 +61,12 @@ The **variable ".length" is public** and can be accessed directly on array objec
 
 ```java
 // Example:
-int maxIndex = numbersArr.length - 1; // Example...
+int maxIndex = numbersArr.length - 1;
 ```
 
-## multi-dimensional arrays
+## Multi-dimensional arrays
 
-- Multi-dimensional arrays are achieved by creating **arrays of arrays** (of arrays of ...)
+- Multi-dimensional arrays are achieved by creating nested arrays, i.e. **arrays of arrays** (of arrays of ...)
 - To instantiate the arrays and to access elements, we just use **multiple square brackets** (one for each dimension)
 - To access properties of dimensions, we just use them on elements of the "layer before" (which are arrays themselves)
 
@@ -72,7 +79,7 @@ table[0].length; // = width (# columns)
 ```
 
 - We can also use **initialization lists** for instantiation, again they are just used in a nested way
-- Importantly, this can cause a **ragged array**, i.e. arrays with different lengths in the same dimension
+- Importantly, this may cause a **"ragged array"**, i.e. arrays with different lengths in the same dimension
 
 ```java
 // Example "normal" array:

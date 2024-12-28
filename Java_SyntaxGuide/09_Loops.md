@@ -10,7 +10,7 @@ while ( boolExpre­ssion ) {
 }
 ```
 
-![while](while.png)
+<img src="while.png" alt="while" width="600">
 
 ## Do While Loops
 
@@ -19,10 +19,12 @@ do {
  ­ ... ­st­ate­ments
 } while ( boolExpre­ssion );
 ```
-![doWhile](doWhile.png)
+
+<img src="doWhile.png" alt="doWhile" width="600">
 
 ## For Loops
-![for](for.png)
+<img src="for.png" alt="for" width="600">
+
 
 ### For with a variable
 
@@ -30,20 +32,29 @@ do {
 - **Condition** (checked *before* each entry into loop)
 - **Update** of variable (executed *after* each iteration; can basically be *any change* to the variable)
 
-NOTE: The variable used for the loop **should not be changed in the loop**!
+IMPORTANT: The variable used for the loop **should not be changed in the loop**!
 
 ```java
+// GENERAL SYNTAX
 for (loopVar = initVal; boolWithVar; updateOfVar)
     ...
 
+// OR with curly braces
+for (loopVar = initVal; boolWithVar; updateOfVar) {
+    ...
+}
+
+// Example:
 for (int count = 1; count <= 3; count++)
     System.out.println(count);
 
-int count; // can use variable that we declared before
+// can use a variable that we declared before
+int count;
 for (count = 1; count <= 3; count++)
     System.out.println(count);
 
-for (int count = 100; count > 0; count--) // Can also decrement
+// Can also decrement
+for (int count = 100; count > 0; count--)
     System.out.println(count);
 ```
 
@@ -52,6 +63,11 @@ for (int count = 100; count > 0; count--) // Can also decrement
 ```java
 for (elementType tempElementName : objWithIterator)
     ...
+
+// OR with curly braces
+for (elementType tempElementName : objWithIterator) {
+    ...
+}
 
 // Example:    
 for (String bandMember : band)

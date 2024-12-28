@@ -4,9 +4,9 @@
 
 # Interfaces
 
-- **Interfaces** are similar to abstract superclasses, but they can't have any implementation, only method headers.
-- They are used to define a **set of methods** that a class must implement, thereby **ensuring a certain behavior**.
-- To do so, they typically contain **abstract methods**, which are implemented by the class that implements the interface (*see chapter [13_Inheritance](./13_Inheritance.md) for details on abstract methods*).
+- **Interfaces** are similar to abstract superclasses, but they can't have any implementation, only method headers
+- They are used to define a **set of methods** that a class must implement, thereby **ensuring a certain behavior**
+- To do so, they typically contain **abstract methods**, which are implemented by the class that implements the interface (*see chapter [13_Inheritance](./13_Inheritance.md) for details on abstract methods*)
 - Methods in interfaces are by default `public` and `abstract`, and these **keywords can be omitted** when defining them in the interface.
 
 ## Defining interfaces
@@ -41,7 +41,8 @@ public interface Buyable {
 /**
 * Returns the price of a purchasable object
 */
-double getPrice(); // Defining that all Buyable objects must have a getPrice() method
+    // Defining that all Buyable objects must have a getPrice() method
+    double getPrice(); 
 }
 
 // The CLASS
@@ -52,7 +53,8 @@ public class Book implements Buyable {
     }
         
     @Override
-    public double getPrice() { // Implementation of the getPrice() method in the Book class
+    // Implementation of the getPrice() method in the Book class
+    public double getPrice() { 
         return price;
     }
 }
@@ -61,18 +63,19 @@ public class Book implements Buyable {
 If a class implements multiple interfaces, its instances can be **cast to any of the implemented interfaces**, taking on different roles.
 
 ```java
+// Pasta can be used as Buyable or Cookable, depending on the context
 public class Pasta implements Buyable, Cookable
 ```
 
-On the other hand, an interface can be implemented by multiple classes, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
+On the other hand, an interface can be **implemented by multiple classes**, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
 
 *Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.*
 
 
 ## Default methods
 
-- **Default methods** are methods that have a default implementation in the interface, which can be overridden by the implementing class.
-- They are defined using the `default` keyword.
+- **Default methods** are methods that have a default implementation in the interface, which can be overridden by the implementing class
+- They are defined using the `default` keyword
 
 ```java
     // Interface
@@ -92,22 +95,25 @@ On the other hand, an interface can be implemented by multiple classes, allowing
     }
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## Interfaces of the java API
 
 ### Comparable
 
-- The `Comparable` interface is used to define a **natural ordering** of objects.
-- It has one method, `compareTo()`, which compares the object to another object of the same type.
-- It returns an integer, which is negative if the object is smaller than the object in the argument, positive if it is larger, and zero if they are equal.
+- The **`Comparable`** interface is used to define a **natural ordering** of objects
+- It has one method, `compareTo()`, which compares the object to another object of the same type
+- It **returns an integer**, which is negative if the object is smaller than the object in the argument, positive if it is larger, and zero if they are equal
 
 ```java
 obj1.compareTo(obj2); // ~= obj1 - obj2
 ```
 
-- `compareTo()` takes objects as arguments, and we can parameterize the interface using `<>` to specify the type of objects it can compare.
+- The `compareTo()` method takes objects as arguments, and we can parameterize the interface using `<>` to specify the type of objects it can compare to
 
 ```java
-public class Pasta implements Comparable<Pasta> // method compareTo noe expects Pasta objects
+// method compareTo now expects Pasta objects
+public class Pasta implements Comparable<Pasta> 
 ```
 
 - The `compareTo()` method is used in the static `Collections.sort()` method to sort objects.
@@ -118,20 +124,22 @@ public class Pasta implements Comparable<Pasta> // method compareTo noe expects 
 - It has three methods: `hasNext()`, `next()`, and `remove()`.
 
 ```java
+// Create a list and add some elements
 List<String> list = new ArrayList<>();
-// Add elements to the list
 list.add("A");
 list.add("B");
-Iterator<String> iter = list.iterator(); // Create an iterator (as provided in the List interface)
-while (iter.hasNext()) {
+
+// Create an iterator (as provided in the List interface)
+Iterator<String> iter = list.iterator()
+while (iter.hasNext()) { // Check if there is a next element
     String element = iter.next(); // Get the next element
     iter.remove(); // Remove the current element
 }
 ```
 
-- The **`Iterable`** interface is used to define a collection that can be iterated over.
-- It has one method, `iterator()`, which returns an `Iterator` object.
-- Iterables can therefore be used in a `for` (each) loop.
+- The **`Iterable`** interface is used to define a collection that can be iterated over
+- It has one method, `iterator()`, which returns an `Iterator` object
+- Iterables can therefore be used in a `for` (each) loop
 
 ```java
 for (String element : list) {

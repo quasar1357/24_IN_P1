@@ -1,7 +1,7 @@
 [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
-# Combinations of final vs. non-final, public vs. private, and static vs. non-static
+# Combinations of final, static, and visibility modifiers for variables
 
 ## 1. Private Instance Variable: private + non-final + non-static
 
@@ -63,16 +63,16 @@ Use Case: This is used for **global constants** that are available publicly, suc
 public static final int MAX_SIZE = 50;
 ```
 
-Summary Table:
+## Summary Table
 
 Visibility | final | static | Combination Description
 -|-|-|-
-private | non-final | non-static | Private instance variable (standard)
-private | non-final | static | Private class variable (like obj. counter)
-private | final | non-static | Private instance constant (fixed object property)
+private | non-final | non-static | **Private instance variable (standard)**
+private | non-final | static | **Private class variable (like obj. counter)**
+private | final | non-static | **Private instance constant (fixed object property)**
 private | final | static | Private class constant (hidden constants)
 public | final | non-static | Public instance constant (rare)
-public | final | static | Public class constant (global "service" constants)
+public | final | static | **Public class constant (global "service" constants)**
 
 **Excluded** Combinations, because violate **encapsulation**:
 - **public + non-final** + non-static

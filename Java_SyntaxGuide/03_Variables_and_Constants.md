@@ -9,7 +9,7 @@ Declaration always with type; assignment of a value with `=`.
 int variableOne; // declare
 variableOne = 100; // assign value
 // OR
-int variableTwo = 100; declare and assign
+int variableTwo = 100; // declare and assign in one
 ```
 ```java
 int variableOne, variabelTwo, ... ; // declare multiple at once
@@ -20,15 +20,16 @@ int variableOne = 100, variableTwo; // declare both, assign one
 ### Constants
 Constants are declared as `final`, meaning they can be assigned exactly once:
 ```java
-final int ARBITRARY_CONSTANT = 500;
+final int arbitraryConstant = 500; // non-static constant
+final static int MAX_SPEED = 120; // static constant
 ```
 
 ## Assigning Literals
 
-**Literals** can be of any primitive Data Type, a String, or Null:
+**Literals** can be of any primitive Data Type, a String, or `null`:
 - **Integer**: `int a = 10`;
 - **Floating-point** (decimal numbers): `double piApprox = 3.1415;` `float myF = 2.5f;` (note the f for float)
-- **Character** (single character enclosed in single quotes): `char ch = 'A';` ('A' != 'a')
+- **Character** (single character enclosed in single quotes): `char ch = 'A';` (case sensitive; 'A' != 'a')
 - **String** (sequence of characters enclosed in double quotes): `String name = "Hello";`
 - **Boolean** (true and false): `boolean aFlag = true;`
 - **Null** Literal (variable does not point to anything or to the "empty" object): `String str = null;`
