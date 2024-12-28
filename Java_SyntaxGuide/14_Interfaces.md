@@ -28,6 +28,28 @@ Interfaces are defined like classes but using the `interface` keyword (instead o
     }
 ```
 
+## Default methods
+
+- **Default methods** are methods that have a default implementation in the interface, which can be overridden by the implementing class
+- They are defined using the `default` keyword
+
+```java
+    // Interface
+    public interface TheInterface {
+        public void aMethod(); // Normal, abstract method
+        default void anotherMethod() { // Method with default
+            // Default implementation
+        }
+    }
+
+    // Example:
+    public interface Shape {
+        public double getArea(); // Normal, abstract method
+        default void printArea() { // Default method
+            System.out.println("The area is " + getArea());
+        }
+    }
+```
 
 ## Implementing interfaces
 > ___
@@ -70,30 +92,6 @@ public class Pasta implements Buyable, Cookable
 On the other hand, an interface can be **implemented by multiple classes**, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
 
 *Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.*
-
-
-## Default methods
-
-- **Default methods** are methods that have a default implementation in the interface, which can be overridden by the implementing class
-- They are defined using the `default` keyword
-
-```java
-    // Interface
-    public interface TheInterface {
-        public void aMethod();
-        default void anotherMethod() {
-            // Default implementation
-        }
-    }
-
-    // Example:
-    public interface Shape {
-        public double getArea();
-        default void printArea() {
-            System.out.println("The area is " + getArea());
-        }
-    }
-```
 
 <div style="page-break-before: always;"></div>
 

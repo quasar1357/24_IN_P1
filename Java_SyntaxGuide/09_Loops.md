@@ -12,7 +12,7 @@ while ( boolExpre­ssion ) {
 
 <img src="while.png" alt="while" width="600">
 
-## Do While Loops
+## Do-While Loops
 
 ```java
 do {
@@ -26,7 +26,7 @@ do {
 <img src="for.png" alt="for" width="600">
 
 
-### For with a variable
+### For (with a variable)
 
 - **Inititalization** of the variable (executed *once*)
 - **Condition** (checked *before* each entry into loop)
