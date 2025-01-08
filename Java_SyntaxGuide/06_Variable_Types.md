@@ -27,7 +27,7 @@ private static int classVariable;
 
 A private constant that is tied to an instance but can't be changed once initialized (usually in the constructor).
 
-Use Case: Useful for fields that must be initialized per instance but should never be modified after construction, **like fixed properties of that specific object**.
+Use Case: Useful for fields that must be **initialized per instance** but should never be modified after construction, like **fixed properties of that specific object**.
 
 ```java
 private final int constant;
@@ -62,6 +62,10 @@ Use Case: This is used for **global constants** that are available publicly, suc
 ```java
 public static final int MAX_SIZE = 50;
 ```
+
+<div style="page-break-before: always;"></div>
+
+------
 
 ## Summary Table
 

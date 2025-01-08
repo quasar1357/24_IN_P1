@@ -58,6 +58,8 @@ if (arbBool){
 }
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## Switch Statement
 - The `switch` command let's the user go through a block and **enter at positions, depending on the value** of the given variable
 - **If we do not `break`** in a given case, it will **go through all following cases**

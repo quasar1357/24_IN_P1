@@ -10,7 +10,7 @@ while ( boolExpre­ssion ) {
 }
 ```
 
-<img src="while.png" alt="while" width="600">
+<img src="while.png" alt="while" width="350">
 
 ## Do-While Loops
 
@@ -20,11 +20,13 @@ do {
 } while ( boolExpre­ssion );
 ```
 
-<img src="doWhile.png" alt="doWhile" width="600">
+<img src="doWhile.png" alt="doWhile" width="250">
+
+<div style="page-break-before: always;"></div>
 
 ## For Loops
-<img src="for.png" alt="for" width="600">
 
+<img src="for.png" alt="for" width="550">
 
 ### For (with a variable)
 

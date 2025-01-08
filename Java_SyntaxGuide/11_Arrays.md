@@ -1,6 +1,7 @@
 [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
+
 # Arrays
 
 ## Creating arrays
@@ -55,6 +56,8 @@ Use **square brackets and an index** to access elements
 int myEl = numbersArr[3];
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## Getting the length
 
 The **variable ".length" is public** and can be accessed directly on array objects
@@ -97,7 +100,9 @@ int[][] ragged = { {1, 2, 0},       // row length 3
 
 ```
 
-## Comparison Arrays vs. ArrayLists
+---
+
+# Comparison Arrays vs. ArrayLists
 
 Property | Arrays | ArrayLists
 -|-|-

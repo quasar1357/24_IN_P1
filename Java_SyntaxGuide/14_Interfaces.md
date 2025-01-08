@@ -30,7 +30,7 @@ Interfaces are defined like classes but using the `interface` keyword (instead o
 
 ## Default methods
 
-- **Default methods** are methods that have a default implementation in the interface, which can be overridden by the implementing class
+- **Default methods** have a default implementation in the interface, which **can be overridden** by the implementing class
 - They are defined using the `default` keyword
 
 ```java
@@ -51,11 +51,15 @@ Interfaces are defined like classes but using the `interface` keyword (instead o
     }
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## Implementing interfaces
 > ___
 > **IMPORTANT**: A class can **implement multiple interfaces**, but only **extend one superclass**.
 > ___
-**Implementing an interface** is done using the `implements` keyword, and all methods of the interface must be implemented in the class.
+
+- Implementing an interface is done using the **`implements` keyword**
+- **All methods of the interface must be implemented** in the class
 
 ```java
 // The INTERFACE
@@ -82,14 +86,20 @@ public class Book implements Buyable {
 }
 ```
 
-If a class implements multiple interfaces, its instances can be **cast to any of the implemented interfaces**, taking on different roles.
+If a class implements multiple interfaces, its instances can be **cast to any of the implemented interfaces**, taking on different roles, allowing for a form of **polymorphism**, (*see chapter [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*).
 
 ```java
 // Pasta can be used as Buyable or Cookable, depending on the context
 public class Pasta implements Buyable, Cookable
 ```
 
-On the other hand, an interface can be **implemented by multiple classes**, allowing for **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
+On the other hand, an interface can be **implemented by multiple classes**, allowing for another type of **polymorphism** (*see chapter about [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)*). This allows interfaces to **make classes "interchangeable" in certain contexts**, as they share a common behavior.
+
+```java
+// Buyable can be implemented by multiple classes
+public class Book implements Buyable
+public class Pasta implements Buyable
+```
 
 *Sidenote: **Interfaces can extend other interfaces**, allowing for a hierarchy of interfaces.*
 

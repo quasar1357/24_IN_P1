@@ -91,6 +91,8 @@ int arbitraryIntVar = inputScanner.nextInt();
 double arbitraryDoubleVar = inputScanner.nextDouble();
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## PrintWriter
 ```java
 import java.io.PrintWriter;
@@ -131,6 +133,8 @@ import java.util.Random;
 - int `nextInt(`int `max)`: int between 0 and max (excl.)
 
 **Adjust and combine** to the needs (e.g. add and multiply to move boarders and extend range) !
+
+<div style="page-break-before: always;"></div>
 
 ## DecimalFormat
 
@@ -184,6 +188,8 @@ static double sqrt(`double `x): x^0.5
 - static double `min(`double `x, `double `y)` | Similarly: `max()`
 - static double `random()`: between 0.0 (incl.) and 1.0 (excl.)
 
+<div style="page-break-before: always;"></div>
+
 ## Wrapper Classes
 
 To each primitive data type, there exists a class that wraps it and **can hold and work with values of that type**. They are particularly useful in cases where it is necessary to use objects and not primitive data types.
@@ -211,17 +217,21 @@ int num = 987;
 String strNum = Integer.toString(num);
 ```
 
+<div style="page-break-before: always;"></div>
+
 ## ArrayList
 
 - Save a **list of objects of the same type**
 - Allow access and modifications through **integer indices**
 - ArrayList is a **generic** class, meaning the user can instantiate a parametrised type that can hold objects of one defined type.
-- Importantly, ArrayLists **can only store objects**, NOT primitive data types. This suggests using wrapper classes mentioned above.
+- Importantly, ArrayLists **can only store objects**, NOT primitive data types; this suggests using wrapper classes mentioned above
+
+*Sidenote: ArrayLists are just one example from java's **collection framework**, which provides many other data structures (e.g. LinkedList, HashSet, HashMap, etc.)*
 
 Type specification:
 - At the declaration, the user **specifies the type of the objects that can be contained** in the ArrayList
 - Naturally, the assigned object must be instantiated with a compatible type (typically the same)
-- In cases of inheritance, the ArrayList can be instantiated with the superclass, and objects of a subclass can be added (see chapter [Polymorphism and Inheritance vs. Interfaces](./15_Polymorphism_and_InhVsInt.md)).
+- In cases of polymorphism, the ArrayList can be instantiated with a superclass/interface type, and objects of subclasses/interface-implementing-classes can be added (see [15_Polymorphism](./15_Polymorphism_and_InhVsInt.md)).
 - Defining an ArrayList without type specification (holding any types) is possible, but not recommended.
 
 ```java

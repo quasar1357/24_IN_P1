@@ -43,6 +43,8 @@ public class Dictionary extends Book {
 ```
 
 
+<div style="page-break-before: always;"></div>
+
 ## Overriding and `final` methods/classes
 
 - **Methods that share the method head** of a method in the superclass will overwrite the inherited method
@@ -86,8 +88,8 @@ IMPORTANT: Differentiate between **overloading** (same method name, different pa
 
 ## Abstract classes and methods
 
-- **Abstract classes** are classes that can't be instantiated, but are used as a **blueprint for other classes** (kind of defining its role but not its implementation)
-- Abstract classes can have **abstract methods**, which are methods without a body, only a method head (but it can also have concrete methods)
+- **Abstract classes** can't be instantiated, but are used as a **blueprint for other classes** (~= defining its role but not its implementation)
+- Abstract classes can have **abstract methods**: methods with no body, only a method head (but they can also have concrete methods)
 - Since abstract classes can't be instantiated, their **constructors can't be (directly) called** and are optional (they are just called when a concrete subclass is instantiated); in some cases, they can be useful, especially to initialize variables
 - Subclasses of an abstract class **must implement all abstract methods** of the superclass, unless they are abstract themselves
 - Abstract methods are defined using the `abstract` keyword, and a `;` instead of a method body
@@ -100,11 +102,8 @@ IMPORTANT: Differentiate between **overloading** (same method name, different pa
     }
 
     // Example:
-    
-    // Abstract class
-    public abstract class Shape {
-        // Abstract method
-        public abstract double getArea();
+    public abstract class Shape { // Abstract class
+        public abstract double getArea(); // Abstract method
     }
 ```
 

@@ -51,6 +51,8 @@ String aStringVar = "arbitrary text"
 ```
 *Details about strings, see  chapter [Java API](10_Java_API.md).*
 
+<div style="page-break-before: always;"></div>
+
 ## 3) Booleans
 
 Only two possible values: **true** or **false**

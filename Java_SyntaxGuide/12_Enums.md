@@ -3,7 +3,7 @@
 ---
 # Enum Types
 
-Enum types are **similar to classes**. However, they allow **only a selection of identifiers ("versions") of objects**, thereby providing **type safety**.
+Enum types are **similar to classes**. However, they allow **only a selection of identifiers ("versions") of objects**, thus providing **type safety**.
 
 
 ## Defining enums
@@ -19,21 +19,19 @@ NOTE: The **constructor** of an enum type must be **private**, as it is called a
 ```java
 public enum AnEnumName {
 
-    // identifiers: call constructor, instantiate objects, assign to static variables
+    // Identifiers: call constructor, instantiate objects, assign to static variables !!!
     VersionOne(valOneForVar), VersionTwo(valTwoForVar), VersionThree(valThreeForVar);
 
     // instance variable for the objects
-    private typeOfVar var; // 
+    private typeOfVar var;
 
-    // Constructor; must be private, as it is called above and not from outside
+    // Constructor; must be private, as it is called above and not from outside !!!
     private AnEnumName(typeOfVar argIn) {
 
-        this.var = argIn // Assigning the argument to the instance variable
+        this.var = argIn // Assigning the argument to the instance variable !!!
 
     }
-
-}
-
+    ...
 ```
 
 Identifiers/versions that do not need further specification can be defined in a more **simple way**:
@@ -43,10 +41,10 @@ public enum AnEnumName {
     // Note, the semicolon is not needed here (but can be added...)
     VersionOne, VersionTwo, VersionThree 
     // BUT: if you add any more code, the semicolon is needed!
-
 }
 ```
 
+<div style="page-break-before: always;"></div>
 
 ## Using enums
 
@@ -58,10 +56,10 @@ To instantiate an enum object, we just use the `.` operator and **version name o
 AnEnumName myEnum = AnEnumName.VersionOne;
 ```
 
-Remember that the enums are built direcly as a pre-defined version of the enum type, so they are already instantiated and **do not take any arguments**.
+Remember: enums are built directly as a pre-defined version of the enum type, so they are already instantiated and **do not take any arguments**.
 
 
-### Methods of enums and the Enum class
+### Methods of enum Objects and of the Enum Class
 
 Enums can have methods and variables, just like classes, and of course these methods may also access and change the values of the variables.
 

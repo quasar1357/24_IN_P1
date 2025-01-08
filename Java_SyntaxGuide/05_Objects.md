@@ -29,6 +29,8 @@ Circle circle1 = new Circle(40, 40, 10);
 ---
 
 
+<div style="page-break-before: always;"></div>
+
 ## Using Methods and Constants
 
 Call methods of an object: use **dot operator on the Object**
@@ -87,6 +89,8 @@ class Car {
 
 *For an overview over possible variable and constant types, see Chapter [Variable Types](06_Variable_Types.md).*
 
+
+<div style="page-break-before: always;"></div>
 
 ## Using overloaded methods
 

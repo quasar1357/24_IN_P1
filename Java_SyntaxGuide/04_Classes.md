@@ -9,10 +9,8 @@ The class **definition** outlines the **blueprint**, while **instantiation** cre
 
 **Class structure**:
 
-<img src="class_structure.png" alt="class_structure" width="400">
+<img src="class_structure.png" alt="class_structure" width="350">
 
-
-<div style="page-break-before: always;"></div>
 
 ## Defining a Class
 
@@ -40,22 +38,24 @@ public final class AnyClass extends ParentClass implements InterfOne, InterfTwo 
 }
 ```
 
+<div style="page-break-before: always;"></div>
+
 ### Defining Methods
 
 **Head**:
 
-1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`): see below and chapters [13_Inheritance](13_Inheritance.md), [14_Interfaces](14_Interfaces.md) and [15_Polymorphism](15_Polymorphism_and_InhVsInt.md)
+1. **Visibility** modifier (and optionally other modifiers such as `static`, `abstract` or `final`); see below and [inher.](13_Inheritance.md), [interf.](14_Interfaces.md) and [polym.](15_Polymorphism_and_InhVsInt.md)
 2. **Return type** OR `void` (when nothing is returned)
 3. **Name** of the method
 4. **Parameters**: inside `()` in form `type name`, multiples separated by `,`
 
 ```java
     aVisibility aType aMethodName(typeOne argOne, typeTwo argTwo){
-            ...
-        }
+        ...
+    }
 ```
 ```java
-// Example:
+    // Example:
     public int calcDouble(int num){
         ...
     }
@@ -68,7 +68,7 @@ public final class AnyClass extends ParentClass implements InterfOne, InterfTwo 
 - We can only use **ONE such parameter**, and it has to be **passed as the last parameter**
 
 ```java
-// Example:
+    // Example:
     public Band(String bandName, String ... members) {
         this.bandName = bandName; // simple String
         this.members = members; // string-array of variable length
@@ -77,11 +77,9 @@ public final class AnyClass extends ParentClass implements InterfOne, InterfTwo 
 
 **Return**:
 ```java
-return this.anyVar; // an instance variable
-
-return endResult; // a local variable
-
-... // or any other expression (but only one value/object)
+        return this.anyVar; // an instance variable
+        return endResult; // a local variable
+        ... // or any other expression (but only one value/object)
 ```
 
 ### Visibility Modifiers
@@ -92,6 +90,8 @@ Variables, constants and methods can be defined with a specific **visibility** a
 - If no visibility modifier is specified, the **default is "package-private"**, meaning the variable is accessible within the same package.
 
 <img src="visibility.png" alt="visibility" width="400">
+
+<div style="page-break-before: always;"></div>
 
 ### Variables and Constants
 
@@ -112,21 +112,20 @@ Variables, constants and methods can be defined with a specific **visibility** a
 
 - **Variables** are typically defined as `private`, such that they are only available within the class (= "encapsulation")
 - Using **public variables is not recommended**, as this violates the principle of encapsulation
-- **Constants** (especially `static` ones, see below) can be `private` or `public`, in which case they can be seen as a "service" to external sources
+- **Constants** (esp. `static` ones, see below) can be `private` or `public`, in which case they can be seen as a "service" to external sources
 
 ```java
 public class AnyClass{
-    ...
+
     // An instance variable, available to all methods of the class
     private int anInstanceVariable;
-    ...
+
     public anyType anyMethod(aType anArg){
         string aLocalVariable; // A local variable, only available to the method
         this.anInstanceVariable = 100; // Use instance variable anywhere using this.*
         ...
     }
     ...
-}
 ```
 
 ### The Static Modifier
@@ -141,15 +140,14 @@ For static variables (and constants), there is only **one instance of the variab
 
 ```java
 public class AnyClass{
-    ...
+
     public static final int ANY_CONSTANT = 100; // A static, public constant
     private static int aCounter = 0; // A static variable; e.g. an instance counter
-    ...
+
     public static anyType anyMethod(aType anArg){
         ... // Do something independently of any instances...
     }
     ...
-}
 ```
 
 ### Method overloading
@@ -167,12 +165,11 @@ The main method contains commands that we want to be **executed** when running t
 
 ```java
 public class AnyClass{
-    ...
+
     public static void main(String[] args){
         ...
     }
     ...
-}
 ```
 
 ### Constructor Method(s)
@@ -189,9 +186,10 @@ public class AnyClass{
         ... // Define the initial state of the object given an argument
     }
     public AnyClass(){
-    ... // Define the initial state of the object given NO argument
-    ... // (e.g. using default values)
-}
+        ... // Define the initial state of the object given NO argument
+        ... // (e.g. using default values)
+    }
+    ...
 ```
 
 ### Getters/Setters
@@ -208,7 +206,6 @@ public class AnyClass{
         return varOne
     }
     ...
-}
 ```
 ```java
 public class AnyClass{
@@ -218,8 +215,9 @@ public class AnyClass{
         this.varOne = anArg;
     }
     ...
-}
 ```
+
+<div style="page-break-before: always;"></div>
 
 ### toString() Method
 The `toString()` method overrides the default implementation from the Object class and **defines the string representation** of the object when printed or concatenated with strings.
@@ -244,8 +242,6 @@ The **`compareTo()`** method has a similar function. It should generally produce
 - a **positive** integer value if the executing object is **larger** in this way
 - **0** if objects are **equal** (with regard to relevant properties)
 
-
-<div style="page-break-before: always;"></div>
 
 ## Importing Classes
 

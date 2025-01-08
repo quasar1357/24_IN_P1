@@ -15,6 +15,8 @@
 
 <img src="excpetionsHierarchy.png" alt="Exceptions Hierarchy" width="600">
 
+<div style="page-break-before: always;"></div>
+
 ## NOT handling exceptions
 
 - If an exception is not handled at all, the program will **terminate** and an error message will be displayed
@@ -68,6 +70,8 @@ try {
     e.printStackTrace(); // prints the stack trace of the exception
 }
 ```
+
+<div style="page-break-before: always;"></div>
 
 ### Passing exceptions - the `throws` keyword
 

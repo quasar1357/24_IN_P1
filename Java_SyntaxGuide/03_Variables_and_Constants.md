@@ -4,21 +4,24 @@
 # Variables and Constants
 
 ## Declaration and Assignment
-Declaration always with type; assignment of a value with `=`.
+
+Declaration always **with type**; assignment of a value with `=`:
+
 ```java
 int variableOne; // declare
 variableOne = 100; // assign value
 // OR
 int variableTwo = 100; // declare and assign in one
-```
-```java
+
+// Multiple declarations
 int variableOne, variabelTwo, ... ; // declare multiple at once
-// OR
 int variableOne = 100, variableTwo; // declare both, assign one
 ```
 
 ### Constants
-Constants are declared as `final`, meaning they can be assigned exactly once:
+
+Constants are declared as `final`, meaning they **can be assigned exactly once**:
+
 ```java
 final int arbitraryConstant = 500; // non-static constant
 final static int MAX_SPEED = 120; // static constant
@@ -36,15 +39,15 @@ final static int MAX_SPEED = 120; // static constant
 
 **Strings**: Assigning a String literal to a variable, automatically creates a **String object** (*see chapter [Java API](07_Generics.md)*). This is an exception, as usually objects first need to be explicitly instantiated (*see chapter about [Objects](05_Objects.md)*).
 
-**Primitive Data Types**: When assigning a literal of a primitive Data Type, the variable points **to the value itself**, which cannot be changed. This is different for object references (*see chapter about [Objects](05_Objects.md)*).
+**Primitive Data Types**: When assigning a literal of a primitive Data Type, the variable points **to the value itself**, which cannot be changed. This is different to object references (*see chapter about [Objects](05_Objects.md)*).
 
 
-## Naming
+## Naming (Identifiers)
 
 **Conventions**:
 - **Variables**: camelCase, e.g. ```currentSpeed```
 - **Constants (static)**: CAPITAL_SNAKE_CASE, e.g. ```MAX_SPEED```
-- (Non-static constants: camelCase; *see chapter about [Objects](05_Objects.md)*)
+- (Non-static constants: camelCase; *see chapters about [Objects](05_Objects.md) and [Variable Types](06_Variable_Types.md)*)
 - **Classes**: PascalCase, e.g. ```SpeedSensor```
 - **Methods**: camelCase, e.g. ```getCurrentSpeed```
 

@@ -58,7 +58,9 @@ Rocket<Dog> dogRocket = new Rocket<Dog>(); // Rocket for dogs
 Rocket<Human> humanRocket = new Rocket<Human>(); // Rocket for humans
 ```
 
-<img src="generics.png" alt="generics" width="500">
+<img src="generics.png" alt="generics" width="350">
+
+<div style="page-break-before: always;"></div>
 
 ## Generic Methods
 

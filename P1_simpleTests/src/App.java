@@ -18,16 +18,19 @@ public class App {
         // }
 
         
-        String path = "C:/Programming/java_projects/24_IN_P1/P1_simpleTests/src/test.txt";
-        PrintWriter outFile = new PrintWriter(path); // create a file
-        final int MAX = 10;
-        for (int line = 1; line <= MAX; line++) {
-            for (int num = line; num <= MAX; num++) {
-                outFile.print(num * line + " "); // write to file
-            }
-            outFile.println(); // write line break to file
-        }
-        outFile.close(); // close file
+        // String path = "C:/Programming/java_projects/24_IN_P1/P1_simpleTests/src/test.txt";
+        // PrintWriter outFile = new PrintWriter(path); // create a file
+        // final int MAX = 10;
+        // for (int line = 1; line <= MAX; line++) {
+        //     for (int num = line; num <= MAX; num++) {
+        //         outFile.print(num * line + " "); // write to file
+        //     }
+        //     outFile.println(); // write line break to file
+        // }
+        // outFile.close(); // close file
+
+        System.out.println((64-32) * (5/9));
+        System.out.println((64-32) * 5/9);
             
     }
 }
