@@ -206,7 +206,7 @@ Integer obj = 69; // auto-instantiation of Integer object
 int num = obj; // auto-extraction of int value
 ```
 
-For **parsing**, numerical Wrapper functions contain *static* parse methods to convert a string to a number:
+For **parsing**, numerical Wrapper classes contain *static* parse methods to convert a string to a number:
 ```java
 String strNum = "987";
 int num = Integer.parseInt(strNum);
