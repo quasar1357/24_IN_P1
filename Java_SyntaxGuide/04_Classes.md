@@ -76,10 +76,16 @@ public final class AnyClass extends ParentClass implements InterfOne, InterfTwo 
 ```
 
 **Return**:
+- Methods that declare a return type, must **return a value** of that type
 ```java
         return this.anyVar; // an instance variable
         return endResult; // a local variable
         ... // or any other expression (but only one value/object)
+```
+- If the method is declared as `void`, **no return value** is expected and the control is passed back to the caller after the method is executed
+- However, the method can still **return prematurely** using `return;` (without a value)
+```java
+        return; // return without a value
 ```
 
 ### Visibility Modifiers
@@ -100,6 +106,7 @@ Variables, constants and methods can be defined with a specific **visibility** a
 - Variables (and constants) that are declared **inside a *method***
 - Can **only** be used **within this method**
 - Visibility cannot be changed
+- IMPORTANT: **Passed parameters** are treated as local variables
 
 **Instance variables/constants**
 
@@ -107,6 +114,7 @@ Variables, constants and methods can be defined with a specific **visibility** a
 - They are **tied to an instance** (object) of that class
 - Within the class, they are **available to all methods**
 - To address an instance variable/constant of the current instance, the **`this.*` keyword** is used, e.g. `this.points = 3` (although `this` is technically optional if there is no ambiguity)
+- NOTE: It is **possible to have instance variables and local variables with the same name**, in which case the local variable will be prioritised; in this case, the instance variable can/must be accessed using `this.*`
 
 **Visibilities**
 

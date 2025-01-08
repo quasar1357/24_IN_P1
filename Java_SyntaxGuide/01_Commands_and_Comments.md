@@ -18,6 +18,11 @@ someHead {
 }
 ```
 
+## Control Flow
+Control flow **follows the calls of the methods**:
+
+<img src="controlFlow.png" alt="controlFlow" width="500">
+
 ## Comments
 
 ```java

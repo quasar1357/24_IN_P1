@@ -62,6 +62,7 @@ if (arbBool){
 
 ## Switch Statement
 - The `switch` command let's the user go through a block and **enter at positions, depending on the value** of the given variable
+- The variable used passed to the Switch command must be of **type `char`, `byte`, `short`, `int` or an object of type `String`**.
 - **If we do not `break`** in a given case, it will **go through all following cases**
 - The **`default`** case can be used to define what to do **if no other case is true**
 

@@ -70,7 +70,7 @@ boolean aBoolVar = false;
     3. AND
     4. OR
 
-**NOTE**: Equals `==` should **not be used on floating point numbers** (e.g. doubles), because of floating point numbers imprecision; use a constant TOLERANCE to check the difference instead. Simiarly, **Strings and other objects** should usually not be compared using `==` (this checks for Aliases, not equal properties) but with the `equals()` method.
+**NOTE**: Equals `==` should **not be used on floating point numbers** (e.g. doubles), because of floating point numbers imprecision; use a constant TOLERANCE to check the difference instead. Simiarly, **Strings and other objects** should usually not be compared using `==` (this checks for Aliases, not equal properties) but with the `equals()` method. **Comparison of `char`** types, always considers the **Unicode** values of the characters.
 
 ---
 

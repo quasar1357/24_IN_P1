@@ -90,7 +90,7 @@ try {
 
 - Custom exceptions can be created by **extending the class `Exception`** or one of its subclasses (creating a new subclass through inheritance)
 - Custom exceptions are primarily created to **differentiate between different types of exceptions** (just through its definition/name) and possibly **provide more information** about the exception
-- Often, they are just extending the `Exception` class with a **constructor** that calls the constructor of the superclass, possibly providing additional information for creating the message (getMesssage() method)
+- Often, they are just extending the `Exception` class with a **constructor** that calls the `constructor(String message)` of the superclass, possibly providing additional information for creating the message (getMesssage() method)
 - Each subclass of the `Exception` class provides (through inherictance) the two methods `getMessage()` and `printStackTrace()`
 
 ```java
@@ -103,7 +103,8 @@ public class EmptyInputException extends Exception {
 }
 ```
 
-Once defined, custom exceptions can be **thrown** and **handled** like any other exception:
+- Once a custom exception is defined, it must be **thrown at the lowest level** where the actual issue occurs, using the `throw` statement to create and throw its instance.
+- From that point on, it can be **handled and passed** like any standard exception (in methods or classes that use the method where it was thrown):
 
 ```java
 public static void main(String[] args) {

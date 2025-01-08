@@ -63,6 +63,7 @@ String arbitraryStringVar = scan.next();
 ### Standard Error
 `System.err`, output stream used for error messages (mostly used for print/println commands in red).
 
+
 ## Scanner
 ```java
 import java.util.Scanner
