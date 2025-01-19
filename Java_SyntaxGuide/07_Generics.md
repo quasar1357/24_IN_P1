@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Variable Types](./06_Variable_Types.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Generics
@@ -97,4 +97,4 @@ System.out.println(getFirstElement(strArray));  // Compiler infers T as String
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Conditions](./08_Conditions.md) | [Back to overview](./00_Java_SyntaxGuide.md)

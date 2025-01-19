@@ -41,4 +41,4 @@ comment until ended with
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Primitive Data Types](./02_Primitive_Data_Types.md) | [Back to overview](./00_Java_SyntaxGuide.md)

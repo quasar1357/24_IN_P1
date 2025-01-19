@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Objects and Methods](05_Objects.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Combinations of final, static, and visibility modifiers for variables
@@ -84,4 +84,4 @@ public | final | static | **Public class constant (global "service" constants)**
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Generics](07_Generics.md) | [Back to overview](./00_Java_SyntaxGuide.md)

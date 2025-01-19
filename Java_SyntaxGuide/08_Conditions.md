@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Generics](07_Generics.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Conditions
@@ -95,5 +95,4 @@ System.out.println(tries + (tries == 1 ? " Versuch" : " Versuche"));
 ```
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Loops](09_Loops.md) | [Back to overview](./00_Java_SyntaxGuide.md)

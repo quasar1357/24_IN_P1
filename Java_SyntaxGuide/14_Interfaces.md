@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Inheritance](13_Inheritance.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 
@@ -160,4 +160,4 @@ for (String element : list) {
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Polymorphism](15_Polymorphism_and_InhVsInt.md) | [Back to overview](./00_Java_SyntaxGuide.md)

@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Classes and Method Definitions](./04_Classes.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Objects and Method Calls
@@ -147,5 +147,4 @@ private static void displayInfo(Mammal m){
 
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Variable Types](./06_Variable_Types.md) | [Back to overview](./00_Java_SyntaxGuide.md)

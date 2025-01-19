@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Loops](09_Loops.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Using Java API classes
@@ -260,5 +260,4 @@ ArrayList<String> names = new ArrayList<String>();
 NOTE: methods using an index return a runtime error if the index is not valid
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Arrays](11_Arrays.md) | [Back to overview](./00_Java_SyntaxGuide.md)

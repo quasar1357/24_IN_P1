@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Java API](10_Java_API.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 
@@ -115,5 +115,4 @@ Property | Arrays | ArrayLists
 
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Enums](12_Enums.md) | [Back to overview](./00_Java_SyntaxGuide.md)

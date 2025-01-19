@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Commands and Comments](./01_Commands_and_Comments.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Primitive Data Types
@@ -74,4 +74,4 @@ boolean aBoolVar = false;
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Variables and Constants](./03_Variables_and_Constants.md) | [Back to overview](./00_Java_SyntaxGuide.md)

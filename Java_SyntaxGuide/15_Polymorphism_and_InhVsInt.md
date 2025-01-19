@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Interfaces](14_Interfaces.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 
@@ -67,5 +67,4 @@ Abstract superclasses are a step towards interfaces as they allow partial implem
 
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Exceptions](16_Exceptions.md) | [Back to overview](./00_Java_SyntaxGuide.md)

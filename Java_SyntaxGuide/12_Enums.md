@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Arrays](11_Arrays.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Enum Types
@@ -140,5 +140,4 @@ config.setVariableB(60);
 - This way, `variableA` is always tied to the `ConfigType`, while `variableB` can vary per instance.
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Inheritance](13_Inheritance.md) | [Back to overview](./00_Java_SyntaxGuide.md)

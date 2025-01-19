@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Enums](12_Enums.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Inheritance
@@ -108,5 +108,4 @@ IMPORTANT: Differentiate between **overloading** (same method name, different pa
 ```
 
 ---
-
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Interfaces](14_Interfaces.md) | [Back to overview](./00_Java_SyntaxGuide.md)

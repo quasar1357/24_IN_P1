@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Variables and Constants](./03_Variables_and_Constants.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Classes and Method Definitions
@@ -268,4 +268,4 @@ public class AnyClass{
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Objects and Methods](05_Objects.md) | [Back to overview](./00_Java_SyntaxGuide.md)

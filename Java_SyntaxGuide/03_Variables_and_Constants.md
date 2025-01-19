@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Primitive Data Types](./02_Primitive_Data_Types.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Variables and Constants
@@ -59,4 +59,4 @@ Identifiers belong to one of **three categories**:
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Classes and Method Definitions](./04_Classes.md) | [Back to overview](./00_Java_SyntaxGuide.md)

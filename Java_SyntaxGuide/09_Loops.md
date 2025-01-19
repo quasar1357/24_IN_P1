@@ -1,4 +1,4 @@
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Previous Chapter: Conditions](08_Conditions.md) | [Back to overview](./00_Java_SyntaxGuide.md)
 
 ---
 # Loops
@@ -78,4 +78,4 @@ for (String bandMember : band)
 
 ---
 
-[Back to overview](./00_Java_SyntaxGuide.md)
+[Next Chapter: Java API](10_Java_API.md) | [Back to overview](./00_Java_SyntaxGuide.md)
